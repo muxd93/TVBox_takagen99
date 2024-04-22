@@ -1,6 +1,7 @@
 package com.github.tvbox.osc.ui.activity;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -27,8 +28,6 @@ import com.github.tvbox.osc.ui.adapter.SearchWordAdapter;
 import com.github.tvbox.osc.util.FastClickCheckUtil;
 import com.github.tvbox.osc.util.SearchHelper;
 import com.github.tvbox.osc.viewmodel.SourceViewModel;
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -43,7 +42,6 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -136,7 +134,8 @@ public class FastSearchActivity extends BaseActivity {
         mGridViewFilter = findViewById(R.id.mGridViewFilter);
 
         mGridViewWord.setHasFixedSize(true);
-        mGridViewWord.setLayoutManager(new V7LinearLayoutManager(this.mContext, 1, false));
+        mLinearViewLayoutMgr = new V7LinearLayoutManager(this.mContext, 1, false);
+        mGridViewWord.setLayoutManager(mLinearViewLayoutMgr);
         spListAdapter = new FastListAdapter();
         mGridViewWord.setAdapter(spListAdapter);
 
@@ -175,7 +174,8 @@ public class FastSearchActivity extends BaseActivity {
         });
 
         // mGridView.setHasFixedSize(true);
-        mGridView.setLayoutManager(new V7GridLayoutManager(this.mContext, isBaseOnWidth() ? 4 : 5));
+        mGridViewLayoutMgr = new V7GridLayoutManager(this.mContext, isPortrait() ? 2 : 5);
+        mGridView.setLayoutManager(mGridViewLayoutMgr);
 
         searchAdapter = new FastSearchAdapter();
         mGridView.setAdapter(searchAdapter);
@@ -203,7 +203,8 @@ public class FastSearchActivity extends BaseActivity {
             }
         });
 
-        mGridViewFilter.setLayoutManager(new V7GridLayoutManager(this.mContext, isBaseOnWidth() ? 4 : 5));
+        mGridViewFilterLayoutMgr = new V7GridLayoutManager(this.mContext, isPortrait() ? 2 : 5);
+        mGridViewFilter.setLayoutManager(mGridViewFilterLayoutMgr);
         searchAdapterFilter = new FastSearchAdapter();
         mGridViewFilter.setAdapter(searchAdapterFilter);
         searchAdapterFilter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
@@ -505,5 +506,18 @@ public class FastSearchActivity extends BaseActivity {
             th.printStackTrace();
         }
         EventBus.getDefault().unregister(this);
+    }
+    private V7GridLayoutManager mGridViewLayoutMgr = null;
+    private V7GridLayoutManager mGridViewFilterLayoutMgr = null;
+    private V7LinearLayoutManager mLinearViewLayoutMgr = null;
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        mGridViewLayoutMgr.setSpanCount(newConfig.orientation == Configuration.ORIENTATION_PORTRAIT ? 2 : 5);
+        mGridView.setLayoutManager(mGridViewLayoutMgr);
+        mGridViewFilterLayoutMgr.setSpanCount(newConfig.orientation == Configuration.ORIENTATION_PORTRAIT ? 2 : 5);
+        mGridViewFilter.setLayoutManager(mGridViewFilterLayoutMgr);
     }
 }

@@ -1,11 +1,11 @@
 package com.github.tvbox.osc.util.live;
 
+import com.github.tvbox.osc.util.LogUtil;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 import java.io.BufferedReader;
 import java.io.StringReader;
-
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.regex.Matcher;
@@ -118,6 +118,7 @@ public class TxtSubscribe {
             }
             linkedHashMap.put("未分组", linkedHashMap2);
         } catch (Throwable unused) {
+            LogUtil.e(unused);
         }
     }
 

@@ -4,7 +4,6 @@ import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 
 import com.github.tvbox.osc.server.ControlManager;
-import com.github.tvbox.osc.util.LOG;
 import com.github.tvbox.osc.util.rsa.RSAEncrypt;
 import com.whl.quickjs.wrapper.ContextSetter;
 import com.whl.quickjs.wrapper.Function;
@@ -18,7 +17,6 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.net.URLEncoder;
-
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.ExecutorService;

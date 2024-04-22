@@ -1,10 +1,12 @@
 package com.github.tvbox.osc.util;
 
 import static com.bumptech.glide.load.resource.bitmap.VideoDecoder.FRAME_OPTION;
+
 import android.graphics.Bitmap;
 import android.media.MediaMetadataRetriever;
 import android.text.TextUtils;
 import android.widget.ImageView;
+
 import androidx.annotation.Nullable;
 
 import com.aminography.redirectglide.GlideApp;
@@ -25,6 +27,7 @@ import com.github.tvbox.osc.base.App;
 import com.google.common.net.HttpHeaders;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;

@@ -1,11 +1,14 @@
 package com.github.tvbox.osc.subtitle;
 
+import static com.lzy.okgo.utils.HttpUtils.runOnUiThread;
+
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Message;
-import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Log;
+
+import androidx.annotation.Nullable;
 
 import com.github.tvbox.osc.base.App;
 import com.github.tvbox.osc.cache.CacheManager;
@@ -22,7 +25,6 @@ import java.util.List;
 import java.util.TreeMap;
 
 import xyz.doikki.videoplayer.player.AbstractPlayer;
-import static com.lzy.okgo.utils.HttpUtils.runOnUiThread;
 
 /**
  * @author AveryZhong.

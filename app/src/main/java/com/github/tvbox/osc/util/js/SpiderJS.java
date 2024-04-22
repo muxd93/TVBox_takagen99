@@ -1,13 +1,13 @@
 package com.github.tvbox.osc.util.js;
 
 import android.content.Context;
+
 import androidx.media3.common.util.UriUtil;
+
 import com.github.catvod.crawler.Spider;
 import com.github.tvbox.osc.util.FileUtils;
-import com.github.tvbox.osc.util.LOG;
+import com.github.tvbox.osc.util.LogUtil;
 import com.github.tvbox.osc.util.MD5;
-import com.github.tvbox.osc.util.js.FunCall;
-import com.whl.quickjs.android.QuickJSLoader;
 import com.whl.quickjs.wrapper.Function;
 import com.whl.quickjs.wrapper.JSArray;
 import com.whl.quickjs.wrapper.JSCallFunction;
@@ -17,6 +17,7 @@ import com.whl.quickjs.wrapper.JSUtils;
 import com.whl.quickjs.wrapper.QuickJSContext;
 
 import org.json.JSONArray;
+
 import java.io.ByteArrayInputStream;
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -84,7 +85,7 @@ public class SpiderJS extends Spider {
                 Class<?>[] classes = cls.getDeclaredClasses();
                 JSObject apiObj = runtime.createJSObject();
 
-                LOG.e("cls","" + classes.length);
+                LogUtil.e("cls","" + classes.length);
                 for (Class<?> classe : classes) {
                     Object javaObj = null;
                     try {
@@ -113,7 +114,7 @@ public class SpiderJS extends Spider {
                         }
                     }
                     apiObj.set(classe.getSimpleName(), claObj);
-                    LOG.e("cls", classe.getSimpleName());
+                    LogUtil.e("cls", classe.getSimpleName());
                 }
                 runtime.getGlobalObject().set("jsapi", apiObj);
             }
@@ -142,7 +143,7 @@ public class SpiderJS extends Spider {
         runtime.setConsole(new QuickJSContext.Console() {
             @Override
             public void log(String s) {
-                LOG.i("QuJs", s);
+                LogUtil.i("QuJs", s);
             }
         });
 
@@ -222,7 +223,7 @@ public class SpiderJS extends Spider {
                 result[2] = baos;
                 return result;
             } catch (Throwable throwable) {
-                LOG.e(throwable);
+                LogUtil.e(throwable);
                 return new Object[0];
             }
         }).get();

@@ -42,7 +42,6 @@ import android.util.Log;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 
-import com.github.tvbox.osc.base.App;
 import com.github.tvbox.osc.util.FileUtils;
 
 import java.io.BufferedReader;
@@ -56,7 +55,6 @@ import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.nio.charset.StandardCharsets;
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.Locale;
@@ -1118,8 +1116,21 @@ public final class IjkMediaPlayer extends AbstractMediaPlayer {
                     if (msg.obj == null) {
                         player.notifyOnTimedText(null);
                     } else {
-                        IjkTimedText text = new IjkTimedText(new Rect(0, 0, 1, 1), (String) msg.obj);
-                        player.notifyOnTimedText(text);
+                        if (msg.arg1 == 0) {// normal
+                            IjkTimedText text = new IjkTimedText(new Rect(0, 0, 1, 1), (String) msg.obj);
+                            player.notifyOnTimedText(text);
+                        } else if (msg.arg1 == 1) { // ass
+                            IjkTimedText text = new IjkTimedText(new Rect(0, 0, 1, 1), (String) msg.obj);
+                            player.notifyOnTimedText(text);
+                        } else if (msg.arg1 == 2) { // bitmap
+                            IjkTimedText text;
+                            if (msg.arg2 > 0 && msg.obj instanceof int[] && ((int[]) msg.obj).length == msg.arg2) {
+                                text = new IjkTimedText((int[]) msg.obj);
+                            } else {
+                                text = new IjkTimedText(null, "");
+                            }
+                            player.notifyOnTimedText(text);
+                        }
                     }
                     return;
                 case MEDIA_NOP: // interface test message - ignore
@@ -1305,11 +1316,7 @@ public final class IjkMediaPlayer extends AbstractMediaPlayer {
     public static class DefaultMediaCodecSelector implements OnMediaCodecSelectListener {
         public static final DefaultMediaCodecSelector sInstance = new DefaultMediaCodecSelector();
 
-        @SuppressWarnings("deprecation")
-        @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
         public String onMediaCodecSelect(IMediaPlayer mp, String mimeType, int profile, int level) {
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN)
-                return null;
 
             if (TextUtils.isEmpty(mimeType))
                 return null;
@@ -1319,7 +1326,7 @@ public final class IjkMediaPlayer extends AbstractMediaPlayer {
             int numCodecs = MediaCodecList.getCodecCount();
             for (int i = 0; i < numCodecs; i++) {
                 MediaCodecInfo codecInfo = MediaCodecList.getCodecInfoAt(i);
-                Log.d(TAG, String.format(Locale.US, "  found codec: %s", codecInfo.getName()));
+                Log.d(TAG, String.format(Locale.US, " found codec: %s", codecInfo.getName()));
                 if (codecInfo.isEncoder())
                     continue;
 
@@ -1331,7 +1338,7 @@ public final class IjkMediaPlayer extends AbstractMediaPlayer {
                     if (TextUtils.isEmpty(type))
                         continue;
 
-                    Log.d(TAG, String.format(Locale.US, "    mime: %s", type));
+                    Log.d(TAG, String.format(Locale.US, "   mime: %s", type));
                     if (!type.equalsIgnoreCase(mimeType))
                         continue;
 

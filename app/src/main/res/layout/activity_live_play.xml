@@ -236,7 +236,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="暂无节目信息…"
+                android:text="@string/act_no_EPG_information"
                 android:textColor="@color/color_FFFFFF"
                 android:visibility="gone" />
 

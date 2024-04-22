@@ -81,7 +81,7 @@ import com.github.tvbox.osc.util.AdBlocker;
 import com.github.tvbox.osc.util.DefaultConfig;
 import com.github.tvbox.osc.util.FileUtils;
 import com.github.tvbox.osc.util.HawkConfig;
-import com.github.tvbox.osc.util.LOG;
+import com.github.tvbox.osc.util.LogUtil;
 import com.github.tvbox.osc.util.M3U8;
 import com.github.tvbox.osc.util.MD5;
 import com.github.tvbox.osc.util.PlayerHelper;
@@ -325,7 +325,12 @@ public class PlayActivity extends BaseActivity {
 
     void selectMySubtitle() throws Exception {
         SubtitleDialog subtitleDialog = new SubtitleDialog(PlayActivity.this);
-
+        int playerType = mVodPlayerCfg.getInt("pl");
+        if (mController.mSubtitleView.hasInternal && playerType == 1) {
+            subtitleDialog.selectInternal.setVisibility(View.VISIBLE);
+        } else {
+            subtitleDialog.selectInternal.setVisibility(View.GONE);
+        }
         subtitleDialog.setSubtitleViewListener(new SubtitleDialog.SubtitleViewListener() {
             @Override
             public void setTextSize(int size) {
@@ -358,7 +363,7 @@ public class PlayActivity extends BaseActivity {
                             @Override
                             public void run() {
                                 String zimuUrl = subtitle.getUrl();
-                                LOG.i("Remote SubtitleBean Url: " + zimuUrl);
+                                LogUtil.i("Remote SubtitleBean Url: " + zimuUrl);
                                 setSubtitle(zimuUrl); //设置字幕
                                 if (searchSubtitleDialog != null) {
                                     searchSubtitleDialog.dismiss();
@@ -391,7 +396,7 @@ public class PlayActivity extends BaseActivity {
                         .withChosenListener(new ChooserDialog.Result() {
                             @Override
                             public void onChoosePath(String path, File pathFile) {
-                                LOG.i("Local SubtitleBean Path: " + path);
+                                LogUtil.i("Local SubtitleBean Path: " + path);
                                 setSubtitle(path);//设置字幕
                             }
                         })
@@ -418,7 +423,7 @@ public class PlayActivity extends BaseActivity {
         }
 
         if (trackInfo == null) {
-            Toast.makeText(mContext, "没有内置字幕", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, getString(R.string.vod_sub_na), Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -469,7 +474,8 @@ public class PlayActivity extends BaseActivity {
                     }
                     dialog.dismiss();
                 } catch (Exception e) {
-                    LOG.e("切换内置字幕出错");
+                    LogUtil.e("切换内置字幕出错");
+                    LogUtil.e(e);
                 }
             }
 
@@ -536,7 +542,8 @@ public class PlayActivity extends BaseActivity {
                     }, 800);
                     dialog.dismiss();
                 } catch (Exception e) {
-                    LOG.e("切换音轨出错");
+                    LogUtil.e("切换音轨出错");
+                    LogUtil.e(e);
                 }
             }
 
@@ -744,6 +751,10 @@ public class PlayActivity extends BaseActivity {
     }
 
     void startPlayUrl(String url, HashMap<String, String> headers) {
+        LogUtil.i("playUrl:" + url);
+        if(autoRetryCount>1 && url.contains(".m3u8")){
+            url="http://home.jundie.top:666/unBom.php?m3u8="+url;//尝试去bom头再次播放
+        }
         final String finalUrl = url;
         runOnUiThread(new Runnable() {
             @Override
@@ -1300,6 +1311,17 @@ public class PlayActivity extends BaseActivity {
         if (reset) {
             CacheManager.delete(MD5.string2MD5(progressKey), 0);
             CacheManager.delete(MD5.string2MD5(subtitleCacheKey), "");
+        }else{
+            try{
+                int playerType = mVodPlayerCfg.getInt("pl");
+                if(playerType==1){
+                    mController.mSubtitleView.setVisibility(View.VISIBLE);
+                }else {
+                    mController.mSubtitleView.setVisibility(View.GONE);
+                }
+            }catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
         if (vs.url.startsWith("tvbox-drive://")) {
             progressKey = vs.url.replace("tvbox-drive://", "");
@@ -1320,9 +1342,14 @@ public class PlayActivity extends BaseActivity {
             playUrl(vs.url.replace("tvbox-drive://", ""), headers);
             return;
         }
-        if (vs.url.startsWith("tvbox-xg:") && !TextUtils.isEmpty(vs.url.substring(9))) {
+        if(Jianpian.isJpUrl(vs.url)){//荐片地址特殊判断
+            String jp_url= vs.url;
             this.mController.showParse(false);
-            playUrl(Jianpian.JPUrlDec(vs.url.substring(9)), null);
+            if(vs.url.startsWith("tvbox-xg:")){
+                playUrl(Jianpian.JPUrlDec(jp_url.substring(9)), null);
+            }else {
+                playUrl(Jianpian.JPUrlDec(jp_url), null);
+            }
             return;
         }
         if (Thunder.play(vs.url, new Thunder.ThunderCallback() {
@@ -1594,7 +1621,7 @@ public class PlayActivity extends BaseActivity {
             LinkedHashMap<String, HashMap<String, String>> jxs = new LinkedHashMap<>();
             String extendName = "";
             for (ParseBean p : ApiConfig.get().getParseBeanList()) {
-                HashMap data = new HashMap<String, String>();
+                HashMap<String, String> data = new HashMap<String, String>();
                 data.put("url", p.getUrl());
                 if (p.getUrl().equals(pb.getUrl())) {
                     extendName = p.getName();
@@ -1766,6 +1793,10 @@ public class PlayActivity extends BaseActivity {
                     mSysWebView.loadUrl("about:blank");
                     if (destroy) {
 //                        mSysWebView.clearCache(true);
+                        final ViewGroup viewGroup = (ViewGroup) mSysWebView.getParent();
+                        if (viewGroup != null) {
+                            viewGroup.removeView(mSysWebView);
+                        }
                         mSysWebView.removeAllViews();
                         mSysWebView.destroy();
                         mSysWebView = null;
@@ -1925,9 +1956,17 @@ public class PlayActivity extends BaseActivity {
         public void onPageFinished(WebView view, String url) {
             super.onPageFinished(view, url);
             String click = sourceBean.getClickSelector();
-            LOG.i("onPageFinished url:" + url);
-            if (!click.isEmpty()) {
-                mSysWebView.loadUrl("javascript:" + click);
+            LogUtil.i("onPageFinished url:" + url);
+            if(!click.isEmpty()){
+                String selector;
+                if(click.contains(";")){
+                    if(!url.contains(click.split(";")[0]))return;
+                    selector=click.split(";")[1];
+                }else {
+                    selector=click.trim();
+                }
+                String js="$(\""+ selector+"\").click();";
+                mSysWebView.loadUrl("javascript:"+js);
             }
 
             mHandler.sendEmptyMessage(200);
@@ -1943,7 +1982,7 @@ public class PlayActivity extends BaseActivity {
 
             boolean isFilter = VideoParseRuler.isFilter(webUrl, url);
             if (isFilter) {
-                LOG.i("shouldInterceptLoadRequest filter:" + url);
+                LogUtil.i("shouldInterceptLoadRequest filter:" + url);
                 return null;
             }
 
@@ -1960,7 +1999,7 @@ public class PlayActivity extends BaseActivity {
                 if (checkVideoFormat(url)) {
                     loadFoundVideoUrls.add(url);
                     loadFoundVideoUrlsHeader.put(url, headers);
-                    LOG.i("loadFoundVideoUrl:" + url);
+                    LogUtil.i("loadFoundVideoUrl:" + url);
                     if (loadFoundCount.incrementAndGet() == 1) {
                         url = loadFoundVideoUrls.poll();
                         mHandler.removeMessages(100);
@@ -1989,7 +2028,7 @@ public class PlayActivity extends BaseActivity {
         @TargetApi(Build.VERSION_CODES.LOLLIPOP)
         public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
             String url = request.getUrl().toString();
-            LOG.i("shouldInterceptRequest url:" + url);
+            LogUtil.i("shouldInterceptRequest url:" + url);
             HashMap<String, String> webHeaders = new HashMap<>();
             Map<String, String> hds = request.getRequestHeaders();
             if (hds != null && hds.keySet().size() > 0) {
@@ -2103,7 +2142,7 @@ public class PlayActivity extends BaseActivity {
         @Override
         public XWalkWebResourceResponse shouldInterceptLoadRequest(XWalkView view, XWalkWebResourceRequest request) {
             String url = request.getUrl().toString();
-            LOG.i("shouldInterceptLoadRequest url:" + url);
+            LogUtil.i("shouldInterceptLoadRequest url:" + url);
             // suppress favicon requests as we don't display them anywhere
             if (url.endsWith("/favicon.ico")) {
                 if (url.startsWith("http://127.0.0.1")) {
@@ -2114,7 +2153,7 @@ public class PlayActivity extends BaseActivity {
 
             boolean isFilter = VideoParseRuler.isFilter(webUrl, url);
             if (isFilter) {
-                LOG.i("shouldInterceptLoadRequest filter:" + url);
+                LogUtil.i("shouldInterceptLoadRequest filter:" + url);
                 return null;
             }
 
@@ -2140,7 +2179,7 @@ public class PlayActivity extends BaseActivity {
                     }
                     loadFoundVideoUrls.add(url);
                     loadFoundVideoUrlsHeader.put(url, webHeaders);
-                    LOG.i("loadFoundVideoUrl:" + url);
+                    LogUtil.i("loadFoundVideoUrl:" + url);
                     if (loadFoundCount.incrementAndGet() == 1) {
                         mHandler.removeMessages(100);
                         url = loadFoundVideoUrls.poll();

@@ -11,6 +11,7 @@ public class LiveChannelGroup {
     private int groupIndex;
     private String groupName;
     private String groupPassword;
+    private boolean isGroupHide = false;
     private ArrayList<LiveChannelItem> liveChannelItems;
 
     public int getGroupIndex() {
@@ -43,5 +44,24 @@ public class LiveChannelGroup {
 
     public void setGroupPassword(String groupPassword) {
         this.groupPassword = groupPassword;
+    }
+
+    public boolean isGroupHide() {
+        return isGroupHide;
+    }
+
+    public void setGroupHide(boolean groupHide) {
+        isGroupHide = groupHide;
+    }
+
+    @Override
+    public String toString() {
+        return "LiveChannelGroup{" +
+                "groupIndex=" + groupIndex +
+                ", groupName='" + groupName + '\'' +
+                ", groupPassword='" + groupPassword + '\'' +
+                ", isGroupHide=" + isGroupHide +
+                ", liveChannelItems=" + liveChannelItems +
+                '}';
     }
 }

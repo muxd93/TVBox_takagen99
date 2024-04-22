@@ -1,17 +1,19 @@
 package com.github.tvbox.osc.util;
 
+import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Base64;
+
 import com.github.tvbox.osc.base.App;
 import com.github.tvbox.osc.server.ControlManager;
-import com.github.tvbox.osc.util.StringUtils;
-import com.github.tvbox.osc.util.urlhttp.OkHttpUtil;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.HttpHeaders;
 import com.orhanobut.hawk.Hawk;
+
 import org.json.JSONObject;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
@@ -22,11 +24,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.math.BigDecimal;
 import java.util.Map;
-import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import okhttp3.Response;
 
 public class FileUtils {
@@ -122,7 +123,13 @@ public class FileUtils {
 
     public static String loadModule(String name) {
         try {
-            if (name.contains("gbk.js")) {
+        	if (name.endsWith("ali.js")) {
+                name = "ali.js";
+            } else if (name.endsWith("ali_api.js")) {
+                name = "ali_api.js";    
+            } else if (name.contains("similarity.js")) {
+                name = "similarity.js";
+            } else if (name.contains("gbk.js")) {
                 name = "gbk.js";
             } else if (name.contains("模板.js")) {
                 name = "模板.js";
@@ -223,6 +230,10 @@ public class FileUtils {
         } catch (Exception e4) {
             return null;
         }
+    }
+
+    public static String getRootPath() {
+        return Environment.getExternalStorageDirectory().getAbsolutePath();
     }
 
     public static void setCache(int time, String name, String data) {
@@ -343,5 +354,21 @@ public class FileUtils {
         int lastSlashIndex = Math.max(path.lastIndexOf("/"), path.lastIndexOf("\\"));
         // 如果路径中有点号，并且点号在最后一个斜杠之后，认为有后缀
         return lastDotIndex > lastSlashIndex && lastDotIndex < path.length() - 1;
+    }
+
+    public static String readRawFile(int id) {
+        StringBuilder tv = new StringBuilder();
+        try {
+            InputStream is = App.getInstance().getResources().openRawResource(id);
+            InputStreamReader isr = new InputStreamReader(is,"UTF-8");
+            BufferedReader br = new BufferedReader(isr);
+            String str = "";
+            while((str = br.readLine()) != null){
+                tv.append(str).append("\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return tv.toString();
     }
 }

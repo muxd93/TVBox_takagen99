@@ -19,6 +19,7 @@ public class LiveChannelItem {
     private int channelIndex;
     private int channelNum;
     private String channelName;
+    private boolean isChannelHide = false;
     private ArrayList<String> channelSourceNames;
     private ArrayList<String> channelUrls;
     public int sourceIndex = 0;
@@ -101,5 +102,28 @@ public class LiveChannelItem {
 
     public String getSourceName() {
         return channelSourceNames.get(sourceIndex);
+    }
+
+    public boolean isChannelHide() {
+        return isChannelHide;
+    }
+
+    public void setChannelHide(boolean channelHide) {
+        isChannelHide = channelHide;
+    }
+
+    @Override
+    public String toString() {
+        return "LiveChannelItem{" +
+                "channelIndex=" + channelIndex +
+                ", channelNum=" + channelNum +
+                ", channelName='" + channelName + '\'' +
+                ", isChannelHide=" + isChannelHide +
+                ", channelSourceNames=" + channelSourceNames +
+                ", channelUrls=" + channelUrls +
+                ", sourceIndex=" + sourceIndex +
+                ", sourceNum=" + sourceNum +
+                ", include_back=" + include_back +
+                '}';
     }
 }

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Rect;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,7 +16,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -60,7 +60,6 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.AbsCallback;
 import com.lzy.okgo.model.Response;
@@ -68,6 +67,7 @@ import com.orhanobut.hawk.Hawk;
 import com.owen.tvrecyclerview.widget.TvRecyclerView;
 import com.owen.tvrecyclerview.widget.V7GridLayoutManager;
 import com.owen.tvrecyclerview.widget.V7LinearLayoutManager;
+import com.yang.flowlayoutlibrary.FlowLayout;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -80,7 +80,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
-import com.yang.flowlayoutlibrary.FlowLayout;
 
 import me.jessyan.autosize.utils.AutoSizeUtils;
 
@@ -208,10 +207,13 @@ public class SearchActivity extends BaseActivity {
         keyboard = findViewById(R.id.keyBoardRoot);
         mGridViewWord = findViewById(R.id.mGridViewWord);
         mGridViewWord.setHasFixedSize(true);
-        mGridViewWord.setLayoutManager(new V7LinearLayoutManager(this.mContext, 1, false));
+        mGridViewWordLayoutMgr = new V7GridLayoutManager(this.mContext, isPortrait() ? 3 : 1);
+        mLinearViewLayoutMgr = new V7LinearLayoutManager(this.mContext, 1, false);
+//        mGridViewWord.setLayoutManager(mLinearViewLayoutMgr);
+        mGridViewWord.setLayoutManager(mGridViewWordLayoutMgr);
         wordAdapter = new PinyinAdapter();
         mGridViewWord.setAdapter(wordAdapter);
-        
+
         wordAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
@@ -232,10 +234,12 @@ public class SearchActivity extends BaseActivity {
         mGridView.setHasFixedSize(true);
         // lite
         if (Hawk.get(HawkConfig.SEARCH_VIEW, 0) == 0)
-            mGridView.setLayoutManager(new V7LinearLayoutManager(this.mContext, 1, false));
+            mGridView.setLayoutManager(mLinearViewLayoutMgr);
             // with preview
-        else
-            mGridView.setLayoutManager(new V7GridLayoutManager(this.mContext, 4));
+        else{
+            mGridViewLayoutMgr = new V7GridLayoutManager(this.mContext, isPortrait() ? 3 : 4);
+            mGridView.setLayoutManager(mGridViewLayoutMgr);
+        }
         searchAdapter = new SearchAdapter();
         mGridView.setAdapter(searchAdapter);
         searchAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
@@ -447,7 +451,7 @@ public class SearchActivity extends BaseActivity {
                     int spanCount;
                     spanCount = (int)Math.floor(siteKey.size()/10.0);
                     spanCount = Math.min(spanCount, 3);
-                    tvRecyclerView.setLayoutManager(new V7GridLayoutManager(dialog.getContext(), spanCount+1));
+                    tvRecyclerView.setLayoutManager(new V7GridLayoutManager(dialog.getContext(), isPortrait() ? 2 : spanCount+1));
                     ConstraintLayout cl_root = dialog.findViewById(R.id.cl_root);
                     ViewGroup.LayoutParams clp = cl_root.getLayoutParams();
                     clp.width = AutoSizeUtils.mm2px(dialog.getContext(), 340+250*spanCount);
@@ -807,5 +811,19 @@ public class SearchActivity extends BaseActivity {
         etSearch.requestFocus();
         etSearch.setText(inputMsgEvent.getText());
         search(inputMsgEvent.getText());
-    }    
+    }
+
+    private V7GridLayoutManager mGridViewLayoutMgr = null;
+    private V7GridLayoutManager mGridViewWordLayoutMgr = null;
+    private V7LinearLayoutManager mLinearViewLayoutMgr = null;
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        mGridViewWordLayoutMgr.setSpanCount(newConfig.orientation == Configuration.ORIENTATION_PORTRAIT ? 3 : 1);
+        mGridViewWord.setLayoutManager(mGridViewWordLayoutMgr);
+        mGridViewLayoutMgr.setSpanCount(newConfig.orientation == Configuration.ORIENTATION_PORTRAIT ? 3 : 4);
+        mGridView.setLayoutManager(mGridViewLayoutMgr);
+    }
+
 }

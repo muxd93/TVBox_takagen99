@@ -1,13 +1,14 @@
 package com.github.tvbox.osc.viewmodel;
 
 import android.text.TextUtils;
+
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.github.tvbox.osc.bean.SubtitleBean;
 import com.github.tvbox.osc.bean.SubtitleData;
 import com.github.tvbox.osc.ui.dialog.SearchSubtitleDialog;
-import com.github.tvbox.osc.util.LOG;
+import com.github.tvbox.osc.util.LogUtil;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.AbsCallback;
 
@@ -60,7 +61,7 @@ public class SubtitleViewModel extends ViewModel {
         } catch (Throwable e) {
             e.printStackTrace();
             searchResult.postValue(null);
-            LOG.e(e);
+            LogUtil.e(e);
         }
     }
 
@@ -123,7 +124,7 @@ public class SubtitleViewModel extends ViewModel {
                     });
         } catch (Exception e) {
             e.printStackTrace();
-            LOG.e(e);
+            LogUtil.e(e);
         }
     }
 
@@ -192,7 +193,7 @@ public class SubtitleViewModel extends ViewModel {
             });
         } catch (Exception e) {
             e.printStackTrace();
-            LOG.e(e);
+            LogUtil.e(e);
         }
     }
 

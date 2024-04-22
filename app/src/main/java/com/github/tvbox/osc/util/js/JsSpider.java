@@ -3,16 +3,15 @@ package com.github.tvbox.osc.util.js;
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.Base64;
+
 import androidx.media3.common.util.UriUtil;
+
 import com.github.catvod.crawler.Spider;
 import com.github.tvbox.osc.util.FileUtils;
-import com.github.tvbox.osc.util.LOG;
+import com.github.tvbox.osc.util.LogUtil;
 import com.github.tvbox.osc.util.MD5;
-
-import com.whl.quickjs.android.QuickJSLoader;
 import com.whl.quickjs.wrapper.Function;
 import com.whl.quickjs.wrapper.JSArray;
-
 import com.whl.quickjs.wrapper.JSCallFunction;
 import com.whl.quickjs.wrapper.JSObject;
 import com.whl.quickjs.wrapper.JSUtils;
@@ -224,7 +223,7 @@ public class JsSpider extends Spider {
         ctx.setConsole(new QuickJSContext.Console() {
             @Override
             public void log(String s) {
-                LOG.i("QuJs", s);
+                LogUtil.i("QuJs", s);
             }
         });
 
@@ -247,7 +246,7 @@ public class JsSpider extends Spider {
             if (classes.length >= 1) invokeMultiple(clz, obj);
         } catch (Throwable e) {
             e.printStackTrace();
-            LOG.e(e);
+            LogUtil.e(e);
         }
     }
 

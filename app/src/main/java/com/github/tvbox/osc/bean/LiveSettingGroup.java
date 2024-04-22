@@ -30,4 +30,13 @@ public class LiveSettingGroup {
     public void setLiveSettingItems(ArrayList<LiveSettingItem> liveSettingItems) {
         this.liveSettingItems = liveSettingItems;
     }
+
+    @Override
+    public String toString() {
+        return "LiveSettingGroup{" +
+                "groupIndex=" + groupIndex +
+                ", groupName='" + groupName + '\'' +
+                ", liveSettingItems=" + liveSettingItems +
+                '}';
+    }
 }

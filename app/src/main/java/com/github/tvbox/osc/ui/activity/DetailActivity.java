@@ -1,5 +1,7 @@
 package com.github.tvbox.osc.ui.activity;
 
+import android.app.AlertDialog;
+import android.app.DownloadManager;
 import android.app.PendingIntent;
 import android.app.PictureInPictureParams;
 import android.app.RemoteAction;
@@ -10,10 +12,15 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.content.res.Configuration;
 import android.graphics.Paint;
 import android.graphics.drawable.Icon;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.text.Html;
 import android.text.TextUtils;
 import android.util.Rational;
@@ -26,6 +33,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.FragmentContainerView;
 import androidx.lifecycle.Observer;
@@ -44,7 +52,6 @@ import com.github.tvbox.osc.bean.VodInfo;
 import com.github.tvbox.osc.bean.VodSeriesGroup;
 import com.github.tvbox.osc.cache.RoomDataManger;
 import com.github.tvbox.osc.event.RefreshEvent;
-import com.github.tvbox.osc.player.controller.VodController;
 import com.github.tvbox.osc.server.PlayService;
 import com.github.tvbox.osc.ui.adapter.SeriesAdapter;
 import com.github.tvbox.osc.ui.adapter.SeriesFlagAdapter;
@@ -57,7 +64,6 @@ import com.github.tvbox.osc.util.FastClickCheckUtil;
 import com.github.tvbox.osc.util.HawkConfig;
 import com.github.tvbox.osc.util.ImgUtil;
 import com.github.tvbox.osc.util.SearchHelper;
-import com.github.tvbox.osc.util.StringUtils;
 import com.github.tvbox.osc.util.SubtitleHelper;
 import com.github.tvbox.osc.util.thunder.Thunder;
 import com.github.tvbox.osc.viewmodel.SourceViewModel;
@@ -84,7 +90,6 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.regex.Matcher;
@@ -117,6 +122,7 @@ public class DetailActivity extends BaseActivity {
     private TextView tvPush;
     private TextView tvQuickSearch;
     private TextView tvCollect;
+    private TextView tvDownload;
     private TvRecyclerView mGridViewFlag;
     private TvRecyclerView mGridView;
     private TvRecyclerView mSeriesGroupView;
@@ -252,14 +258,15 @@ public class DetailActivity extends BaseActivity {
         tvSort = findViewById(R.id.tvSort);
         tvPush = findViewById(R.id.tvPush);
         tvCollect = findViewById(R.id.tvCollect);
+        tvDownload = findViewById(R.id.tvDownload);
         tvQuickSearch = findViewById(R.id.tvQuickSearch);
         tvPlayUrl = findViewById(R.id.tvPlayUrl);
         mEmptyPlayList = findViewById(R.id.mEmptyPlaylist);
         mGridView = findViewById(R.id.mGridView);
         mGridView.setHasFixedSize(false);
-        mGridViewLayoutMgr = new V7GridLayoutManager(this.mContext, 6);
+        mGridViewLayoutMgr = new V7GridLayoutManager(this.mContext, isPortrait() ? 3 : 6);
         mGridView.setLayoutManager(mGridViewLayoutMgr);
-//        mGridView.setLayoutManager(new V7GridLayoutManager(this.mContext, isBaseOnWidth() ? 6 : 7));
+//        mGridView.setLayoutManager(new V7GridLayoutManager(this.mContext, isPortrait() ? 6 : 7));
         seriesAdapter = new SeriesAdapter();
         mGridView.setAdapter(seriesAdapter);
         mGridViewFlag = findViewById(R.id.mGridViewFlag);
@@ -416,7 +423,9 @@ public class DetailActivity extends BaseActivity {
                 return true;
             }
         });
-
+        tvDownload.setOnClickListener(v -> {
+            use1DMDownload();
+        });
         tvPlayUrl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -424,7 +433,11 @@ public class DetailActivity extends BaseActivity {
                 ClipboardManager cm = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
                 //设置内容到剪切板
                 cm.setPrimaryClip(ClipData.newPlainText(null, vodInfo.seriesMap.get(vodInfo.playFlag).get(vodInfo.getplayIndex()).url));
-                Toast.makeText(DetailActivity.this, getString(R.string.det_url), Toast.LENGTH_SHORT).show();
+//                cm.setPrimaryClip(ClipData.newPlainText(null, vodInfo.seriesMap.get(vodInfo.playFlag).get(0).url));
+                //VodInfo.VodSeries vod = vodInfo.seriesMap.get(vodInfo.playFlag).get(vodInfo.playIndex);
+                //String url = TextUtils.isEmpty(playFragment.getFinalUrl())?vod.url:playFragment.getFinalUrl();
+                //cm.setPrimaryClip(ClipData.newPlainText(null, url));
+                //Toast.makeText(DetailActivity.this, getString(R.string.det_url), Toast.LENGTH_SHORT).show();
             }
         });
         mGridView.setOnItemListener(new TvRecyclerView.OnItemListener() {
@@ -641,7 +654,7 @@ public class DetailActivity extends BaseActivity {
             int screenWidth = getWindowManager().getDefaultDisplay().getWidth() / 3;
             int offset = screenWidth / w;
             if (offset <= 2) offset = 2;
-            if (offset > 6) offset = 6;
+            if (offset > 6) offset = isPortrait() ? 5 : 6;;
             mGridViewLayoutMgr.setSpanCount(offset);
 
             List<VodSeriesGroup> seriesGroupList = getSeriesGroupList();
@@ -1315,5 +1328,66 @@ public class DetailActivity extends BaseActivity {
             subtitleTextSize *= 0.5;
         }
         EventBus.getDefault().post(new RefreshEvent(RefreshEvent.TYPE_SUBTITLE_SIZE_CHANGE, subtitleTextSize));
+    }
+
+    public void use1DMDownload() {
+        if (vodInfo != null && vodInfo.seriesMap.get(vodInfo.playFlag).size() > 0){
+            VodInfo.VodSeries vod = vodInfo.seriesMap.get(vodInfo.playFlag).get(vodInfo.playIndex);
+            String url = TextUtils.isEmpty(playFragment.getFinalUrl())?vod.url:playFragment.getFinalUrl();
+            // 创建Intent对象，启动1DM App
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            intent.setDataAndType(Uri.parse(url), "video/mp4");
+            intent.putExtra("title", vodInfo.name+" "+vod.name); // 传入文件保存名
+//            intent.setClassName("idm.internet.download.manager.plus", "idm.internet.download.manager.MainActivity");
+            intent.setClassName("idm.internet.download.manager.plus", "idm.internet.download.manager.Downloader");
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+            // 检查1DM App是否已安装
+            PackageManager pm = getPackageManager();
+            List<ResolveInfo> activities = pm.queryIntentActivities(intent, 0);
+            boolean isIntentSafe = activities.size() > 0;
+
+            if (isIntentSafe) {
+                startActivity(intent); // 启动1DM App
+            } else {
+                // 如果1DM App未安装，提示用户安装1DM App
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("调用1DM+下载管理器失败");
+                builder.setMessage("为了下载视频，请先安装1DM+下载管理器。\n点击确定跳转到浏览器下载安装1DM+下载管理器\n点击取消尝试调用系统默认下载器...");
+                builder.setPositiveButton("下载1DM+", (dialog, which) -> {
+                    // 跳转到下载链接
+                    Intent downloadIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.baidu.com/s?wd=1dm%2BAPP"));
+                    startActivity(downloadIntent);
+                });
+                builder.setNegativeButton("尝试默认下载器", (dialog, which) -> {
+                    // 跳转到下载链接
+                    downloadFile(this, url, vodInfo.name+" "+vod.name);
+                });
+                builder.show();
+            }
+        } else {
+            Toast.makeText(mContext, "资源异常,请稍后重试", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public static void downloadFile(Context context, String fileUrl, String fileName) {
+        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(fileUrl));
+        request.setTitle(fileName);
+        request.setDescription("Downloading");
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, fileName);
+
+        DownloadManager downloadManager = (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
+        if (downloadManager != null) {
+            downloadManager.enqueue(request);
+        }
+    }
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        mGridViewLayoutMgr.setSpanCount(newConfig.orientation == Configuration.ORIENTATION_PORTRAIT ? 5 : 6);
+        mGridView.setLayoutManager(mGridViewLayoutMgr);
     }
 }

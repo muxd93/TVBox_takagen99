@@ -1,7 +1,5 @@
 package com.github.tvbox.osc.bean;
 
-import android.text.TextUtils;
-
 import androidx.annotation.NonNull;
 
 import com.github.tvbox.osc.api.ApiConfig;

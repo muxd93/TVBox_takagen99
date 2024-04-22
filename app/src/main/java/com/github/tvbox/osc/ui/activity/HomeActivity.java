@@ -1,14 +1,15 @@
 package com.github.tvbox.osc.ui.activity;
 
-import android.Manifest;
-import android.content.Context;
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.IntEvaluator;
 import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
@@ -28,9 +29,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.viewpager.widget.ViewPager;
 
@@ -43,9 +44,11 @@ import com.github.tvbox.osc.bean.MovieSort;
 import com.github.tvbox.osc.bean.SourceBean;
 import com.github.tvbox.osc.event.RefreshEvent;
 import com.github.tvbox.osc.server.ControlManager;
+import com.github.tvbox.osc.ui.adapter.ApiHistoryDialogAdapter;
 import com.github.tvbox.osc.ui.adapter.HomePageAdapter;
 import com.github.tvbox.osc.ui.adapter.SelectDialogAdapter;
 import com.github.tvbox.osc.ui.adapter.SortAdapter;
+import com.github.tvbox.osc.ui.dialog.ApiHistoryDialog;
 import com.github.tvbox.osc.ui.dialog.SelectDialog;
 import com.github.tvbox.osc.ui.dialog.TipDialog;
 import com.github.tvbox.osc.ui.fragment.GridFragment;
@@ -58,7 +61,7 @@ import com.github.tvbox.osc.util.AppManager;
 import com.github.tvbox.osc.util.DefaultConfig;
 import com.github.tvbox.osc.util.FileUtils;
 import com.github.tvbox.osc.util.HawkConfig;
-import com.github.tvbox.osc.util.LOG;
+import com.github.tvbox.osc.util.LogUtil;
 import com.github.tvbox.osc.viewmodel.SourceViewModel;
 import com.orhanobut.hawk.Hawk;
 import com.owen.tvrecyclerview.widget.TvRecyclerView;
@@ -141,6 +144,16 @@ public class HomeActivity extends BaseActivity {
             Bundle bundle = intent.getExtras();
             useCacheConfig = bundle.getBoolean("useCache", false);
         }
+        if (intent != null && intent.getCategories() != null && (intent.hasCategory("android.intent.category.HOME"))) {
+            Hawk.put(HawkConfig.SET_AS_LAUNCHER, true);
+        }
+        if (intent != null && intent.getCategories() != null && (intent.hasCategory("android.intent.category.LAUNCHER"))) {
+            if (Hawk.get(HawkConfig.HOME_DEFAULT_SHOW, false)) {
+                jumpActivity(LivePlayActivity.class);
+            }
+        }
+
+
         initData();
     }
 
@@ -375,6 +388,8 @@ public class HomeActivity extends BaseActivity {
     }
 
     private void initData() {
+        LogUtil.v("initData start. dataInitOk: "+ dataInitOk + ", jarInitOk: "+jarInitOk);
+        ArrayList<String> history = Hawk.get(HawkConfig.API_HISTORY, new ArrayList<String>());
 
         // takagen99 : Switch to show / hide source title
         SourceBean home = ApiConfig.get().getHomeSourceBean();
@@ -407,19 +422,18 @@ public class HomeActivity extends BaseActivity {
         if (dataInitOk && jarInitOk) {
             showLoading();
             sourceViewModel.getSort(ApiConfig.get().getHomeSourceBean().getKey());
-            if (hasPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-                LOG.e("有");
-            } else {
-                LOG.e("无");
-            }
-            if (Hawk.get(HawkConfig.HOME_DEFAULT_SHOW, false)) {
-                jumpActivity(LivePlayActivity.class);
-            }         
+//            if (hasPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+//                LogUtil.d("有存储权限");
+//            } else {
+//                LogUtil.e("无存储权限");
+//            }
             return;
         }
         showLoading();
         if (dataInitOk && !jarInitOk) {
             if (!ApiConfig.get().getSpider().isEmpty()) {
+                LogUtil.v("initData and load jar");
+
                 ApiConfig.get().loadJar(useCacheConfig, ApiConfig.get().getSpider(), new ApiConfig.LoadConfigCallback() {
                     @Override
                     public void success() {
@@ -437,12 +451,17 @@ public class HomeActivity extends BaseActivity {
 
                     @Override
                     public void retry() {
-
+                        dataInitOk = false;
+                        if (!showApiList(history)) {
+                            dataInitOk = true;
+                            jarInitOk = true;
+                            mHandler.post(HomeActivity.this::initData);
+                        }
                     }
 
                     @Override
                     public void error(String msg) {
-                        jarInitOk = true;
+                        jarInitOk = false;
                         mHandler.post(new Runnable() {
                             @Override
                             public void run() {
@@ -450,7 +469,6 @@ public class HomeActivity extends BaseActivity {
                                     Toast.makeText(HomeActivity.this, getString(R.string.hm_notok), Toast.LENGTH_SHORT).show();
                                 else
                                     Toast.makeText(HomeActivity.this, msg, Toast.LENGTH_SHORT).show();
-                                initData();
                             }
                         });
                     }
@@ -458,6 +476,8 @@ public class HomeActivity extends BaseActivity {
             }
             return;
         }
+        LogUtil.v("initData and load data Config");
+
         ApiConfig.get().loadConfig(useCacheConfig, new ApiConfig.LoadConfigCallback() {
             TipDialog dialog = null;
 
@@ -466,17 +486,30 @@ public class HomeActivity extends BaseActivity {
                 mHandler.post(new Runnable() {
                     @Override
                     public void run() {
-                        initData();
+                        Toast.makeText(HomeActivity.this, getString(R.string.hm_notok_try), Toast.LENGTH_SHORT).show();
+                        if (!showApiList(history)) {
+                            dataInitOk = true;
+                            jarInitOk = true;
+                            mHandler.post(HomeActivity.this::initData);
+                        }
                     }
                 });
             }
 
             @Override
             public void success() {
-                dataInitOk = true;
+                if (ApiConfig.get().isMultiApi()) {
+                    LogUtil.d("initData and reload data Config for multi API");
+                    dataInitOk = false;
+                    mHandler.post(HomeActivity.this::initData);
+                    return;
+                } else {
+                    dataInitOk = true;
+                }
                 if (ApiConfig.get().getSpider().isEmpty()) {
                     jarInitOk = true;
                 }
+
                 mHandler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -501,7 +534,8 @@ public class HomeActivity extends BaseActivity {
                 mHandler.post(new Runnable() {
                     @Override
                     public void run() {
-                        if (dialog == null)
+                        Toast.makeText(HomeActivity.this, getString(R.string.hm_notok), Toast.LENGTH_SHORT).show();
+                        /*if (dialog == null)
                             dialog = new TipDialog(HomeActivity.this, msg, getString(R.string.hm_retry), getString(R.string.hm_cancel), new TipDialog.OnListener() {
                                 @Override
                                 public void left() {
@@ -541,15 +575,48 @@ public class HomeActivity extends BaseActivity {
                                 }
                             });
                         if (!dialog.isShowing())
-                            dialog.show();
+                            dialog.show();*/
                     }
                 });
             }
         }, this);
     }
 
+    private boolean showApiList(ArrayList<String> history) {
+        boolean autoChangeSource = Hawk.get(HawkConfig.AUTO_CHANGE_SOURCE, true);
+        if (history.isEmpty()) {
+            Toast.makeText(HomeActivity.this, getString(R.string.empty_source), Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        String current = Hawk.get(HawkConfig.API_URL, "");
+        history.remove(current);
+        if (history.isEmpty()) {
+            Toast.makeText(HomeActivity.this, getString(R.string.empty_source), Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        ApiHistoryDialog dialog = new ApiHistoryDialog(HomeActivity.this);
+        dialog.setTip(HomeActivity.getRes().getString(R.string.dia_history_list));
+        dialog.setAdapter(new ApiHistoryDialogAdapter.SelectDialogInterface() {
+            @Override
+            public void click(String value) {
+                Hawk.put(HawkConfig.API_HISTORY, history);
+                Hawk.put(HawkConfig.API_URL, value);
+                initData();
+                dialog.dismiss();
+            }
+
+            @Override
+            public void del(String value, ArrayList<String> data) {
+                Hawk.put(HawkConfig.API_HISTORY, data);
+            }
+        }, history, 0);
+        dialog.show();
+        return true;
+    }
+
     private void initViewPager(AbsSortXml absXml) {
-        if (sortAdapter.getData().size() > 0) {
+        if (!sortAdapter.getData().isEmpty()) {
             for (MovieSort.SortData data : sortAdapter.getData()) {
                 if (data.id.equals("my0")) {
                     if (Hawk.get(HawkConfig.HOME_REC, 0) == 1 && absXml != null && absXml.videoList != null && absXml.videoList.size() > 0) {
@@ -613,6 +680,7 @@ public class HomeActivity extends BaseActivity {
     }
 
     private void exit() {
+        if (Hawk.get(HawkConfig.SET_AS_LAUNCHER, false)) return;
         if (System.currentTimeMillis() - mExitTime < 2000) {
             //这一段借鉴来自 q群老哥 IDCardWeb
             EventBus.getDefault().unregister(this);
@@ -625,7 +693,19 @@ public class HomeActivity extends BaseActivity {
             Toast.makeText(mContext, getString(R.string.hm_exit), Toast.LENGTH_SHORT).show();
         }
     }
+    protected void adjustHomeIcon(){
 
+        if (Hawk.get(HawkConfig.HOME_SEARCH_POSITION, true)) {
+            tvFind.setVisibility(View.VISIBLE);
+        } else {
+            tvFind.setVisibility(View.GONE);
+        }
+        if (Hawk.get(HawkConfig.HOME_MENU_POSITION, true)) {
+            tvMenu.setVisibility(View.VISIBLE);
+        } else {
+            tvMenu.setVisibility(View.GONE);
+        }
+    }
     @Override
     protected void onResume() {
         super.onResume();
@@ -641,16 +721,7 @@ public class HomeActivity extends BaseActivity {
         }
 
         // takagen99: Icon Placement
-        if (Hawk.get(HawkConfig.HOME_SEARCH_POSITION, true)) {
-            tvFind.setVisibility(View.VISIBLE);
-        } else {
-            tvFind.setVisibility(View.GONE);
-        }
-        if (Hawk.get(HawkConfig.HOME_MENU_POSITION, true)) {
-            tvMenu.setVisibility(View.VISIBLE);
-        } else {
-            tvMenu.setVisibility(View.GONE);
-        }
+        adjustHomeIcon();
         mHandler.post(mRunnable);
     }
 
@@ -746,11 +817,11 @@ public class HomeActivity extends BaseActivity {
         // Hide Top =======================================================
         if (hide && topHide == 0) {
             animatorSet.playTogether(ObjectAnimator.ofObject(viewObj, "marginTop", new IntEvaluator(),
-                            Integer.valueOf(AutoSizeUtils.mm2px(this.mContext, 20.0f)),
-                            Integer.valueOf(AutoSizeUtils.mm2px(this.mContext, 0.0f))),
+                            AutoSizeUtils.mm2px(this.mContext, getRes().getDimension(R.dimen.vs_20)),
+                            AutoSizeUtils.mm2px(this.mContext, 0.0f)),
                     ObjectAnimator.ofObject(viewObj, "height", new IntEvaluator(),
-                            Integer.valueOf(AutoSizeUtils.mm2px(this.mContext, 50.0f)),
-                            Integer.valueOf(AutoSizeUtils.mm2px(this.mContext, 1.0f))),
+                            AutoSizeUtils.mm2px(this.mContext, getRes().getDimension(R.dimen.vs_50)),
+                            AutoSizeUtils.mm2px(this.mContext, 1.0f)),
                     ObjectAnimator.ofFloat(this.topLayout, "alpha", 1.0f, 0.0f));
             animatorSet.setDuration(250);
             animatorSet.start();
@@ -765,11 +836,11 @@ public class HomeActivity extends BaseActivity {
         // Show Top =======================================================
         if (!hide && topHide == 1) {
             animatorSet.playTogether(ObjectAnimator.ofObject(viewObj, "marginTop", new IntEvaluator(),
-                            Integer.valueOf(AutoSizeUtils.mm2px(this.mContext, 0.0f)),
-                            Integer.valueOf(AutoSizeUtils.mm2px(this.mContext, 20.0f))),
+                            AutoSizeUtils.mm2px(this.mContext, 0.0f),
+                            AutoSizeUtils.mm2px(this.mContext, getRes().getDimension(R.dimen.vs_20))),
                     ObjectAnimator.ofObject(viewObj, "height", new IntEvaluator(),
-                            Integer.valueOf(AutoSizeUtils.mm2px(this.mContext, 1.0f)),
-                            Integer.valueOf(AutoSizeUtils.mm2px(this.mContext, 50.0f))),
+                            AutoSizeUtils.mm2px(this.mContext, 1.0f),
+                            AutoSizeUtils.mm2px(this.mContext, getRes().getDimension(R.dimen.vs_50))),
                     ObjectAnimator.ofFloat(this.topLayout, "alpha", 0.0f, 1.0f));
             animatorSet.setDuration(250);
             animatorSet.start();
@@ -804,11 +875,29 @@ public class HomeActivity extends BaseActivity {
             if (spanCount <= 1) spanCount = 1;
             if (spanCount >= 3) spanCount = 3;
 
+            TextView dialogTitle = dialog.findViewById(R.id.title);
+
+            dialogTitle.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Hawk.put(HawkConfig.DEFAULT_ORIENTATION, ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
+//                    Toast.makeText(HomeActivity.this, "sensor_land", Toast.LENGTH_SHORT).show();
+                }
+            });
+            dialogTitle.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    Hawk.put(HawkConfig.DEFAULT_ORIENTATION, ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+                    Toast.makeText(HomeActivity.this, "unspecified", Toast.LENGTH_SHORT).show();
+                    return false;
+                }
+            });
+
             TvRecyclerView tvRecyclerView = dialog.findViewById(R.id.list);
-            tvRecyclerView.setLayoutManager(new V7GridLayoutManager(dialog.getContext(), spanCount));
+            tvRecyclerView.setLayoutManager(new V7GridLayoutManager(dialog.getContext(), isPortrait() ? 2 : spanCount));
             ConstraintLayout cl_root = dialog.findViewById(R.id.cl_root);
             ViewGroup.LayoutParams clp = cl_root.getLayoutParams();
-            if (spanCount != 1) {
+            if (spanCount != 1 && !isPortrait()) {
                 clp.width = AutoSizeUtils.mm2px(dialog.getContext(), 400 + 260 * (spanCount - 1));
             }
 
@@ -860,14 +949,17 @@ public class HomeActivity extends BaseActivity {
         intent.putExtras(bundle);
         HomeActivity.this.startActivity(intent);
     }
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        boolean isPortrait = newConfig.orientation == Configuration.ORIENTATION_PORTRAIT;
 
-//    public void onClick(View v) {
-//        FastClickCheckUtil.check(v);
-//        if (v.getId() == R.id.tvFind) {
-//            jumpActivity(SearchActivity.class);
-//        } else if (v.getId() == R.id.tvMenu) {
-//            jumpActivity(SettingActivity.class);
-//        }
-//    }
+        if (isPortrait) {
+            tvFind.setVisibility(View.VISIBLE);
+            tvMenu.setVisibility(View.VISIBLE);
+        } else {
+            adjustHomeIcon();
+        }
+    }
 
 }

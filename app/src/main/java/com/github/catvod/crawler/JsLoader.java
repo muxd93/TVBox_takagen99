@@ -2,10 +2,8 @@ package com.github.catvod.crawler;
 
 
 import com.github.tvbox.osc.base.App;
-
-import com.github.tvbox.osc.util.LOG;
+import com.github.tvbox.osc.util.LogUtil;
 import com.github.tvbox.osc.util.MD5;
-
 import com.github.tvbox.osc.util.js.JsSpider;
 import com.lzy.okgo.OkGo;
 
@@ -13,7 +11,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -130,7 +127,7 @@ public class JsLoader {
             return sp;
         } catch (Throwable th) {
             th.printStackTrace();
-            LOG.e("QuJS", th);
+            LogUtil.e("QuJS", th);
         }
         return new SpiderNull();
     }
@@ -142,7 +139,7 @@ public class JsLoader {
                 return proxyFun.proxyLocal(params);
             }
         } catch (Throwable th) {
-            LOG.e("proxyInvoke", th);
+            LogUtil.e("proxyInvoke", th);
         }
         return null;
     }

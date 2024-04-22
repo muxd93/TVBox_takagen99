@@ -1,11 +1,14 @@
 package com.github.tvbox.osc.ui.fragment;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.BounceInterpolator;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.github.tvbox.osc.R;
@@ -15,7 +18,16 @@ import com.github.tvbox.osc.bean.Movie;
 import com.github.tvbox.osc.bean.VodInfo;
 import com.github.tvbox.osc.cache.RoomDataManger;
 import com.github.tvbox.osc.event.ServerEvent;
-import com.github.tvbox.osc.ui.activity.*;
+import com.github.tvbox.osc.ui.activity.CollectActivity;
+import com.github.tvbox.osc.ui.activity.DetailActivity;
+import com.github.tvbox.osc.ui.activity.DriveActivity;
+import com.github.tvbox.osc.ui.activity.FastSearchActivity;
+import com.github.tvbox.osc.ui.activity.HistoryActivity;
+import com.github.tvbox.osc.ui.activity.HomeActivity;
+import com.github.tvbox.osc.ui.activity.LivePlayActivity;
+import com.github.tvbox.osc.ui.activity.PushActivity;
+import com.github.tvbox.osc.ui.activity.SearchActivity;
+import com.github.tvbox.osc.ui.activity.SettingActivity;
 import com.github.tvbox.osc.ui.adapter.HomeHotVodAdapter;
 import com.github.tvbox.osc.util.FastClickCheckUtil;
 import com.github.tvbox.osc.util.HawkConfig;
@@ -70,10 +82,8 @@ public class UserFragment extends BaseLazyFragment implements View.OnClickListen
         return this;
     }
 
-    @Override
-    public void onFragmentResume() {
+    protected void adjustHomeIcon(){
 
-        // takagen99: Initialize Icon Placement
         if (!Hawk.get(HawkConfig.HOME_SEARCH_POSITION, true)) {
             tvSearch.setVisibility(View.VISIBLE);
         } else {
@@ -84,6 +94,12 @@ public class UserFragment extends BaseLazyFragment implements View.OnClickListen
         } else {
             tvSetting.setVisibility(View.GONE);
         }
+    }
+    @Override
+    public void onFragmentResume() {
+
+        // takagen99: Initialize Icon Placement
+        adjustHomeIcon();
 
         super.onFragmentResume();
         if (Hawk.get(HawkConfig.HOME_REC, 0) == 2) {
@@ -135,7 +151,8 @@ public class UserFragment extends BaseLazyFragment implements View.OnClickListen
         tvHotListForLine = findViewById(R.id.tvHotListForLine);
         tvHotListForGrid = findViewById(R.id.tvHotListForGrid);
         tvHotListForGrid.setHasFixedSize(true);
-        tvHotListForGrid.setLayoutManager(new V7GridLayoutManager(this.mContext, 5));
+        mGridViewLayoutMgr = new V7GridLayoutManager(this.mContext, isPortrait() ? 3 : 5);
+        tvHotListForGrid.setLayoutManager(mGridViewLayoutMgr);
         homeHotVodAdapter = new HomeHotVodAdapter();
         homeHotVodAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
@@ -255,11 +272,15 @@ public class UserFragment extends BaseLazyFragment implements View.OnClickListen
         if (Hawk.get(HawkConfig.HOME_REC, 0) == 1) {
             if (homeSourceRec != null) {
                 adapter.setNewData(homeSourceRec);
+                return;
             }
-            return;
         } else if (Hawk.get(HawkConfig.HOME_REC, 0) == 2) {
             return;
         }
+        setDouBanData(adapter);
+    }
+
+    private void setDouBanData(HomeHotVodAdapter adapter) {
         try {
             Calendar cal = Calendar.getInstance();
             int year = cal.get(Calendar.YEAR);
@@ -363,5 +384,22 @@ public class UserFragment extends BaseLazyFragment implements View.OnClickListen
     public void onDestroy() {
         super.onDestroy();
         EventBus.getDefault().unregister(this);
+    }
+
+    private V7GridLayoutManager mGridViewLayoutMgr = null;
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        boolean isPortrait = newConfig.orientation == Configuration.ORIENTATION_PORTRAIT;
+        mGridViewLayoutMgr.setSpanCount(isPortrait ? 3 : 5);
+        tvHotListForGrid.setLayoutManager(mGridViewLayoutMgr);
+
+        if (isPortrait) {
+            tvSearch.setVisibility(View.GONE);
+            tvSetting.setVisibility(View.GONE);
+        } else {
+            adjustHomeIcon();
+        }
+
     }
 }

@@ -3,6 +3,7 @@ package com.github.tvbox.osc.base;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.BitmapFactory;
@@ -17,6 +18,7 @@ import android.view.WindowManager;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.PermissionChecker;
+
 import com.blankj.utilcode.util.ActivityUtils;
 import com.github.tvbox.osc.R;
 import com.github.tvbox.osc.callback.EmptyCallback;
@@ -25,6 +27,7 @@ import com.github.tvbox.osc.ui.activity.DetailActivity;
 import com.github.tvbox.osc.util.AppManager;
 import com.github.tvbox.osc.util.HawkConfig;
 import com.github.tvbox.osc.util.LocaleHelper;
+import com.github.tvbox.osc.util.LogUtil;
 import com.kingja.loadsir.callback.Callback;
 import com.kingja.loadsir.core.LoadService;
 import com.kingja.loadsir.core.LoadSir;
@@ -79,6 +82,10 @@ public abstract class BaseActivity extends AppCompatActivity implements CustomAd
         } catch (Throwable th) {
             th.printStackTrace();
         }
+//        if(BuildConfig.DYNAMIC_ORIENTATION_PORTRAIT) {
+            //TODO
+            //setRequestedOrientation(Hawk.get(HawkConfig.DEFAULT_ORIENTATION, 6));
+//        }
 
         // takagen99 : Set Theme Color
         if (Hawk.get(HawkConfig.THEME_SELECT, 0) == 0) {
@@ -279,7 +286,11 @@ public abstract class BaseActivity extends AppCompatActivity implements CustomAd
     public boolean isBaseOnWidth() {
         return !(screenRatio >= 4.0f);
     }
-
+    public boolean isPortrait() {
+        int ori = getResources().getConfiguration().orientation;
+        LogUtil.i("Current orientation: " + (ori == 1 ? "portrait" : "landscape"));
+        return ori == Configuration.ORIENTATION_PORTRAIT;
+    }
     public boolean supportsPiPMode() {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O;
     }

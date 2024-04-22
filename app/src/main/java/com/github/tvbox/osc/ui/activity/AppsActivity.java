@@ -87,7 +87,7 @@ public class AppsActivity extends BaseActivity {
         tvDelete = findViewById(R.id.tvDelete);
         mGridViewApps = findViewById(R.id.mGridViewApps);
         mGridViewApps.setHasFixedSize(true);
-        mGridViewApps.setLayoutManager(new V7GridLayoutManager(this.mContext, isBaseOnWidth() ? 6 : 7));
+        mGridViewApps.setLayoutManager(new V7GridLayoutManager(this.mContext, isPortrait() ? 3 : 7));
         appsAdapter = new AppsAdapter();
         mGridViewApps.setAdapter(appsAdapter);
         tvDelete.setOnClickListener(new View.OnClickListener() {

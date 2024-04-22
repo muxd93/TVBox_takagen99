@@ -1,20 +1,24 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
+//apply plugin: 'com.google.devtools.ksp'
 
 def static buildTime() {
     return new Date().format("yyyyMMdd_HHmm", TimeZone.getTimeZone("GMT+08:00"))
 }
 
+def updatesFile = file('../apk/muxd93-Release.log')
+def updatesContent = updatesFile.exists() ? updatesFile.text : '修复一些问题.'
+
 android {
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
-        applicationId 'com.github.tvbox.osc.tk'
+        applicationId 'com.github.tvbox.osc.xd'
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0.".concat(buildTime())
+        versionName "XD.".concat(buildTime())
         multiDexEnabled true
         //设置room的Schema的位置
         javaCompileOptions {
@@ -22,25 +26,69 @@ android {
                 arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
             }
         }
-    }
 
+    }
     packagingOptions {
-        exclude 'META-INF/DEPENDENCIES'
+        jniLibs {
+            useLegacyPackaging true
+        }
+        resources {
+            excludes += ['META-INF/DEPENDENCIES']
+        }
     }
 
     buildTypes {
-        release {
+        all {
+            resValue "string", "mn_Version", "XD_".concat(buildTime())
+            resValue "string", "dia_update_desc", "更新日志：\n".concat("\"${updatesContent}\"")
+        }
+        debug {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            minifyEnabled true
+            minifyEnabled false
+            shrinkResources false
+
+            buildConfigField("boolean", "LOG_DEBUG", "true")
+            buildConfigField("boolean", "DYNAMIC_ORIENTATION_PORTRAIT", "true")
+            manifestPlaceholders = [customScreenOrientation: "unspecified", alikey: "licensekey"]
+            matchingFallbacks = ['debug']
             ndk {
                 abiFilters 'armeabi-v7a'
             }
+            matchingFallbacks = ['release']
+        }
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            shrinkResources true
+
+            buildConfigField("boolean", "LOG_DEBUG", "false")
+            buildConfigField("boolean", "DYNAMIC_ORIENTATION_PORTRAIT", "false")
+            manifestPlaceholders = [customScreenOrientation: "sensorLandscape", alikey: "licensekey"]
+            matchingFallbacks = ['release']
+            ndk {
+                abiFilters 'armeabi-v7a'
+            }
+            matchingFallbacks = ['release']
+        }
+        releaseCommon {
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            shrinkResources true
+
+            buildConfigField("boolean", "LOG_DEBUG", "false")
+            buildConfigField("boolean", "DYNAMIC_ORIENTATION_PORTRAIT", "true")
+            manifestPlaceholders = [customScreenOrientation: "unspecified", alikey: "licensekey"]
+            matchingFallbacks = ['release']
+            ndk {
+                abiFilters 'armeabi-v7a'
+            }
+            matchingFallbacks = ['release']
         }
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     lintOptions {
@@ -50,6 +98,16 @@ android {
 
     buildFeatures {
         dataBinding = true
+        buildConfig true
+    }
+    namespace 'com.github.tvbox.osc'
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    lint {
+        disable 'UnsafeOptInUsageError'
     }
 
     lint {
@@ -59,10 +117,10 @@ android {
 
 dependencies {
     constraints {
-        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0") {
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version") {
             because("kotlin-stdlib-jdk7 is now a part of kotlin-stdlib")
         }
-        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0") {
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version") {
             because("kotlin-stdlib-jdk8 is now a part of kotlin-stdlib")
         }
     }
@@ -70,29 +128,30 @@ dependencies {
     implementation 'org.conscrypt:conscrypt-android:2.5.2'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     // for WebDAV
-    implementation('com.github.thegrizzlylabs:sardine-android:0.8') {
+    implementation('com.github.thegrizzlylabs:sardine-android:0.9') {
         exclude group: 'com.squareup.okhttp3'
     }
     implementation 'com.github.NanoHttpd.nanohttpd:nanohttpd:nanohttpd-project-2.3.1'
     implementation 'com.github.NanoHttpd.nanohttpd:nanohttpd:nanohttpd-websocket-2.3.1'
-    implementation 'com.google.zxing:core:3.5.1'
+    implementation 'com.google.zxing:core:3.5.3'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation 'androidx.recyclerview:recyclerview:1.3.2'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation files('libs\\thunder.jar')
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation files('libs/thunder.jar', 'libs/pyramid.aar')
     implementation project(path: ':quickjs')
 
-    kapt 'androidx.room:room-compiler:2.5.1'
+    kapt 'androidx.room:room-compiler:2.6.1'
     implementation 'com.github.alidili:FlowLayout:v1.5'
-    implementation 'androidx.room:room-runtime:2.5.1'
+    implementation 'androidx.room:room-runtime:2.6.1'
     implementation 'androidx.multidex:multidex:2.0.1'
-    implementation 'com.squareup.okhttp3:okhttp:3.12.11'
-    implementation 'com.squareup.okio:okio:3.3.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.12'
+    implementation 'com.squareup.okio:okio:3.8.0'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.49-androidx'
     implementation 'com.kingja.loadsir:loadsir:1.3.8'
     implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.github.bumptech.glide:glide:4.16.0'
     kapt 'com.github.bumptech.glide:compiler:4.16.0'
     implementation 'me.jessyan:autosize:1.2.1'
@@ -102,32 +161,32 @@ dependencies {
     implementation 'org.greenrobot:eventbus:3.3.1'
     implementation 'com.orhanobut:hawk:2.0.1'
     implementation 'net.sourceforge.streamsupport:android-retrofuture:1.7.4'
-//    implementation 'androidx.annotation:annotation:1.6.0'
-    implementation "androidx.media3:media3-exoplayer:1.1.1"
-    implementation "androidx.media3:media3-ui:1.1.1"
-    implementation "androidx.media3:media3-datasource:1.1.1"
-    implementation "androidx.media3:media3-exoplayer-dash:1.1.1"
-    implementation "androidx.media3:media3-exoplayer-hls:1.1.1"
-    implementation "androidx.media3:media3-exoplayer-rtsp:1.1.1"
-    implementation "androidx.media3:media3-datasource-rtmp:1.1.1"
-    implementation 'androidx.media3:media3-common:1.1.1'
+    //implementation 'androidx.annotation:annotation:1.7.1'
+    implementation "androidx.media3:media3-exoplayer:$media3_version"
+    implementation "androidx.media3:media3-ui:$media3_version"
+    implementation "androidx.media3:media3-exoplayer-dash:$media3_version"
+    implementation "androidx.media3:media3-exoplayer-hls:$media3_version"
+    implementation "androidx.media3:media3-exoplayer-rtsp:$media3_version"
+    implementation "androidx.media3:media3-datasource-rtmp:$media3_version"
+    implementation "androidx.media3:media3-common:$media3_version"
     implementation "com.github.anilbeesetti.nextlib:nextlib-media3ext:0.5.0" // To add media3 software decoders and extensions
     //implementation "com.github.anilbeesetti.nextlib:nextlib-mediainfo:0.5.0" // To get media info through ffmpeg
 
-
-    implementation "com.aliyun.sdk.android:AliyunPlayer:5.5.2.0-full"
-    implementation 'com.alivc.conan:AlivcConan:0.9.5'
+    implementation "com.aliyun.sdk.android:AliyunPlayer:6.10.0-full"
+//    implementation 'com.alivc.conan:AlivcConan:0.9.5'
     implementation 'xyz.doikki.android.dkplayer:dkplayer-ui:3.3.7'
     implementation 'xyz.doikki.android.dkplayer:videocache:3.3.7'
+    implementation 'com.github.xuexiangjys:XUpdate:2.1.4' //在线升级
+    implementation 'com.github.xuexiangjys.XUpdateAPI:xupdate-easy:1.0.1'  //在线升级
 
     implementation('org.xwalk:xwalk_shared_library:23.53.589.4') {
         exclude group: 'com.android.support'
     }
     implementation 'com.lzy.net:okgo:3.0.4'
     implementation 'com.owen:tv-recyclerview:3.0.0'
-    implementation 'com.blankj:utilcodex:1.31.0'
+    implementation 'com.blankj:utilcodex:1.31.1'
     implementation 'com.github.getActivity:XXPermissions:18.5'
-    implementation 'org.jsoup:jsoup:1.16.1'
+    implementation 'org.jsoup:jsoup:1.17.2'
     implementation 'com.github.hedzr:android-file-chooser:v1.2.0-final'
     implementation 'commons-io:commons-io:2.11.0'
     implementation 'com.googlecode.juniversalchardet:juniversalchardet:1.0.3'

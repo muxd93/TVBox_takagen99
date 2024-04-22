@@ -45,6 +45,10 @@ public class InputRequestProcess implements RequestProcess {
                             mDataReceiver.onApiReceived(params.get("url").trim());
                             break;
                         }
+                        case "store": {
+                            mDataReceiver.onStoreReceived(params.get("url").trim());
+                            break;
+                        }
                         case "live": {
                             mDataReceiver.onLiveReceived(params.get("url").trim());
                             break;
@@ -55,6 +59,10 @@ public class InputRequestProcess implements RequestProcess {
                         }
                         case "proxys": {
                             mDataReceiver.onProxysReceived(params.get("url").trim());
+                            break;
+                        }
+                        case "proxy": {
+                            mDataReceiver.onProxyReceived(params.get("url").trim());
                             break;
                         }
                         case "push": {

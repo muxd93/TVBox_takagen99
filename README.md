@@ -1,7 +1,17 @@
 # Box
+#### 参考项目
+#### https://github.com/CatVodTVOfficial/TVBoxOSC
+#### https://github.com/takagen99/Box
+#### https://github.com/q215613905/TVBoxOS
+#### https://github.com/mlabalabala/box
+#### https://github.com/chengxue2020/takagen99/
 
-=== Source Code - Editing the app default settings ===
+TVBox 缝合怪，自用
+默认源配置：
+app\src\main\res\values\config.xml
 /src/main/java/com/github/tvbox/osc/base/App.java
+
+参考：\app\src\main\java\com\github\tvbox\osc\util\HawkConfig.java
 
     private void initParams() {
 

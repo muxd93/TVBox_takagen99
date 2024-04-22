@@ -2,11 +2,12 @@
 <resources>
     <string name="app_name">TVBox</string>
     <string name="app_home">首页</string>
-    <string name="app_source"></string>
 
     // Home Page //
-    <string name="hm_ok">加载成功</string>
-    <string name="hm_notok">加载失败</string>
+    <string name="hm_ok">加载jar包成功</string>
+    <string name="hm_notok">加载jar包失败</string>
+    <string name="hm_notok_try">请换源重试</string>
+    <string name="empty_source">可切换源地址为空，请前往设置界面配置哦</string>
     <string name="hm_retry">重试</string>
     <string name="hm_cancel">取消</string>
     <string name="hm_exit">再按一次返回键退出应用</string>
@@ -32,19 +33,20 @@
     <string name="det_sort">倒序</string>
     <string name="det_push">推送</string>
     <string name="det_fav">收藏</string>
+    <string name="det_download">下载</string>
     <string name="det_fav_add">已添加收藏</string>
     <string name="det_fav_del">已取消收藏</string>
     <string name="det_fav_star">★ 收藏</string>
     <string name="det_fav_unstar">☆ 收藏</string>
     <string name="det_url">播放地址已复制</string>
-    <string name="det_source"></string>
+    <string name="det_source">来源</string>
     <string name="det_year">年份</string>
     <string name="det_area">地区</string>
     <string name="det_lang">语言</string>
     <string name="det_type">类型</string>
     <string name="det_actor">演员</string>
     <string name="det_dir">导演</string>
-    <string name="det_des"></string>
+    <string name="det_des">简介</string>
     <string name="det_desc">简介</string>
 
     // Settings Menu Page //
@@ -62,9 +64,10 @@
     <string name="mn_play_decode">IJK解码</string>
     <string name="mn_search">搜索展示</string>
     <string name="mn_ratio">画面缩放</string>
-    <string name="mn_bgplay">后台</string>
+    <string name="mn_bgplay">后台播放</string>
     <string name="mn_preview">窗口预览</string>
     <string name="mn_webview">嗅探Webview</string>
+    <string name="mn_searchTVBox">搜索附近TVBox</string>
     <string name="mn_render">渲染方式</string>
     <string name="mn_backup">数据备份还原</string>
     <string name="mn_dns">安全DNS</string>
@@ -96,6 +99,8 @@
     <string name="dia_theme">请选择主题</string>
     <string name="dia_confirm">确定全部删除 ?</string>
     <string name="dia_reset">确定重置将清除配置</string>
+    <string name="dia_reset_done">重置成功</string>
+    <string name="dia_proxy_epg">GITHUB代理历史列表</string>
 
     // Settings Backup Restore Page //
     <string name="set_bkup_ok">备份成功!</string>
@@ -122,6 +127,7 @@
     <string name="act_hist_sel">确定键删除当前选中记录</string>
     <string name="act_hist_rm">删除记录</string>
     <string name="act_live_play_empty_live_url">直播地址未配置，请前往设置界面配置哦</string>
+    <string name="act_live_play_empty_channel_load_local">频道列表为空，尝试加载应用默认频道</string>
     <string name="act_live_play_empty_channel">频道列表为空</string>
     <string name="act_live_play_network_error">直播地址网络请求失败</string>
     <string name="act_search">搜索</string>
@@ -134,6 +140,7 @@
     <string name="act_home">首页</string>
     <string name="act_player">播放器</string>
     <string name="act_system">系统</string>
+    <string name="act_no_EPG_information">暂无节目信息</string>
 
     // Search Page //
     <string name="search_input">输入内容不能为空</string>
@@ -185,6 +192,10 @@
     <string name="exo_track_bitrate">%1$.2f Mbps</string>
     <string name="exo_item_list">%1$s，%2$s</string>
 
+    // About
+    <string name="version_title">版本 </string>
+<!--    <string name="mn_Version">20240207-2309</string>-->
+    <string name="dia_about">\n\n本软件只提供聚合展示功能，所有资源来自网上, 软件不参与任何制作, 上传, 储存, 下载等内容. 软件仅供学习参考, 请于安装后24小时内删除。\n\n打包分发请保留出处\nhttps://github.com/CatVodTVOfficial/TVBoxOSC</string>
     <string name="sub_size">大小</string>
     <string name="sub_delay">偏移</string>
     <string name="sub_style">样式</string>

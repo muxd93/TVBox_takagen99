@@ -303,5 +303,10 @@ public abstract class BaseLazyFragment extends Fragment implements CustomAdapt {
         return true;
     }
 
+    public boolean isPortrait() {
+        if (getActivity() != null && getActivity() instanceof BaseActivity)
+            return ((BaseActivity) getActivity()).isPortrait();
+        return true;
+    }
 
 }

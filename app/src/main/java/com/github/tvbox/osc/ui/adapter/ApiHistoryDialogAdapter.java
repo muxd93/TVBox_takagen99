@@ -57,8 +57,10 @@ public class ApiHistoryDialogAdapter extends ListAdapter<String, ApiHistoryDialo
     public void setData(List<String> newData, int defaultSelect) {
         data.clear();
         data.addAll(newData);
-        select = data.get(defaultSelect);
-        notifyDataSetChanged();
+        if (!newData.isEmpty()){
+            select = data.get(defaultSelect);
+            notifyDataSetChanged();
+        }
     }
 
     @Override
@@ -82,8 +84,8 @@ public class ApiHistoryDialogAdapter extends ListAdapter<String, ApiHistoryDialo
         holder.itemView.findViewById(R.id.tvName).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (select.equals(value))
-                    return;
+                //if (select.equals(value))
+                //    return;
                 notifyItemChanged(data.indexOf(select));
                 select = value;
                 notifyItemChanged(data.indexOf(value));

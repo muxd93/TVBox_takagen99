@@ -29,7 +29,6 @@
             android:shadowDy="0"
             android:shadowRadius="5"
             android:singleLine="true"
-            android:text="11111111"
             android:textColor="@color/color_FFFFFF"
             android:textSize="@dimen/ts_26"
             android:textStyle="bold"

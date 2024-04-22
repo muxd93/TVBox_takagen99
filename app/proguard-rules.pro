@@ -5,9 +5,10 @@
 #############################################
 -optimizationpasses 5
 -dontusemixedcaseclassnames
--dontskipnonpubliclibraryclasses
--dontskipnonpubliclibraryclassmembers
--dontpreverify
+#-dontskipnonpubliclibraryclasses
+#-dontskipnonpubliclibraryclassmembers
+#-dontpreverify
+#-dontobfuscate
 -verbose
 -printmapping proguardMapping.txt
 -optimizations !code/simplification/cast,!field/*,!class/merging/*
@@ -25,7 +26,7 @@
 -repackageclasses androidx.base
 
 # 把混淆类中的方法名也混淆了
--useuniqueclassmembernames
+#-useuniqueclassmembernames
 #############################################
 #
 # Android开发中一些需要保留的公共部分
@@ -42,6 +43,8 @@
 -keep public class * extends android.app.backup.BackupAgentHelper
 -keep public class * extends android.preference.Preference
 -keep public class * extends android.view.View
+-keep public class com.android.vending.licensing.ILicensingService.**
+-keep class com.github.tvbox.osc.update.pojo.** { *; }
 
 # 保留support下的所有类及其内部类
 -keep class android.support.** {*;}
@@ -56,7 +59,7 @@
 -dontwarn androidx.**
 -keep class androidx.** { *; }
 -keep interface androidx.** { *; }
-#-keep public class * extends androidx.**
+-keep public class * extends androidx.**
 
 -keep class org.xmlpull.v1.** {*;}
 
@@ -189,6 +192,8 @@
 -dontwarn com.google.androidx.media3.exoplayer.**
 -keep class androidx.media3.exoplayer.** { *; }
 -dontwarn androidx.media3.exoplayer.**
+-keep class com.google.android.exoplayer2.** { *; }
+-dontwarn com.google.android.exoplayer2.**
 
 # sardine webdav
 -keep class com.thegrizzlylabs.sardineandroid.** { *; }
@@ -203,8 +208,9 @@
 -dontwarn jcifs.**
 
 # 实体类
-#-keep class com.github.tvbox.osc.bean.** { *; }
--keep class com.github.tvbox.osc.ui.fragment.homes.**{*;}
+-keep class com.github.tvbox.osc.bean.** { *; }
+-keep class com.github.tvbox.osc.viewmodel.** { *; }
+-keep class com.github.tvbox.osc.ui.fragment.**{*;}
 #CardView
 -keep class com.github.tvbox.osc.ui.tv.widget.card.**{*;}
 #ViewObj
@@ -214,7 +220,7 @@
 
 -keep class com.github.catvod.crawler.*{*;}
 
-# magnet：解决模拟器推送 磁力链接 闪退
+# magnet：迅雷下载模块,解决模拟器推送 磁力链接 闪退
 -keep class com.xunlei.downloadlib.** {*;}
 
 # quickjs引擎
@@ -304,3 +310,27 @@
 -dontwarn org.joda.time.format.ISODateTimeFormat
 -dontwarn org.kxml2.io.KXmlParser
 -dontwarn org.xmlpull.mxp1.MXParser
+
+-keep class com.xuexiang.xupdate.entity.** { *; }
+-dontwarn com.arialyy.aria.**
+-keep class com.arialyy.aria.**{*;}
+-keep class **$$DownloadListenerProxy{ *; }
+-keep class **$$UploadListenerProxy{ *; }
+-keep class **$$DownloadGroupListenerProxy{ *; }
+-keep class **$$DGSubListenerProxy{ *; }
+-keepclasseswithmembernames class * {
+    @Download.* <methods>;
+    @Upload.* <methods>;
+    @DownloadGroup.* <methods>;
+}
+
+#添加PY支持
+-keep public class com.undcover.freedom.pyramid.** { *; }
+-dontwarn com.undcover.freedom.pyramid.**
+-keep public class com.chaquo.python.** { *; }
+-dontwarn com.chaquo.python.**
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}

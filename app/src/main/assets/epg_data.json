@@ -3,34 +3,42 @@
     {
       "tvid": "1",
       "epgid": "CCTV1",
-      "name": "CCTV-1综合,CCTV-1,CCTV1,CCTV1综合",
+      "name": "CCTV-1综合,CCTV-1 综合,CCTV-1,CCTV1,CCTV1综合",
       "status": "1",
       "note": "CCTV-1综合",
-      "logo": "https://live.fanmingming.com/tv/CCTV1.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV1.png",
+      "channel_id": "13842",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV1.png"
     },
     {
       "tvid": "2",
       "epgid": "CCTV2",
-      "name": "CCTV-2财经,CCTV-2,CCTV2,CCTV2财经",
+      "name": "CCTV-2财经,CCTV-2 财经,CCTV-2,CCTV2,CCTV2财经",
       "status": "1",
       "note": "CCTV-2财经",
-      "logo": "https://live.fanmingming.com/tv/CCTV2.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV2.png",
+      "channel_id": "13843",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV2.png"
     },
     {
       "tvid": "3",
       "epgid": "CCTV3",
-      "name": "CCTV-3综艺,CCTV-3,CCTV3,CCTV3综艺",
+      "name": "CCTV-3综艺,CCTV-3 综艺,CCTV-3,CCTV3,CCTV3综艺",
       "status": "1",
       "note": "CCTV-3综艺",
-      "logo": "https://live.fanmingming.com/tv/CCTV3.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV3.png",
+      "channel_id": "13844",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV3.png"
     },
     {
       "tvid": "4",
       "epgid": "CCTV4",
-      "name": "CCTV-4中文国际,CCTV-4,CCTV4,CCTV4中文国际,",
+      "name": "CCTV-4中文国际,CCTV-4 中文国际,CCTV-4,CCTV4,CCTV4中文国际,,CCTV-4国际,CCTV4国际,CCTV-4国际亚洲",
       "status": "1",
       "note": "CCTV-4中文国际",
-      "logo": "https://live.fanmingming.com/tv/CCTV4.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV4.png",
+      "channel_id": "13845",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV4.png"
     },
     {
       "tvid": "5",
@@ -38,7 +46,8 @@
       "name": "CCTV-4中文国际欧洲,CCTV-4欧洲,CCTV4欧洲,CCTV4中文国际欧洲,CCTV-4中文国际 欧洲",
       "status": "1",
       "note": "CCTV-4中文国际欧洲",
-      "logo": "https://live.fanmingming.com/tv/CCTV4欧洲.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV4欧洲.png",
+      "channel_id": "13863"
     },
     {
       "tvid": "6",
@@ -46,132 +55,162 @@
       "name": "CCTV-4中文国际美洲,CCTV-4美洲,CCTV4美洲,CCTV4中文国际美洲,CCTV-4中文国际 美洲",
       "status": "1",
       "note": "CCTV-4中文国际美洲",
-      "logo": "https://live.fanmingming.com/tv/CCTV4美洲.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV4美洲.png",
+      "channel_id": "13864"
     },
     {
       "tvid": "7",
       "epgid": "CCTV5",
-      "name": "CCTV-5体育,CCTV-5,CCTV5,CCTV5体育",
+      "name": "CCTV-5体育,CCTV-5 体育,CCTV-5,CCTV5,CCTV5体育,CCTV5plus",
       "status": "1",
       "note": "CCTV-5体育",
-      "logo": "https://live.fanmingming.com/tv/CCTV5.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV5.png",
+      "channel_id": "13846",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV5.png"
     },
     {
       "tvid": "8",
       "epgid": "CCTV5+",
-      "name": "CCTV-5+体育赛事,CCTV-5+,CCTV5+,CCTV5+体育赛事",
+      "name": "CCTV-5+体育赛事,CCTV-5+ 体育赛事,CCTV-5+,CCTV5+,CCTV5+体育赛事,CCTV5⁺体育赛事,CCTV5⁺,CCTV-5⁺,CCTV-5⁺体育赛事,CCTV-体育赛事",
       "status": "1",
       "note": "CCTV-5+体育赛事",
-      "logo": "https://live.fanmingming.com/tv/CCTV5+.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV5+.png",
+      "channel_id": "13847",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV5+.png"
     },
     {
       "tvid": "9",
       "epgid": "CCTV6",
-      "name": "CCTV-6电影,CCTV-6,CCTV6,CCTV6电影",
+      "name": "CCTV-6电影,CCTV-6 电影,CCTV-6,CCTV6,CCTV6电影",
       "status": "1",
       "note": "CCTV-6电影",
-      "logo": "https://live.fanmingming.com/tv/CCTV6.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV6.png",
+      "channel_id": "13848",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV6.png"
     },
     {
       "tvid": "10",
       "epgid": "CCTV7",
-      "name": "CCTV-7国防军事,CCTV-7,CCTV7,CCTV7国防军事",
+      "name": "CCTV-7国防军事,CCTV-7 国防军事,CCTV-7,CCTV7,CCTV7国防军事,CCTV-7国防,CCTV7国防,CCTV7-国防军事",
       "status": "1",
       "note": "CCTV-7国防军事",
-      "logo": "https://live.fanmingming.com/tv/CCTV7.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV7.png",
+      "channel_id": "13849",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV7.png"
     },
     {
       "tvid": "11",
       "epgid": "CCTV8",
-      "name": "CCTV-8电视剧,CCTV-8,CCTV8,CCTV8电视剧",
+      "name": "CCTV-8电视剧,CCTV-8 电视剧,CCTV-8,CCTV8,CCTV8电视剧,CCTV-8电视,CCTV8电视,CCTV8-电视剧",
       "status": "1",
       "note": "CCTV-8电视剧",
-      "logo": "https://live.fanmingming.com/tv/CCTV8.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV8.png",
+      "channel_id": "13850",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV8.png"
     },
     {
       "tvid": "12",
       "epgid": "CCTV9",
-      "name": "CCTV-9纪录,CCTV-9,CCTV9,CCTV9纪录",
+      "name": "CCTV-9纪录,CCTV-9 纪录,CCTV-9,CCTV9,CCTV9纪录,CCTV9-纪录",
       "status": "1",
       "note": "CCTV-9纪录",
-      "logo": "https://live.fanmingming.com/tv/CCTV9.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV9.png",
+      "channel_id": "13851",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV9.png"
     },
     {
       "tvid": "13",
       "epgid": "CCTV10",
-      "name": "CCTV-10科教,CCTV-10,CCTV10,CCTV10科教",
+      "name": "CCTV-10科教,CCTV-10 科教,CCTV-10,CCTV10,CCTV10科教",
       "status": "1",
       "note": "CCTV-10科教",
-      "logo": "https://live.fanmingming.com/tv/CCTV10.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV10.png",
+      "channel_id": "13852",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV10.png"
     },
     {
       "tvid": "14",
       "epgid": "CCTV11",
-      "name": "CCTV-11戏曲,CCTV-11,CCTV11,CCTV11戏曲",
+      "name": "CCTV-11戏曲,CCTV-11 戏曲,CCTV-11,CCTV11,CCTV11戏曲",
       "status": "1",
       "note": "CCTV-11戏曲",
-      "logo": "https://live.fanmingming.com/tv/CCTV11.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV11.png",
+      "channel_id": "13853",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV11.png"
     },
     {
       "tvid": "15",
       "epgid": "CCTV12",
-      "name": "CCTV-12社会与法,CCTV-12,CCTV12,CCTV12社会与法",
+      "name": "CCTV-12社会与法,CCTV-12 社会与法,CCTV-12,CCTV12,CCTV12社会与法,CCTV-12法制,CCTV12法制",
       "status": "1",
       "note": "CCTV-12社会与法",
-      "logo": "https://live.fanmingming.com/tv/CCTV12.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV12.png",
+      "channel_id": "13854",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV12.png"
     },
     {
       "tvid": "16",
       "epgid": "CCTV13",
-      "name": "CCTV-13新闻,CCTV-13,CCTV13,CCTV13新闻",
+      "name": "CCTV-13新闻,CCTV-13 新闻,CCTV-13,CCTV13,CCTV13新闻",
       "status": "1",
       "note": "CCTV-13新闻",
-      "logo": "https://live.fanmingming.com/tv/CCTV13.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV13.png",
+      "channel_id": "13855",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV13.png"
     },
     {
       "tvid": "17",
       "epgid": "CCTV14",
-      "name": "CCTV-14少儿,CCTV-14,CCTV14,CCTV14少儿",
+      "name": "CCTV-14少儿,CCTV-14 少儿,CCTV-14,CCTV14,CCTV14少儿",
       "status": "1",
       "note": "CCTV-14少儿",
-      "logo": "https://live.fanmingming.com/tv/CCTV14.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV14.png",
+      "channel_id": "13856",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV14.png"
     },
     {
       "tvid": "18",
       "epgid": "CCTV15",
-      "name": "CCTV-15音乐,CCTV-15,CCTV15,CCTV15音乐",
+      "name": "CCTV-15音乐,CCTV-15 音乐,CCTV-15,CCTV15,CCTV15音乐",
       "status": "1",
       "note": "CCTV-15音乐",
-      "logo": "https://live.fanmingming.com/tv/CCTV15.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV15.png",
+      "channel_id": "13857",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV15.png"
     },
     {
       "tvid": "19",
       "epgid": "CCTV16",
-      "name": "CCTV-16奥林匹克,CCTV-16,CCTV16,CCTV16奥林匹克",
+      "name": "CCTV-16奥林匹克,CCTV-16 奥林匹克,CCTV-16,CCTV16,CCTV16奥林匹克",
       "status": "1",
       "note": "CCTV-16奥林匹克",
-      "logo": "https://live.fanmingming.com/tv/CCTV16.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV16.png",
+      "channel_id": "14153"
     },
     {
       "tvid": "20",
       "epgid": "CCTV17",
-      "name": "CCTV-17农业农村,CCTV-17,CCTV17,CCTV17农业农村",
+      "name": "CCTV-17农业农村,CCTV-17 农业农村,CCTV-17,CCTV17,CCTV17农业农村,CCTV-17农业,CCTV17农业,CCTV-17农村农业,CCTV17农村农业",
       "status": "1",
       "note": "CCTV-17农业农村",
-      "logo": "https://live.fanmingming.com/tv/CCTV17.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV17.png",
+      "channel_id": "13858",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV17.png"
     },
     {
       "tvid": "21",
       "epgid": "CCTV4K",
-      "name": "CCTV4K,CCTV4K超高清,CCTV-4K,CCTV-4K超高清",
+      "name": "CCTV4K,CCTV4K超高清,CCTV4K 超高清,CCTV-4K,CCTV-4K超高清",
       "status": "1",
       "note": "CCTV-4K超高清",
-      "logo": "https://live.fanmingming.com/tv/CCTV4K.png"
+      "logo": "https://live.fanmingming.com/tv/CCTV4K.png",
+      "channel_id": "13929",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV4k.png"
     },
     {
       "tvid": "22",
       "epgid": "CCTV8K",
-      "name": "CCTV8K,CCTV8K超高清,CCTV-8K,CCTV-8K超高清",
+      "name": "CCTV8K,CCTV8K超高清,CCTV8K 超高清,CCTV-8K,CCTV-8K超高清",
       "status": "1",
       "note": "CCTV-8K超高清",
       "logo": "https://live.fanmingming.com/tv/CCTV8K.png"
@@ -182,12 +221,14 @@
       "name": "CGTN,CGTN英语",
       "status": "1",
       "note": "CGTN",
-      "logo": "https://live.fanmingming.com/tv/CGTN.png"
+      "logo": "https://live.fanmingming.com/tv/CGTN.png",
+      "channel_id": "13861",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/cgtn.png"
     },
     {
       "tvid": "24",
       "epgid": "CGTN俄语",
-      "name": "CGTNRussian,CGTN俄语",
+      "name": "CGTNRussian,CGTN Russian,CGTN俄语",
       "status": "1",
       "note": "CGTN俄语",
       "logo": "https://live.fanmingming.com/tv/CGTN俄语.png"
@@ -195,7 +236,7 @@
     {
       "tvid": "25",
       "epgid": "CGTN法语",
-      "name": "CGTNFrench,CGTN法语",
+      "name": "CGTNFrench,CGTN French,CGTN法语",
       "status": "1",
       "note": "CGTN法语",
       "logo": "https://live.fanmingming.com/tv/CGTN法语.png"
@@ -203,7 +244,7 @@
     {
       "tvid": "26",
       "epgid": "CGTN纪录",
-      "name": "CGTNDocumentary,CGTN纪录",
+      "name": "CGTNDocumentary,CGTN Documentary,CGTN纪录",
       "status": "1",
       "note": "CGTN纪录",
       "logo": "https://live.fanmingming.com/tv/CGTN纪录.png"
@@ -211,7 +252,7 @@
     {
       "tvid": "27",
       "epgid": "CGTN西语",
-      "name": "CGTNSpanish,CGTN西语,CGTN西班牙语",
+      "name": "CGTNSpanish,CGTN Spanish,CGTN西语,CGTN西班牙语",
       "status": "1",
       "note": "CGTN西语",
       "logo": "https://live.fanmingming.com/tv/CGTN西语.png"
@@ -219,7 +260,7 @@
     {
       "tvid": "28",
       "epgid": "CGTN阿语",
-      "name": "CGTNArabic,CGTN阿语,CGTN阿拉伯语",
+      "name": "CGTNArabic,CGTN Arabic,CGTN阿语,CGTN阿拉伯语",
       "status": "1",
       "note": "CGTN阿语",
       "logo": "https://live.fanmingming.com/tv/CGTN阿语.png"
@@ -227,82 +268,102 @@
     {
       "tvid": "29",
       "epgid": "电视指南",
-      "name": "电视指南,CCTV电视指南",
+      "name": "电视指南,CCTV电视指南,中数电视指南",
       "status": "1",
       "note": "电视指南",
-      "logo": "https://live.fanmingming.com/tv/电视指南.png"
+      "logo": "https://live.fanmingming.com/tv/电视指南.png",
+      "channel_id": "37581",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "30",
       "epgid": "风云剧场",
-      "name": "风云剧场,CCTV风云剧场",
+      "name": "风云剧场,风云.剧场,CCTV风云剧场,中数风云剧场",
       "status": "1",
       "note": "风云剧场",
-      "logo": "https://live.fanmingming.com/tv/风云剧场.png"
+      "logo": "https://live.fanmingming.com/tv/风云剧场.png",
+      "channel_id": "13978",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTBfengyun.png"
     },
     {
       "tvid": "31",
       "epgid": "风云足球",
-      "name": "风云足球,CCTV风云足球",
+      "name": "风云足球,风云.足球,CCTV风云足球,中数风云足球",
       "status": "1",
       "note": "风云足球",
-      "logo": "https://live.fanmingming.com/tv/风云足球.png"
+      "logo": "https://live.fanmingming.com/tv/风云足球.png",
+      "channel_id": "14216",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVfengyunzuqiu.png"
     },
     {
       "tvid": "32",
       "epgid": "风云音乐",
-      "name": "风云音乐,CCTV风云音乐",
+      "name": "风云音乐,风云.音乐,CCTV风云音乐,中数风云音乐",
       "status": "1",
       "note": "风云音乐",
-      "logo": "https://live.fanmingming.com/tv/风云音乐.png"
+      "logo": "https://live.fanmingming.com/tv/风云音乐.png",
+      "channel_id": "13976",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVfengyunyinyue.png"
     },
     {
       "tvid": "33",
       "epgid": "第一剧场",
-      "name": "第一剧场,CCTV第一剧场",
+      "name": "第一剧场,第一.剧场,CCTV第一剧场,中数第一剧场",
       "status": "1",
       "note": "第一剧场",
-      "logo": "https://live.fanmingming.com/tv/第一剧场.png"
+      "logo": "https://live.fanmingming.com/tv/第一剧场.png",
+      "channel_id": "13977",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVdiyijuchang.png"
     },
     {
       "tvid": "34",
       "epgid": "世界地理",
-      "name": "世界地理,CCTV世界地理",
+      "name": "世界地理,CCTV世界地理,中数世界地理",
       "status": "1",
       "note": "世界地理",
-      "logo": "https://live.fanmingming.com/tv/世界地理.png"
+      "logo": "https://live.fanmingming.com/tv/世界地理.png",
+      "channel_id": "14007",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVshijiedili.png"
     },
     {
       "tvid": "35",
       "epgid": "怀旧剧场",
-      "name": "怀旧剧场,CCTV怀旧剧场",
+      "name": "怀旧剧场,CCTV怀旧剧场,中数怀旧剧场",
       "status": "1",
       "note": "怀旧剧场",
-      "logo": "https://live.fanmingming.com/tv/怀旧剧场.png"
+      "logo": "https://live.fanmingming.com/tv/怀旧剧场.png",
+      "channel_id": "13980",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE7.jpg"
     },
     {
       "tvid": "36",
       "epgid": "兵器科技",
-      "name": "兵器科技,CCTV兵器科技",
+      "name": "兵器科技,CCTV兵器科技,中数兵器科技",
       "status": "1",
       "note": "兵器科技",
-      "logo": "https://live.fanmingming.com/tv/兵器科技.png"
+      "logo": "https://live.fanmingming.com/tv/兵器科技.png",
+      "channel_id": "13981",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE8.jpg"
     },
     {
       "tvid": "37",
       "epgid": "女性时尚",
-      "name": "女性时尚,CCTV女性时尚",
+      "name": "女性时尚,CCTV女性时尚,中数女性时尚",
       "status": "1",
       "note": "女性时尚",
-      "logo": "https://live.fanmingming.com/tv/女性时尚.png"
+      "logo": "https://live.fanmingming.com/tv/女性时尚.png",
+      "channel_id": "13982",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVnvxing.png"
     },
     {
       "tvid": "38",
       "epgid": "高尔夫网球",
-      "name": "高尔夫网球,CCTV高尔夫网球,高尔夫•网球,CCTV高尔夫•网球",
+      "name": "高尔夫网球,CCTV高尔夫网球,高尔夫•网球,CCTV高尔夫•网球,中数高尔夫网球",
       "status": "1",
       "note": "高尔夫网球",
-      "logo": "https://live.fanmingming.com/tv/高尔夫网球.png"
+      "logo": "https://live.fanmingming.com/tv/高尔夫网球.png",
+      "channel_id": "13986",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE13.jpg"
     },
     {
       "tvid": "39",
@@ -315,10 +376,12 @@
     {
       "tvid": "40",
       "epgid": "央视台球",
-      "name": "央视台球,CCTV央视台球",
+      "name": "央视台球,CCTV央视台球,中数CCTV央视台球",
       "status": "1",
       "note": "央视台球",
-      "logo": "https://live.fanmingming.com/tv/央视台球.png"
+      "logo": "https://live.fanmingming.com/tv/央视台球.png",
+      "channel_id": "13999",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVtaiqiu.png"
     },
     {
       "tvid": "41",
@@ -326,31 +389,38 @@
       "name": "卫生健康,CCTV卫生健康",
       "status": "1",
       "note": "卫生健康",
-      "logo": "https://live.fanmingming.com/tv/卫生健康.png"
+      "logo": "https://live.fanmingming.com/tv/卫生健康.png",
+      "channel_id": "37594"
     },
     {
       "tvid": "42",
       "epgid": "中学生",
-      "name": "中学生,中央新影中学生,CCTV中学生",
+      "name": "中学生,中央新影中学生,CCTV中学生,中数CCTV中学生频道",
       "status": "1",
       "note": "中学生",
-      "logo": "https://live.fanmingming.com/tv/中学生.png"
+      "logo": "https://live.fanmingming.com/tv/中学生.png",
+      "channel_id": "37597",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "43",
       "epgid": "老故事",
-      "name": "老故事,中央新影老故事,CCTV老故事",
+      "name": "老故事,中央新影老故事,CCTV老故事,中数CCTV老故事",
       "status": "1",
       "note": "老故事",
-      "logo": "https://live.fanmingming.com/tv/老故事.png"
+      "logo": "https://live.fanmingming.com/tv/老故事.png",
+      "channel_id": "14008",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVlaogushi.png"
     },
     {
       "tvid": "44",
       "epgid": "发现之旅",
-      "name": "发现之旅,中央新影发现之旅,CCTV发现之旅",
+      "name": "发现之旅,中央新影发现之旅,CCTV发现之旅,中数发现之旅",
       "status": "1",
       "note": "发现之旅",
-      "logo": "https://live.fanmingming.com/tv/发现之旅.png"
+      "logo": "https://live.fanmingming.com/tv/发现之旅.png",
+      "channel_id": "14002",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVfaxianzhilv.png"
     },
     {
       "tvid": "45",
@@ -358,7 +428,9 @@
       "name": "三沙卫视",
       "status": "1",
       "note": "三沙卫视",
-      "logo": "https://live.fanmingming.com/tv/三沙卫视.png"
+      "logo": "https://live.fanmingming.com/tv/三沙卫视.png",
+      "channel_id": "13910",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/sansha.png"
     },
     {
       "tvid": "46",
@@ -366,7 +438,9 @@
       "name": "东南卫视",
       "status": "1",
       "note": "东南卫视",
-      "logo": "https://live.fanmingming.com/tv/东南卫视.png"
+      "logo": "https://live.fanmingming.com/tv/东南卫视.png",
+      "channel_id": "13882",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/dongnan.png"
     },
     {
       "tvid": "47",
@@ -374,7 +448,9 @@
       "name": "东方卫视",
       "status": "1",
       "note": "东方卫视",
-      "logo": "https://live.fanmingming.com/tv/东方卫视.png"
+      "logo": "https://live.fanmingming.com/tv/东方卫视.png",
+      "channel_id": "13872",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/dongfang.png"
     },
     {
       "tvid": "48",
@@ -382,7 +458,9 @@
       "name": "云南卫视",
       "status": "1",
       "note": "云南卫视",
-      "logo": "https://live.fanmingming.com/tv/云南卫视.png"
+      "logo": "https://live.fanmingming.com/tv/云南卫视.png",
+      "channel_id": "13899",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/yunnan.png"
     },
     {
       "tvid": "49",
@@ -390,7 +468,9 @@
       "name": "兵团卫视",
       "status": "1",
       "note": "兵团卫视",
-      "logo": "https://live.fanmingming.com/tv/兵团卫视.png"
+      "logo": "https://live.fanmingming.com/tv/兵团卫视.png",
+      "channel_id": "13901",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/bingtuan.png"
     },
     {
       "tvid": "50",
@@ -398,7 +478,9 @@
       "name": "内蒙古卫视",
       "status": "1",
       "note": "内蒙古卫视",
-      "logo": "https://live.fanmingming.com/tv/内蒙古卫视.png"
+      "logo": "https://live.fanmingming.com/tv/内蒙古卫视.png",
+      "channel_id": "13893",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/neimeng.png"
     },
     {
       "tvid": "51",
@@ -414,15 +496,18 @@
       "name": "北京卫视",
       "status": "1",
       "note": "北京卫视",
-      "logo": "https://live.fanmingming.com/tv/北京卫视.png"
+      "logo": "https://live.fanmingming.com/tv/北京卫视.png",
+      "channel_id": "13871",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/beijing.png"
     },
     {
       "tvid": "53",
       "epgid": "南方卫视",
-      "name": "南方卫视",
+      "name": "南方卫视,大湾区卫视",
       "status": "1",
       "note": "南方卫视",
-      "logo": "https://live.fanmingming.com/tv/南方卫视.png"
+      "logo": "https://live.fanmingming.com/tv/南方卫视.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/nanfang.png"
     },
     {
       "tvid": "54",
@@ -430,7 +515,9 @@
       "name": "厦门卫视",
       "status": "1",
       "note": "厦门卫视",
-      "logo": "https://live.fanmingming.com/tv/厦门卫视.png"
+      "logo": "https://live.fanmingming.com/tv/厦门卫视.png",
+      "channel_id": "13906",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/xiamen.png"
     },
     {
       "tvid": "55",
@@ -438,7 +525,9 @@
       "name": "四川卫视",
       "status": "1",
       "note": "四川卫视",
-      "logo": "https://live.fanmingming.com/tv/四川卫视.png"
+      "logo": "https://live.fanmingming.com/tv/四川卫视.png",
+      "channel_id": "13897",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/sichuan.png"
     },
     {
       "tvid": "56",
@@ -446,7 +535,9 @@
       "name": "天津卫视",
       "status": "1",
       "note": "天津卫视",
-      "logo": "https://live.fanmingming.com/tv/天津卫视.png"
+      "logo": "https://live.fanmingming.com/tv/天津卫视.png",
+      "channel_id": "13880",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/tianjin.png"
     },
     {
       "tvid": "57",
@@ -462,7 +553,9 @@
       "name": "安徽卫视",
       "status": "1",
       "note": "安徽卫视",
-      "logo": "https://live.fanmingming.com/tv/安徽卫视.png"
+      "logo": "https://live.fanmingming.com/tv/安徽卫视.png",
+      "channel_id": "13873",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/anhui.png"
     },
     {
       "tvid": "59",
@@ -470,7 +563,9 @@
       "name": "广东卫视",
       "status": "1",
       "note": "广东卫视",
-      "logo": "https://live.fanmingming.com/tv/广东卫视.png"
+      "logo": "https://live.fanmingming.com/tv/广东卫视.png",
+      "channel_id": "13874",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/guangdong.png"
     },
     {
       "tvid": "60",
@@ -478,7 +573,9 @@
       "name": "广西卫视",
       "status": "1",
       "note": "广西卫视",
-      "logo": "https://live.fanmingming.com/tv/广西卫视.png"
+      "logo": "https://live.fanmingming.com/tv/广西卫视.png",
+      "channel_id": "13884",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/guangxi.png"
     },
     {
       "tvid": "61",
@@ -486,7 +583,9 @@
       "name": "吉林卫视",
       "status": "1",
       "note": "吉林卫视",
-      "logo": "https://live.fanmingming.com/tv/吉林卫视.png"
+      "logo": "https://live.fanmingming.com/tv/吉林卫视.png",
+      "channel_id": "13892",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/jilin.png"
     },
     {
       "tvid": "62",
@@ -494,7 +593,9 @@
       "name": "康巴卫视",
       "status": "1",
       "note": "康巴卫视",
-      "logo": "https://live.fanmingming.com/tv/康巴卫视.png"
+      "logo": "https://live.fanmingming.com/tv/康巴卫视.png",
+      "channel_id": "13908",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/kangba.png"
     },
     {
       "tvid": "63",
@@ -502,7 +603,9 @@
       "name": "延边卫视",
       "status": "1",
       "note": "延边卫视",
-      "logo": "https://live.fanmingming.com/tv/延边卫视.png"
+      "logo": "https://live.fanmingming.com/tv/延边卫视.png",
+      "channel_id": "13903",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/YANBIAN1.png"
     },
     {
       "tvid": "64",
@@ -510,7 +613,9 @@
       "name": "宁夏卫视",
       "status": "1",
       "note": "宁夏卫视",
-      "logo": "https://live.fanmingming.com/tv/宁夏卫视.png"
+      "logo": "https://live.fanmingming.com/tv/宁夏卫视.png",
+      "channel_id": "13894",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/ningxia.png"
     },
     {
       "tvid": "65",
@@ -526,7 +631,9 @@
       "name": "山东卫视",
       "status": "1",
       "note": "山东卫视",
-      "logo": "https://live.fanmingming.com/tv/山东卫视.png"
+      "logo": "https://live.fanmingming.com/tv/山东卫视.png",
+      "channel_id": "13879",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/shandong.png"
     },
     {
       "tvid": "67",
@@ -534,7 +641,9 @@
       "name": "山西卫视",
       "status": "1",
       "note": "山西卫视",
-      "logo": "https://live.fanmingming.com/tv/山西卫视.png"
+      "logo": "https://live.fanmingming.com/tv/山西卫视.png",
+      "channel_id": "13895",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/shanxi_.png"
     },
     {
       "tvid": "68",
@@ -542,7 +651,9 @@
       "name": "新疆卫视",
       "status": "1",
       "note": "新疆卫视",
-      "logo": "https://live.fanmingming.com/tv/新疆卫视.png"
+      "logo": "https://live.fanmingming.com/tv/新疆卫视.png",
+      "channel_id": "13898",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/xinjiang.png"
     },
     {
       "tvid": "69",
@@ -550,7 +661,9 @@
       "name": "江苏卫视",
       "status": "1",
       "note": "江苏卫视",
-      "logo": "https://live.fanmingming.com/tv/江苏卫视.png"
+      "logo": "https://live.fanmingming.com/tv/江苏卫视.png",
+      "channel_id": "13870",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/jiangsu.png"
     },
     {
       "tvid": "70",
@@ -558,7 +671,9 @@
       "name": "江西卫视",
       "status": "1",
       "note": "江西卫视",
-      "logo": "https://live.fanmingming.com/tv/江西卫视.png"
+      "logo": "https://live.fanmingming.com/tv/江西卫视.png",
+      "channel_id": "13891",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/jiangxi.png"
     },
     {
       "tvid": "71",
@@ -566,7 +681,9 @@
       "name": "河北卫视",
       "status": "1",
       "note": "河北卫视",
-      "logo": "https://live.fanmingming.com/tv/河北卫视.png"
+      "logo": "https://live.fanmingming.com/tv/河北卫视.png",
+      "channel_id": "13886",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/hebei.png"
     },
     {
       "tvid": "72",
@@ -574,7 +691,9 @@
       "name": "河南卫视",
       "status": "1",
       "note": "河南卫视",
-      "logo": "https://live.fanmingming.com/tv/河南卫视.png"
+      "logo": "https://live.fanmingming.com/tv/河南卫视.png",
+      "channel_id": "13888",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/henan.png"
     },
     {
       "tvid": "73",
@@ -582,7 +701,9 @@
       "name": "浙江卫视",
       "status": "1",
       "note": "浙江卫视",
-      "logo": "https://live.fanmingming.com/tv/浙江卫视.png"
+      "logo": "https://live.fanmingming.com/tv/浙江卫视.png",
+      "channel_id": "13869",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/zhejiang.png"
     },
     {
       "tvid": "74",
@@ -606,7 +727,9 @@
       "name": "深圳卫视",
       "status": "1",
       "note": "深圳卫视",
-      "logo": "https://live.fanmingming.com/tv/深圳卫视.png"
+      "logo": "https://live.fanmingming.com/tv/深圳卫视.png",
+      "channel_id": "13875",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/shenzhen.png"
     },
     {
       "tvid": "77",
@@ -614,7 +737,9 @@
       "name": "湖北卫视",
       "status": "1",
       "note": "湖北卫视",
-      "logo": "https://live.fanmingming.com/tv/湖北卫视.png"
+      "logo": "https://live.fanmingming.com/tv/湖北卫视.png",
+      "channel_id": "13889",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/hubei.png"
     },
     {
       "tvid": "78",
@@ -622,7 +747,9 @@
       "name": "湖南卫视",
       "status": "1",
       "note": "湖南卫视",
-      "logo": "https://live.fanmingming.com/tv/湖南卫视.png"
+      "logo": "https://live.fanmingming.com/tv/湖南卫视.png",
+      "channel_id": "13868",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/hunan.png"
     },
     {
       "tvid": "79",
@@ -630,7 +757,8 @@
       "name": "澳亚卫视",
       "status": "1",
       "note": "澳亚卫视",
-      "logo": "https://live.fanmingming.com/tv/澳亚卫视.png"
+      "logo": "https://live.fanmingming.com/tv/澳亚卫视.png",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "80",
@@ -638,7 +766,9 @@
       "name": "甘肃卫视",
       "status": "1",
       "note": "甘肃卫视",
-      "logo": "https://live.fanmingming.com/tv/甘肃卫视.png"
+      "logo": "https://live.fanmingming.com/tv/甘肃卫视.png",
+      "channel_id": "13883",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/gansu.png"
     },
     {
       "tvid": "81",
@@ -654,7 +784,9 @@
       "name": "辽宁卫视",
       "status": "1",
       "note": "辽宁卫视",
-      "logo": "https://live.fanmingming.com/tv/辽宁卫视.png"
+      "logo": "https://live.fanmingming.com/tv/辽宁卫视.png",
+      "channel_id": "13877",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/liaoning.png"
     },
     {
       "tvid": "83",
@@ -662,7 +794,9 @@
       "name": "西藏卫视",
       "status": "1",
       "note": "西藏卫视",
-      "logo": "https://live.fanmingming.com/tv/西藏卫视.png"
+      "logo": "https://live.fanmingming.com/tv/西藏卫视.png",
+      "channel_id": "13909",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/xizang.png"
     },
     {
       "tvid": "84",
@@ -670,7 +804,9 @@
       "name": "贵州卫视",
       "status": "1",
       "note": "贵州卫视",
-      "logo": "https://live.fanmingming.com/tv/贵州卫视.png"
+      "logo": "https://live.fanmingming.com/tv/贵州卫视.png",
+      "channel_id": "13885",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/guizhou.png"
     },
     {
       "tvid": "85",
@@ -678,7 +814,9 @@
       "name": "重庆卫视",
       "status": "1",
       "note": "重庆卫视",
-      "logo": "https://live.fanmingming.com/tv/重庆卫视.png"
+      "logo": "https://live.fanmingming.com/tv/重庆卫视.png",
+      "channel_id": "13881",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/chongqing.png"
     },
     {
       "tvid": "86",
@@ -686,7 +824,9 @@
       "name": "陕西卫视",
       "status": "1",
       "note": "陕西卫视",
-      "logo": "https://live.fanmingming.com/tv/陕西卫视.png"
+      "logo": "https://live.fanmingming.com/tv/陕西卫视.png",
+      "channel_id": "13896",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/shanxi.png"
     },
     {
       "tvid": "87",
@@ -694,7 +834,9 @@
       "name": "黑龙江卫视",
       "status": "1",
       "note": "黑龙江卫视",
-      "logo": "https://live.fanmingming.com/tv/黑龙江卫视.png"
+      "logo": "https://live.fanmingming.com/tv/黑龙江卫视.png",
+      "channel_id": "13887",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/heilongjiang.png"
     },
     {
       "tvid": "88",
@@ -710,7 +852,9 @@
       "name": "CHC动作电影,动作电影",
       "status": "1",
       "note": "CHC动作电影",
-      "logo": "https://live.fanmingming.com/tv/CHC动作电影.png"
+      "logo": "https://live.fanmingming.com/tv/CHC动作电影.png",
+      "channel_id": "14047",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/CHC1.jpg"
     },
     {
       "tvid": "90",
@@ -726,7 +870,9 @@
       "name": "CHC高清电影,高清电影",
       "status": "1",
       "note": "CHC高清电影",
-      "logo": "https://live.fanmingming.com/tv/CHC高清电影.png"
+      "logo": "https://live.fanmingming.com/tv/CHC高清电影.png",
+      "channel_id": "14045",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/CHC3.jpg"
     },
     {
       "tvid": "92",
@@ -1166,7 +1312,9 @@
       "name": "中国3D电视试验频道",
       "status": "1",
       "note": "中国3D电视试验频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV3D.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV3D.png",
+      "channel_id": "13914",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV3D.png"
     },
     {
       "tvid": "147",
@@ -1174,7 +1322,9 @@
       "name": "外汇理财",
       "status": "1",
       "note": "外汇理财",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/IPTVEFEL.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/IPTVEFEL.png",
+      "channel_id": "13915",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/IPTVEFEL.png"
     },
     {
       "tvid": "148",
@@ -1182,7 +1332,9 @@
       "name": "电竞天堂",
       "status": "1",
       "note": "电竞天堂",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/dianjingtiantang.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/dianjingtiantang.png",
+      "channel_id": "110978",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/dianjingtiantang.png"
     },
     {
       "tvid": "149",
@@ -1190,7 +1342,9 @@
       "name": "IPTV5⁺",
       "status": "1",
       "note": "IPTV5⁺",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/IPTV5+.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/IPTV5+.png",
+      "channel_id": "253998",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/IPTV5+.png"
     },
     {
       "tvid": "150",
@@ -1198,7 +1352,9 @@
       "name": "IPTV6⁺",
       "status": "1",
       "note": "IPTV6⁺",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/IPTV6+.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/IPTV6+.png",
+      "channel_id": "253999",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/IPTV6+.png"
     },
     {
       "tvid": "151",
@@ -1206,7 +1362,9 @@
       "name": "IPTV经典电影",
       "status": "1",
       "note": "IPTV经典电影",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/IPTV经典电影.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/IPTV经典电影.png",
+      "channel_id": "110983",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/IPTV经典电影.png"
     },
     {
       "tvid": "152",
@@ -1214,7 +1372,9 @@
       "name": "IPTV热播剧场",
       "status": "1",
       "note": "IPTV热播剧场",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/IPTV热播剧场.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/IPTV热播剧场.png",
+      "channel_id": "110984",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/IPTV热播剧场.png"
     },
     {
       "tvid": "153",
@@ -1222,7 +1382,9 @@
       "name": "IPTV少儿动画",
       "status": "1",
       "note": "IPTV少儿动画",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/IPTV少儿动画.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/IPTV少儿动画.png",
+      "channel_id": "110985",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/IPTV少儿动画.png"
     },
     {
       "tvid": "154",
@@ -1230,7 +1392,9 @@
       "name": "IPTV魅力时尚",
       "status": "1",
       "note": "IPTV魅力时尚",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/IPTV魅力时尚.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/IPTV魅力时尚.png",
+      "channel_id": "110986",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/IPTV魅力时尚.png"
     },
     {
       "tvid": "155",
@@ -1238,31 +1402,37 @@
       "name": "DOX映画",
       "status": "1",
       "note": "DOX映画",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "156",
       "epgid": "求索科学",
-      "name": "求索科学",
+      "name": "求索科学,华数求索科学",
       "status": "1",
       "note": "华数求索科学",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/QSKX.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/QSKX.png",
+      "channel_id": "254000",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/QSKX.png"
     },
     {
       "tvid": "157",
       "epgid": "求索动物",
-      "name": "求索动物",
+      "name": "求索动物,华数求索动物",
       "status": "1",
       "note": "华数求索动物",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/QSDW.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/QSDW.png",
+      "channel_id": "254001",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/QSDW.png"
     },
     {
       "tvid": "158",
       "epgid": "求索生活",
-      "name": "求索生活",
+      "name": "求索生活,华数求索生活",
       "status": "1",
       "note": "华数求索生活",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "159",
@@ -1275,178 +1445,220 @@
     {
       "tvid": "160",
       "epgid": "梨园",
-      "name": "梨园,河南梨园,梨园频道",
+      "name": "梨园,河南梨园,梨园频道,中数梨园",
       "status": "1",
       "note": "中数梨园",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE20.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE20.jpg",
+      "channel_id": "13974",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE20.jpg"
     },
     {
       "tvid": "161",
       "epgid": "CCTV-娱乐",
-      "name": "CCTV-娱乐",
+      "name": "CCTV-娱乐,中数CCTV-娱乐",
       "status": "1",
       "note": "中数CCTV-娱乐",
-      "logo": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVyule.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVyule.png",
+      "channel_id": "13983",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVyule.png"
     },
     {
       "tvid": "162",
       "epgid": "CCTV-戏曲",
-      "name": "CCTV-戏曲",
+      "name": "CCTV-戏曲,中数CCTV-戏曲",
       "status": "1",
       "note": "中数CCTV-戏曲",
-      "logo": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVxiqu.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVxiqu.png",
+      "channel_id": "13984",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVxiqu.png"
     },
     {
       "tvid": "163",
       "epgid": "CCTV-电影",
-      "name": "CCTV-电影",
+      "name": "CCTV-电影,中数CCTV-电影",
       "status": "1",
       "note": "中数CCTV-电影",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE12.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE12.jpg",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE12.jpg"
     },
     {
       "tvid": "164",
       "epgid": "彩民在线",
-      "name": "彩民在线",
+      "name": "彩民在线,中数彩民在线",
       "status": "1",
       "note": "中数彩民在线",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/caiminzaixian.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/caiminzaixian.png",
+      "channel_id": "14034",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/caiminzaixian.png"
     },
     {
       "tvid": "165",
       "epgid": "法律服务",
-      "name": "法律服务",
+      "name": "法律服务,中数法律服务",
       "status": "1",
       "note": "中数法律服务",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE17.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE17.jpg",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE17.jpg"
     },
     {
       "tvid": "166",
       "epgid": "汽摩",
-      "name": "汽摩",
+      "name": "汽摩,中数汽摩",
       "status": "1",
       "note": "中数汽摩",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE22.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE22.jpg",
+      "channel_id": "13990",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE22.jpg"
     },
     {
       "tvid": "167",
       "epgid": "留学世界",
-      "name": "留学世界",
+      "name": "留学世界,中数留学世界",
       "status": "1",
       "note": "中数留学世界",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE24.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE24.jpg",
+      "channel_id": "13992",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE24.jpg"
     },
     {
       "tvid": "168",
       "epgid": "青年学苑",
-      "name": "青年学苑",
+      "name": "青年学苑,中数青年学苑",
       "status": "1",
       "note": "中数青年学苑",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE25.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE25.jpg",
+      "channel_id": "13993",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE25.jpg"
     },
     {
       "tvid": "169",
       "epgid": "摄影频道",
-      "name": "摄影频道",
+      "name": "摄影频道,中数摄影频道",
       "status": "1",
       "note": "中数摄影频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/PHOTOGRAPHY-CHANNEL.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/PHOTOGRAPHY-CHANNEL.jpg",
+      "channel_id": "13994",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/PHOTOGRAPHY-CHANNEL.jpg"
     },
     {
       "tvid": "170",
       "epgid": "天元围棋",
-      "name": "天元围棋",
+      "name": "天元围棋,中数天元围棋",
       "status": "1",
       "note": "中数天元围棋",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/TIANYUANWEIQI.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/TIANYUANWEIQI.jpg",
+      "channel_id": "13995",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/TIANYUANWEIQI.jpg"
     },
     {
       "tvid": "171",
       "epgid": "现代女性",
-      "name": "现代女性",
+      "name": "现代女性,中数现代女性",
       "status": "1",
       "note": "中数现代女性",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE29.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE29.png",
+      "channel_id": "13996",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE29.png"
     },
     {
       "tvid": "172",
       "epgid": "早期教育",
-      "name": "早期教育",
+      "name": "早期教育,中数早期教育",
       "status": "1",
       "note": "中数早期教育",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE33.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE33.jpg",
+      "channel_id": "13997",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE33.jpg"
     },
     {
       "tvid": "173",
       "epgid": "茶频道",
-      "name": "茶频道,茶,湖南茶频道",
+      "name": "茶频道,茶,湖南茶频道,中数茶频道",
       "status": "1",
       "note": "中数茶频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/DOCUMENTARY-CHANNEL.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/DOCUMENTARY-CHANNEL.jpg",
+      "channel_id": "14000",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/DOCUMENTARY-CHANNEL.jpg"
     },
     {
       "tvid": "174",
       "epgid": "武术世界",
-      "name": "武术世界,河南武术世界",
+      "name": "武术世界,河南武术世界,中数武术世界",
       "status": "1",
       "note": "中数武术世界",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/WUSHUSHIJIE.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/WUSHUSHIJIE.jpg",
+      "channel_id": "14001",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/WUSHUSHIJIE.jpg"
     },
     {
       "tvid": "175",
       "epgid": "发现之旅",
-      "name": "发现之旅",
+      "name": "发现之旅,中数发现之旅",
       "status": "1",
       "note": "中数发现之旅",
-      "logo": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVfaxianzhilv.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVfaxianzhilv.png",
+      "channel_id": "14002",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVfaxianzhilv.png"
     },
     {
       "tvid": "176",
       "epgid": "环球奇观",
-      "name": "环球奇观",
+      "name": "环球奇观,中数环球奇观",
       "status": "1",
       "note": "中数环球奇观",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/HUANQIUQIGUAN.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/HUANQIUQIGUAN.jpg",
+      "channel_id": "14003",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/HUANQIUQIGUAN.jpg"
     },
     {
       "tvid": "177",
       "epgid": "国学",
-      "name": "国学",
+      "name": "国学,中数国学",
       "status": "1",
       "note": "中数国学",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/SHUOWENJIEZI.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/SHUOWENJIEZI.jpg",
+      "channel_id": "14004",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/SHUOWENJIEZI.jpg"
     },
     {
       "tvid": "178",
       "epgid": "文物宝库",
-      "name": "文物宝库,河南文物宝库",
+      "name": "文物宝库,河南文物宝库,中数文物宝库",
       "status": "1",
       "note": "中数文物宝库",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/WENWUBAOKU.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/WENWUBAOKU.jpg",
+      "channel_id": "14005",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/WENWUBAOKU.jpg"
     },
     {
       "tvid": "179",
       "epgid": "新科动漫",
-      "name": "新科动漫",
+      "name": "新科动漫,中数新科动漫",
       "status": "1",
       "note": "中数新科动漫",
-      "logo": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVxinke.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVxinke.png",
+      "channel_id": "14006",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CCTVxinke.png"
     },
     {
       "tvid": "180",
       "epgid": "幼儿教育",
-      "name": "幼儿教育",
+      "name": "幼儿教育,中数幼儿教育",
       "status": "1",
       "note": "中数幼儿教育",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/YOUERJIAOYU.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/YOUERJIAOYU.jpg",
+      "channel_id": "14052",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/YOUERJIAOYU.jpg"
     },
     {
       "tvid": "181",
       "epgid": "书画频道",
-      "name": "书画频道,书画",
+      "name": "书画频道,书画,中数书画频道",
       "status": "1",
       "note": "中数书画频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE37.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE37.jpg",
+      "channel_id": "14010",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE37.jpg"
     },
     {
       "tvid": "182",
@@ -1459,10 +1671,11 @@
     {
       "tvid": "183",
       "epgid": "中华美食",
-      "name": "中华美食,中华美食频道",
+      "name": "中华美食,中华美食频道,中数中华美食",
       "status": "1",
       "note": "中华美食",
-      "logo": "https://live.fanmingming.com/tv/中华美食.png"
+      "logo": "https://live.fanmingming.com/tv/中华美食.png",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "184",
@@ -1486,15 +1699,18 @@
       "name": "华诚DOXTV",
       "status": "1",
       "note": "华诚DOXTV",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/DOXTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/DOXTV.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/DOXTV.png"
     },
     {
       "tvid": "187",
       "epgid": "先锋乒羽",
-      "name": "先锋乒羽,湖南先锋乒羽 ",
+      "name": "先锋乒羽,湖南先锋乒羽,华诚先锋乒羽",
       "status": "1",
       "note": "华诚先锋乒羽",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/XFBY.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/XFBY.png",
+      "channel_id": "14012",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/XFBY.png"
     },
     {
       "tvid": "188",
@@ -1502,7 +1718,9 @@
       "name": "金鹰卡通,湖南金鹰卡通",
       "status": "1",
       "note": "金鹰卡通",
-      "logo": "https://live.fanmingming.com/tv/金鹰卡通.png"
+      "logo": "https://live.fanmingming.com/tv/金鹰卡通.png",
+      "channel_id": "13907",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/jinyingkatong.png"
     },
     {
       "tvid": "189",
@@ -1515,194 +1733,232 @@
     {
       "tvid": "190",
       "epgid": "车迷频道",
-      "name": "车迷频道,车迷",
+      "name": "车迷频道,车迷,北广车迷频道",
       "status": "1",
       "note": "北广车迷频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC1.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC1.jpg",
+      "channel_id": "14013",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/BAMC1.jpg"
     },
     {
       "tvid": "191",
       "epgid": "考试在线",
-      "name": "考试在线",
+      "name": "考试在线,北广考试在线",
       "status": "1",
       "note": "北广考试在线",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "192",
       "epgid": "优优宝贝",
-      "name": "优优宝贝",
+      "name": "优优宝贝,北广优优宝贝",
       "status": "1",
       "note": "北广优优宝贝",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC3.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC3.jpg",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/BAMC3.jpg"
     },
     {
       "tvid": "193",
       "epgid": "四海钓鱼",
-      "name": "四海钓鱼",
+      "name": "四海钓鱼,北广四海钓鱼",
       "status": "1",
       "note": "北广四海钓鱼",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC4.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC4.jpg",
+      "channel_id": "14016",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/BAMC4.jpg"
     },
     {
       "tvid": "194",
       "epgid": "动感音乐",
-      "name": "动感音乐",
+      "name": "动感音乐,北广动感音乐",
       "status": "1",
       "note": "北广动感音乐",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC5.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC5.jpg",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/BAMC5.jpg"
     },
     {
       "tvid": "195",
       "epgid": "环球旅游",
-      "name": "环球旅游",
+      "name": "环球旅游,北广环球旅游",
       "status": "1",
       "note": "北广环球旅游",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC6.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC6.jpg",
+      "channel_id": "14018",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/BAMC6.jpg"
     },
     {
       "tvid": "196",
       "epgid": "新娱乐",
-      "name": "新娱乐",
+      "name": "新娱乐,北广新娱乐",
       "status": "1",
       "note": "北广新娱乐",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC7.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC7.jpg",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/BAMC7.jpg"
     },
     {
       "tvid": "197",
       "epgid": "京视剧场",
-      "name": "京视剧场",
+      "name": "京视剧场,北广京视剧场",
       "status": "1",
       "note": "北广京视剧场",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC8.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC8.jpg",
+      "channel_id": "14020",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/BAMC8.jpg"
     },
     {
       "tvid": "198",
       "epgid": "弈坛春秋",
-      "name": "弈坛春秋",
+      "name": "弈坛春秋,北广弈坛春秋",
       "status": "1",
       "note": "北广弈坛春秋",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC10.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC10.jpg",
+      "channel_id": "14179",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/BAMC10.jpg"
     },
     {
       "tvid": "199",
       "epgid": "置业频道",
-      "name": "置业频道",
+      "name": "置业频道,北广置业频道",
       "status": "1",
       "note": "北广置业频道",
-      "logo": "https://live.fanmingming.com/tv/置业频道.png"
+      "logo": "https://live.fanmingming.com/tv/置业频道.png",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "200",
       "epgid": "央广健康",
-      "name": "央广健康",
+      "name": "央广健康,北广央广健康",
       "status": "1",
       "note": "北广央广健康",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC14.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC14.jpg",
+      "channel_id": "14022",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/BAMC14.jpg"
     },
     {
       "tvid": "201",
       "epgid": "休闲指南",
-      "name": "休闲指南",
+      "name": "休闲指南,北广休闲指南",
       "status": "1",
       "note": "北广休闲指南",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "202",
       "epgid": "时代家居",
-      "name": "时代家居",
+      "name": "时代家居,北广时代家居",
       "status": "1",
       "note": "北广时代家居",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC17.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC17.jpg",
+      "channel_id": "14023",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/BAMC17.jpg"
     },
     {
       "tvid": "203",
       "epgid": "时代出行",
-      "name": "时代出行",
+      "name": "时代出行,北广时代出行",
       "status": "1",
       "note": "北广时代出行",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC18.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC18.jpg",
+      "channel_id": "14024",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/BAMC18.jpg"
     },
     {
       "tvid": "204",
       "epgid": "时代风尚",
-      "name": "时代风尚",
+      "name": "时代风尚,北广时代风尚",
       "status": "1",
       "note": "北广时代风尚",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC19.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/BAMC19.jpg",
+      "channel_id": "14025",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/BAMC19.jpg"
     },
     {
       "tvid": "205",
       "epgid": "时代美食",
-      "name": "时代美食",
+      "name": "时代美食,北广时代美食",
       "status": "1",
       "note": "北广时代美食",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "206",
       "epgid": "财富天下",
-      "name": "财富天下,江苏财富天下",
+      "name": "财富天下,江苏财富天下,北广财富天下",
       "status": "1",
       "note": "北广财富天下",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/财富天下.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/财富天下.png",
+      "channel_id": "14026",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/财富天下.png"
     },
     {
       "tvid": "207",
       "epgid": "人物频道",
-      "name": "人物频道",
+      "name": "人物频道,北广人物频道",
       "status": "1",
       "note": "北广人物频道",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "208",
       "epgid": "家政频道",
-      "name": "家政频道",
+      "name": "家政频道,北广家政频道",
       "status": "1",
       "note": "北广家政频道",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "209",
       "epgid": "百姓健康",
-      "name": "百姓健康",
+      "name": "百姓健康,北广百姓健康",
       "status": "1",
       "note": "北广百姓健康",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/CHTV.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/CHTV.jpg",
+      "channel_id": "14027",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/CHTV.jpg"
     },
     {
       "tvid": "210",
       "epgid": "亚洲影院",
-      "name": "亚洲影院",
+      "name": "亚洲影院,华数亚洲影院",
       "status": "1",
       "note": "华数亚洲影院",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "211",
       "epgid": "精品剧场",
-      "name": "精品剧场",
+      "name": "精品剧场,华数精品剧场",
       "status": "1",
       "note": "华数精品剧场",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/HSJPJC.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/HSJPJC.jpg",
+      "channel_id": "14029",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/HSJPJC.jpg"
     },
     {
       "tvid": "212",
       "epgid": "少儿动漫",
-      "name": "少儿动漫",
+      "name": "少儿动漫,华数少儿动漫",
       "status": "1",
       "note": "华数少儿动漫",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/HSSEDM.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/HSSEDM.jpg",
+      "channel_id": "14030",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/HSSEDM.jpg"
     },
     {
       "tvid": "213",
       "epgid": "欧美影院",
-      "name": "欧美影院",
+      "name": "欧美影院,华数欧美影院",
       "status": "1",
       "note": "华数欧美影院",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/OMYY.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/OMYY.jpg",
+      "channel_id": "14032",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/OMYY.jpg"
     },
     {
       "tvid": "214",
@@ -1742,7 +1998,8 @@
       "name": "IPTV3⁺",
       "status": "1",
       "note": "IPTV3⁺",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "219",
@@ -1758,7 +2015,9 @@
       "name": "BTV文艺",
       "status": "1",
       "note": "BTV文艺",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/BTV文艺.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/BTV文艺.png",
+      "channel_id": "14209",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/BTV文艺.png"
     },
     {
       "tvid": "221",
@@ -1766,7 +2025,9 @@
       "name": "BTV科教",
       "status": "1",
       "note": "BTV科教",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/BTV科教.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/BTV科教.png",
+      "channel_id": "14210",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/BTV科教.png"
     },
     {
       "tvid": "222",
@@ -1774,7 +2035,9 @@
       "name": "BTV影视",
       "status": "1",
       "note": "BTV影视",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/BTV影视.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/BTV影视.png",
+      "channel_id": "14211",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/BTV影视.png"
     },
     {
       "tvid": "223",
@@ -1782,7 +2045,9 @@
       "name": "BTV财经",
       "status": "1",
       "note": "BTV财经",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/BTV财经.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/BTV财经.png",
+      "channel_id": "14212",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/BTV财经.png"
     },
     {
       "tvid": "224",
@@ -1790,7 +2055,9 @@
       "name": "BTV生活",
       "status": "1",
       "note": "BTV生活",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/BTV生活.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/BTV生活.png",
+      "channel_id": "14214",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/BTV生活.png"
     },
     {
       "tvid": "225",
@@ -1798,7 +2065,9 @@
       "name": "BTV青年",
       "status": "1",
       "note": "BTV青年",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/BTV青年.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/BTV青年.png",
+      "channel_id": "170351",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/BTV青年.png"
     },
     {
       "tvid": "226",
@@ -1806,7 +2075,9 @@
       "name": "BTV新闻",
       "status": "1",
       "note": "BTV新闻",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/BTV新闻.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/BTV新闻.png",
+      "channel_id": "14215",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/BTV新闻.png"
     },
     {
       "tvid": "227",
@@ -1822,7 +2093,9 @@
       "name": "哈哈炫动,上海哈哈炫动",
       "status": "1",
       "note": "哈哈炫动",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/xuandong.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/xuandong.png",
+      "channel_id": "13902",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/xuandong.png"
     },
     {
       "tvid": "229",
@@ -1830,7 +2103,9 @@
       "name": "DOX雅趣",
       "status": "1",
       "note": "DOX雅趣",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/DOX_YAQU.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/DOX_YAQU.png",
+      "channel_id": "254036",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/DOX_YAQU.png"
     },
     {
       "tvid": "230",
@@ -1838,7 +2113,9 @@
       "name": "DOX英伦",
       "status": "1",
       "note": "DOX英伦",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/dox_yinglun.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/dox_yinglun.png",
+      "channel_id": "254016",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/dox_yinglun.png"
     },
     {
       "tvid": "231",
@@ -1846,7 +2123,8 @@
       "name": "DOX怡家",
       "status": "1",
       "note": "DOX怡家",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "232",
@@ -1854,7 +2132,8 @@
       "name": "DOX院线",
       "status": "1",
       "note": "DOX院线",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "233",
@@ -1862,7 +2141,8 @@
       "name": "DOX新知",
       "status": "1",
       "note": "DOX新知",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "234",
@@ -1870,7 +2150,8 @@
       "name": "DOX新艺",
       "status": "1",
       "note": "DOX新艺",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "235",
@@ -1878,7 +2159,9 @@
       "name": "DOX剧场",
       "status": "1",
       "note": "DOX剧场",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/dox_juchang.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/dox_juchang.png",
+      "channel_id": "254017",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/dox_juchang.png"
     },
     {
       "tvid": "236",
@@ -1886,7 +2169,8 @@
       "name": "MAX极速汽车",
       "status": "1",
       "note": "MAX极速汽车",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/jisuqiche.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/jisuqiche.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/jisuqiche.png"
     },
     {
       "tvid": "237",
@@ -1894,7 +2178,9 @@
       "name": "全纪实",
       "status": "1",
       "note": "全纪实",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/quanjishi.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/quanjishi.png",
+      "channel_id": "14177",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/quanjishi.png"
     },
     {
       "tvid": "238",
@@ -1902,7 +2188,8 @@
       "name": "魅力音乐",
       "status": "1",
       "note": "魅力音乐",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "239",
@@ -1910,7 +2197,9 @@
       "name": "幸福彩",
       "status": "1",
       "note": "幸福彩",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/xingfucai.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/xingfucai.png",
+      "channel_id": "14180",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/xingfucai.png"
     },
     {
       "tvid": "240",
@@ -1918,7 +2207,9 @@
       "name": "游戏风云,SITV游戏风云",
       "status": "1",
       "note": "游戏风云",
-      "logo": "https://live.fanmingming.com/tv/游戏风云.png"
+      "logo": "https://live.fanmingming.com/tv/游戏风云.png",
+      "channel_id": "14181",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/youxifengyun.png"
     },
     {
       "tvid": "241",
@@ -1934,7 +2225,9 @@
       "name": "欢笑剧场,SITV欢笑剧场,欢笑剧场4K,SITV欢笑剧场4K",
       "status": "1",
       "note": "欢笑剧场",
-      "logo": "https://live.fanmingming.com/tv/欢笑剧场.png"
+      "logo": "https://live.fanmingming.com/tv/欢笑剧场.png",
+      "channel_id": "14178",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/huanxiao.png"
     },
     {
       "tvid": "243",
@@ -1966,7 +2259,9 @@
       "name": "劲爆体育,SITV劲爆体育",
       "status": "1",
       "note": "劲爆体育",
-      "logo": "https://live.fanmingming.com/tv/劲爆体育.png"
+      "logo": "https://live.fanmingming.com/tv/劲爆体育.png",
+      "channel_id": "14173",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/jinbaotiyu.jpg"
     },
     {
       "tvid": "247",
@@ -1990,7 +2285,9 @@
       "name": "生活时尚,SITV生活时尚",
       "status": "1",
       "note": "生活时尚",
-      "logo": "https://live.fanmingming.com/tv/生活时尚.png"
+      "logo": "https://live.fanmingming.com/tv/生活时尚.png",
+      "channel_id": "14279",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/shenghuoshishang.png"
     },
     {
       "tvid": "250",
@@ -1998,7 +2295,9 @@
       "name": "七彩戏剧,SITV七彩戏剧",
       "status": "1",
       "note": "七彩戏剧",
-      "logo": "https://live.fanmingming.com/tv/七彩戏剧.png"
+      "logo": "https://live.fanmingming.com/tv/七彩戏剧.png",
+      "channel_id": "14259",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/qicaixiju.png"
     },
     {
       "tvid": "251",
@@ -2014,7 +2313,9 @@
       "name": "新视觉,SITV新视觉",
       "status": "1",
       "note": "新视觉",
-      "logo": "https://live.fanmingming.com/tv/新视觉.png"
+      "logo": "https://live.fanmingming.com/tv/新视觉.png",
+      "channel_id": "14172",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/xinshijue.png"
     },
     {
       "tvid": "253",
@@ -2022,7 +2323,9 @@
       "name": "上视新闻频道",
       "status": "1",
       "note": "上视新闻频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/shangshixinwen.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/shangshixinwen.png",
+      "channel_id": "14182",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/shangshixinwen.png"
     },
     {
       "tvid": "254",
@@ -2030,7 +2333,9 @@
       "name": "东方影视",
       "status": "1",
       "note": "东方影视",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/shanghaidongfangyingshi.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/shanghaidongfangyingshi.png",
+      "channel_id": "14184",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/shanghaidongfangyingshi.png"
     },
     {
       "tvid": "255",
@@ -2038,7 +2343,9 @@
       "name": "五星体育频道",
       "status": "1",
       "note": "五星体育频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/wuxingtiyu.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/wuxingtiyu.png",
+      "channel_id": "14185",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/wuxingtiyu.png"
     },
     {
       "tvid": "256",
@@ -2046,7 +2353,9 @@
       "name": "上海纪实人文,纪实人文",
       "status": "1",
       "note": "上海纪实人文",
-      "logo": "http://epg.51zmt.top:8000/tb1/ws/shanghaijishi.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/ws/shanghaijishi.png",
+      "channel_id": "111011",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/shanghaijishi.png"
     },
     {
       "tvid": "257",
@@ -2054,7 +2363,9 @@
       "name": "上海都市频道",
       "status": "1",
       "note": "上海都市频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/shanghaidushi.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/shanghaidushi.jpg",
+      "channel_id": "14187",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/shanghaidushi.jpg"
     },
     {
       "tvid": "258",
@@ -2062,7 +2373,8 @@
       "name": "上视外语频道",
       "status": "1",
       "note": "上视外语频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/shanghaiwaiyu.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/shanghaiwaiyu.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/shanghaiwaiyu.png"
     },
     {
       "tvid": "259",
@@ -2070,7 +2382,9 @@
       "name": "中国交通频道,中国交通",
       "status": "1",
       "note": "中国交通频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/CCTV/zgjt.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/CCTV/zgjt.png",
+      "channel_id": "111012",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/zgjt.png"
     },
     {
       "tvid": "260",
@@ -2078,7 +2392,9 @@
       "name": "四川文化旅游",
       "status": "1",
       "note": "四川文化旅游",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/sctv2.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/sctv2.png",
+      "channel_id": "13959",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/sctv2.png"
     },
     {
       "tvid": "261",
@@ -2086,7 +2402,9 @@
       "name": "四川经济",
       "status": "1",
       "note": "四川经济",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/sctv3.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/sctv3.png",
+      "channel_id": "13964",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/sctv3.png"
     },
     {
       "tvid": "262",
@@ -2094,7 +2412,9 @@
       "name": "四川新闻",
       "status": "1",
       "note": "四川新闻",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/sctv4.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/sctv4.png",
+      "channel_id": "13890",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/sctv4.png"
     },
     {
       "tvid": "263",
@@ -2102,7 +2422,9 @@
       "name": "四川影视文艺频道",
       "status": "1",
       "note": "四川影视文艺频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/sctv5.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/sctv5.png",
+      "channel_id": "13969",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/sctv5.png"
     },
     {
       "tvid": "264",
@@ -2110,7 +2432,9 @@
       "name": "四川妇女儿童频道",
       "status": "1",
       "note": "四川妇女儿童频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/sctv7.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/sctv7.png",
+      "channel_id": "13972",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/sctv7.png"
     },
     {
       "tvid": "265",
@@ -2118,7 +2442,9 @@
       "name": "峨嵋电影频道",
       "status": "1",
       "note": "峨嵋电影频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/emeidianying.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/emeidianying.png",
+      "channel_id": "13991",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/emeidianying.png"
     },
     {
       "tvid": "266",
@@ -2126,7 +2452,9 @@
       "name": "四川公共频道",
       "status": "1",
       "note": "四川公共频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/sctv9.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/sctv9.png",
+      "channel_id": "14014",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/sctv9.png"
     },
     {
       "tvid": "267",
@@ -2134,7 +2462,9 @@
       "name": "四川科教频道",
       "status": "1",
       "note": "四川科教频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/sctv8.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/sctv8.png",
+      "channel_id": "14028",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/sctv8.png"
     },
     {
       "tvid": "268",
@@ -2142,7 +2472,9 @@
       "name": "成都新闻综合频道",
       "status": "1",
       "note": "成都新闻综合频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/cdtv1.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/cdtv1.png",
+      "channel_id": "13922",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/cdtv1.png"
     },
     {
       "tvid": "269",
@@ -2150,7 +2482,9 @@
       "name": "成都经济资讯频道",
       "status": "1",
       "note": "成都经济资讯频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/cdtv2.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/cdtv2.png",
+      "channel_id": "14043",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/cdtv2.png"
     },
     {
       "tvid": "270",
@@ -2158,7 +2492,9 @@
       "name": "成都都市生活频道",
       "status": "1",
       "note": "成都都市生活频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/cdtv3.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/cdtv3.png",
+      "channel_id": "13859",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/cdtv3.png"
     },
     {
       "tvid": "271",
@@ -2166,7 +2502,9 @@
       "name": "成都影视文艺频道",
       "status": "1",
       "note": "成都影视文艺频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/cdtv4.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/cdtv4.png",
+      "channel_id": "13860",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/cdtv4.png"
     },
     {
       "tvid": "272",
@@ -2174,7 +2512,9 @@
       "name": "成都公共频道",
       "status": "1",
       "note": "成都公共频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/cdtv5.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/cdtv5.png",
+      "channel_id": "13930",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/cdtv5.png"
     },
     {
       "tvid": "273",
@@ -2182,7 +2522,9 @@
       "name": "成都少儿频道",
       "status": "1",
       "note": "成都少儿频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/sheng/cdtv6.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/sheng/cdtv6.png",
+      "channel_id": "13862",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/sheng/cdtv6.png"
     },
     {
       "tvid": "274",
@@ -2190,7 +2532,8 @@
       "name": "成都美食天府",
       "status": "1",
       "note": "成都美食天府",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "275",
@@ -2198,7 +2541,9 @@
       "name": "山东齐鲁",
       "status": "1",
       "note": "山东齐鲁",
-      "logo": "https://live.fanmingming.com/tv/山东齐鲁.png"
+      "logo": "https://live.fanmingming.com/tv/山东齐鲁.png",
+      "channel_id": "118630",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/sd_qilu.png"
     },
     {
       "tvid": "276",
@@ -2206,7 +2551,9 @@
       "name": "山东体育,山东体育休闲",
       "status": "1",
       "note": "山东体育",
-      "logo": "https://live.fanmingming.com/tv/山东体育.png"
+      "logo": "https://live.fanmingming.com/tv/山东体育.png",
+      "channel_id": "118631",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/sd_tiyu.png"
     },
     {
       "tvid": "277",
@@ -2214,7 +2561,9 @@
       "name": "山东农科",
       "status": "1",
       "note": "山东农科",
-      "logo": "https://live.fanmingming.com/tv/山东农科.png"
+      "logo": "https://live.fanmingming.com/tv/山东农科.png",
+      "channel_id": "121603",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/sd_nongke.png"
     },
     {
       "tvid": "278",
@@ -2222,7 +2571,9 @@
       "name": "山东公共",
       "status": "1",
       "note": "山东公共",
-      "logo": "https://live.fanmingming.com/tv/山东公共.png"
+      "logo": "https://live.fanmingming.com/tv/山东公共.png",
+      "channel_id": "121604",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/sd_gonggong.png"
     },
     {
       "tvid": "279",
@@ -2230,7 +2581,9 @@
       "name": "山东少儿",
       "status": "1",
       "note": "山东少儿",
-      "logo": "https://live.fanmingming.com/tv/山东少儿.png"
+      "logo": "https://live.fanmingming.com/tv/山东少儿.png",
+      "channel_id": "121605",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/sd_shaoer.png"
     },
     {
       "tvid": "280",
@@ -2246,7 +2599,9 @@
       "name": "山东综艺",
       "status": "1",
       "note": "山东综艺",
-      "logo": "https://live.fanmingming.com/tv/山东综艺.png"
+      "logo": "https://live.fanmingming.com/tv/山东综艺.png",
+      "channel_id": "118636",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/sd_zongyi.png"
     },
     {
       "tvid": "282",
@@ -2270,7 +2625,9 @@
       "name": "山东生活",
       "status": "1",
       "note": "山东生活",
-      "logo": "https://live.fanmingming.com/tv/山东生活.png"
+      "logo": "https://live.fanmingming.com/tv/山东生活.png",
+      "channel_id": "118637",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/sd_shenghuo.png"
     },
     {
       "tvid": "285",
@@ -2278,7 +2635,9 @@
       "name": "环宇电影",
       "status": "1",
       "note": "环宇电影",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/sd_huanyudianying.jpg"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/sd_huanyudianying.jpg",
+      "channel_id": "254014",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/sd_huanyudianying.jpg"
     },
     {
       "tvid": "286",
@@ -2286,7 +2645,9 @@
       "name": "GTV游戏竞技",
       "status": "1",
       "note": "GTV游戏竞技",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/gtv_youxi.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/gtv_youxi.png",
+      "channel_id": "14158",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/gtv_youxi.png"
     },
     {
       "tvid": "287",
@@ -2294,7 +2655,8 @@
       "name": "GTV网络棋牌",
       "status": "1",
       "note": "GTV网络棋牌",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/wangluoqipai.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/wangluoqipai.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/wangluoqipai.png"
     },
     {
       "tvid": "288",
@@ -2302,7 +2664,9 @@
       "name": "新动漫",
       "status": "1",
       "note": "新动漫",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/xindongman.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/xindongman.png",
+      "channel_id": "254013",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/xindongman.png"
     },
     {
       "tvid": "289",
@@ -2310,7 +2674,9 @@
       "name": "辽宁都市",
       "status": "1",
       "note": "辽宁都市",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/LNTV2.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/LNTV2.png",
+      "channel_id": "14217",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/LNTV2.png"
     },
     {
       "tvid": "290",
@@ -2318,7 +2684,9 @@
       "name": "辽宁影视剧",
       "status": "1",
       "note": "辽宁影视剧",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/LNTV3.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/LNTV3.png",
+      "channel_id": "14218",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/LNTV3.png"
     },
     {
       "tvid": "291",
@@ -2326,7 +2694,9 @@
       "name": "辽宁青少",
       "status": "1",
       "note": "辽宁青少",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/LNTV5.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/LNTV5.png",
+      "channel_id": "14219",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/LNTV5.png"
     },
     {
       "tvid": "292",
@@ -2334,7 +2704,9 @@
       "name": "辽宁生活",
       "status": "1",
       "note": "辽宁生活",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/LNTV6.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/LNTV6.png",
+      "channel_id": "14220",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/LNTV6.png"
     },
     {
       "tvid": "293",
@@ -2342,7 +2714,9 @@
       "name": "辽宁公共",
       "status": "1",
       "note": "辽宁公共",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/LNTV7.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/LNTV7.png",
+      "channel_id": "14221",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/LNTV7.png"
     },
     {
       "tvid": "294",
@@ -2350,7 +2724,9 @@
       "name": "辽宁北方",
       "status": "1",
       "note": "辽宁北方",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/LNTV8.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/LNTV8.png",
+      "channel_id": "14222",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/LNTV8.png"
     },
     {
       "tvid": "295",
@@ -2358,7 +2734,9 @@
       "name": "辽宁体育",
       "status": "1",
       "note": "辽宁体育",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/LNTV-SPORT.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/LNTV-SPORT.png",
+      "channel_id": "14223",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/LNTV-SPORT.png"
     },
     {
       "tvid": "296",
@@ -2366,7 +2744,9 @@
       "name": "辽宁经济",
       "status": "1",
       "note": "辽宁经济",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/LNTV-FINANCE.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/LNTV-FINANCE.png",
+      "channel_id": "14224",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/LNTV-FINANCE.png"
     },
     {
       "tvid": "297",
@@ -2374,7 +2754,9 @@
       "name": "沈阳新闻",
       "status": "1",
       "note": "沈阳新闻",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/LNSY1.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/LNSY1.png",
+      "channel_id": "14225",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/LNSY1.png"
     },
     {
       "tvid": "298",
@@ -2382,7 +2764,9 @@
       "name": "湖北综合频道",
       "status": "1",
       "note": "湖北综合频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/HUBEI2.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/HUBEI2.png",
+      "channel_id": "254019",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/HUBEI2.png"
     },
     {
       "tvid": "299",
@@ -2390,7 +2774,9 @@
       "name": "湖北影视频道",
       "status": "1",
       "note": "湖北影视频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/HUBEI3.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/HUBEI3.png",
+      "channel_id": "14191",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/HUBEI3.png"
     },
     {
       "tvid": "300",
@@ -2398,7 +2784,9 @@
       "name": "湖北教育频道",
       "status": "1",
       "note": "湖北教育频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/HUBEI4.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/HUBEI4.png",
+      "channel_id": "14192",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/HUBEI4.png"
     },
     {
       "tvid": "301",
@@ -2406,7 +2794,9 @@
       "name": "湖北生活频道",
       "status": "1",
       "note": "湖北生活频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/HUBEI5.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/HUBEI5.png",
+      "channel_id": "14193",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/HUBEI5.png"
     },
     {
       "tvid": "302",
@@ -2414,7 +2804,9 @@
       "name": "湖北公共·新闻",
       "status": "1",
       "note": "湖北公共·新闻",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/HUBEI7.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/HUBEI7.png",
+      "channel_id": "14194",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/HUBEI7.png"
     },
     {
       "tvid": "303",
@@ -2422,7 +2814,9 @@
       "name": "湖北经济频道",
       "status": "1",
       "note": "湖北经济频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/HUBEI8.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/HUBEI8.png",
+      "channel_id": "14195",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/HUBEI8.png"
     },
     {
       "tvid": "304",
@@ -2430,7 +2824,9 @@
       "name": "湖北垄上频道",
       "status": "1",
       "note": "湖北垄上频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/HBLS.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/HBLS.png",
+      "channel_id": "254020",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/HBLS.png"
     },
     {
       "tvid": "305",
@@ -2438,7 +2834,9 @@
       "name": "武汉新闻综合频道",
       "status": "1",
       "note": "武汉新闻综合频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/WHTV1.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/WHTV1.png",
+      "channel_id": "14197",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/WHTV1.png"
     },
     {
       "tvid": "306",
@@ -2446,7 +2844,9 @@
       "name": "武汉电视剧频道",
       "status": "1",
       "note": "武汉电视剧频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/WHTV2.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/WHTV2.png",
+      "channel_id": "14198",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/WHTV2.png"
     },
     {
       "tvid": "307",
@@ -2454,7 +2854,9 @@
       "name": "武汉科技生活频道",
       "status": "1",
       "note": "武汉科技生活频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/WHTV3.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/WHTV3.png",
+      "channel_id": "14199",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/WHTV3.png"
     },
     {
       "tvid": "308",
@@ -2462,7 +2864,9 @@
       "name": "武汉经济频道",
       "status": "1",
       "note": "武汉经济频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/WHTV4.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/WHTV4.png",
+      "channel_id": "14200",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/WHTV4.png"
     },
     {
       "tvid": "309",
@@ -2470,7 +2874,9 @@
       "name": "武汉文体频道",
       "status": "1",
       "note": "武汉文体频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/WHTV5.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/WHTV5.png",
+      "channel_id": "14201",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/WHTV5.png"
     },
     {
       "tvid": "310",
@@ -2478,7 +2884,9 @@
       "name": "武汉外语频道",
       "status": "1",
       "note": "武汉外语频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/WHTV6.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/WHTV6.png",
+      "channel_id": "14202",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/WHTV6.png"
     },
     {
       "tvid": "311",
@@ -2486,7 +2894,9 @@
       "name": "武汉少儿频道,武汉少儿",
       "status": "1",
       "note": "武汉少儿频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/WHTV7.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/WHTV7.png",
+      "channel_id": "254021",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/WHTV7.png"
     },
     {
       "tvid": "312",
@@ -2494,7 +2904,9 @@
       "name": "武汉教育电视台",
       "status": "1",
       "note": "武汉教育电视台",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/WETV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/WETV.png",
+      "channel_id": "254022",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/WETV.png"
     },
     {
       "tvid": "313",
@@ -2502,7 +2914,8 @@
       "name": "江苏靓妆频道,靓妆频道",
       "status": "1",
       "note": "江苏靓妆频道",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "314",
@@ -2510,7 +2923,9 @@
       "name": "优漫卡通,江苏优漫卡通",
       "status": "1",
       "note": "优漫卡通",
-      "logo": "http://epg.51zmt.top:8000/tb1/qt/youman.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/qt/youman.png",
+      "channel_id": "254008",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/youman.png"
     },
     {
       "tvid": "315",
@@ -2518,7 +2933,8 @@
       "name": "DV生活频道",
       "status": "1",
       "note": "DV生活频道",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "316",
@@ -2526,7 +2942,8 @@
       "name": "高尔夫频道",
       "status": "1",
       "note": "高尔夫频道",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "317",
@@ -2534,7 +2951,8 @@
       "name": "英语辅导频道",
       "status": "1",
       "note": "英语辅导频道",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "318",
@@ -2542,7 +2960,9 @@
       "name": "嘉佳卡通,广东嘉佳卡通",
       "status": "1",
       "note": "嘉佳卡通",
-      "logo": "https://live.fanmingming.com/tv/嘉佳卡通.png"
+      "logo": "https://live.fanmingming.com/tv/嘉佳卡通.png",
+      "channel_id": "14226",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/qt/jiajiakt.png"
     },
     {
       "tvid": "319",
@@ -2550,7 +2970,9 @@
       "name": "珠江频道",
       "status": "1",
       "note": "珠江频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/zhujiang.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/zhujiang.png",
+      "channel_id": "14079",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/zhujiang.png"
     },
     {
       "tvid": "320",
@@ -2558,7 +2980,9 @@
       "name": "金鹰纪实,湖南金鹰纪实",
       "status": "1",
       "note": "金鹰纪实",
-      "logo": "http://epg.51zmt.top:8000/tb1/ws/jinyingjishi.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/ws/jinyingjishi.png",
+      "channel_id": "14315",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/ws/jinyingjishi.png"
     },
     {
       "tvid": "321",
@@ -2566,7 +2990,9 @@
       "name": "翡翠台,翡翠,TVB",
       "status": "1",
       "note": "翡翠台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/TVB翡翠台.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/TVB翡翠台.png",
+      "channel_id": "13931",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/TVB翡翠台.png"
     },
     {
       "tvid": "322",
@@ -2574,7 +3000,9 @@
       "name": "明珠台,明珠,Pearl,TVB Pearl",
       "status": "1",
       "note": "明珠台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/TVB明珠台.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/TVB明珠台.png",
+      "channel_id": "13932",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/TVB明珠台.png"
     },
     {
       "tvid": "323",
@@ -2582,7 +3010,9 @@
       "name": "TVB经典台,TVB经典",
       "status": "1",
       "note": "TVB经典台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/TVBclassic.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/TVBclassic.png",
+      "channel_id": "13933",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/TVBclassic.png"
     },
     {
       "tvid": "324",
@@ -2590,7 +3020,9 @@
       "name": "无线新闻台,无线新闻",
       "status": "1",
       "note": "无线新闻台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/wxxw.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/wxxw.png",
+      "channel_id": "13934",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/wxxw.png"
     },
     {
       "tvid": "325",
@@ -2598,7 +3030,9 @@
       "name": "无线财经资讯台,无线财经",
       "status": "1",
       "note": "无线财经资讯台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/tvbfinanceinformationchannel.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/tvbfinanceinformationchannel.png",
+      "channel_id": "13935",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/tvbfinanceinformationchannel.png"
     },
     {
       "tvid": "326",
@@ -2606,7 +3040,9 @@
       "name": "凤凰卫视中文台,凤凰卫视,凤凰中文",
       "status": "1",
       "note": "凤凰卫视中文台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/fenghuangzhongwen.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/fenghuangzhongwen.png",
+      "channel_id": "13937",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/fenghuangzhongwen.png"
     },
     {
       "tvid": "327",
@@ -2614,7 +3050,9 @@
       "name": "凤凰卫视资讯台,凤凰资讯",
       "status": "1",
       "note": "凤凰卫视资讯台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/fenghuangzixun.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/fenghuangzixun.png",
+      "channel_id": "13938",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/fenghuangzixun.png"
     },
     {
       "tvid": "328",
@@ -2622,7 +3060,9 @@
       "name": "凤凰卫视香港台,凤凰香港",
       "status": "1",
       "note": "凤凰卫视香港台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/fenghuangxianggang.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/fenghuangxianggang.png",
+      "channel_id": "13939",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/fenghuangxianggang.png"
     },
     {
       "tvid": "329",
@@ -2630,7 +3070,9 @@
       "name": "阳光卫视",
       "status": "1",
       "note": "阳光卫视",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/yangguangweishi.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/yangguangweishi.png",
+      "channel_id": "13940",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/yangguangweishi.png"
     },
     {
       "tvid": "330",
@@ -2638,7 +3080,9 @@
       "name": "美亚高清电影台(香港)",
       "status": "1",
       "note": "美亚高清电影台(香港)",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/meiyamovie.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/meiyamovie.png",
+      "channel_id": "13941",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/meiyamovie.png"
     },
     {
       "tvid": "331",
@@ -2646,7 +3090,8 @@
       "name": "香港有线Hollywood Movie Channel",
       "status": "1",
       "note": "香港有线Hollywood Movie Channel",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "332",
@@ -2654,7 +3099,8 @@
       "name": "国家地理悠人频道",
       "status": "1",
       "note": "国家地理悠人频道",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "333",
@@ -2662,7 +3108,8 @@
       "name": "FOX LIFE",
       "status": "1",
       "note": "FOX LIFE",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "334",
@@ -2670,7 +3117,9 @@
       "name": "Viu TV",
       "status": "1",
       "note": "Viu TV",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/viutv.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/viutv.png",
+      "channel_id": "212345",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/viutv.png"
     },
     {
       "tvid": "335",
@@ -2678,7 +3127,9 @@
       "name": "香港卫视",
       "status": "1",
       "note": "香港卫视",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/hks.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/hks.png",
+      "channel_id": "29006",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/hks.png"
     },
     {
       "tvid": "336",
@@ -2686,7 +3137,9 @@
       "name": "J2",
       "status": "1",
       "note": "J2",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/TVBJ2.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/TVBJ2.png",
+      "channel_id": "13979",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/TVBJ2.png"
     },
     {
       "tvid": "337",
@@ -2694,7 +3147,9 @@
       "name": "香港国际财经台,香港国际财经",
       "status": "1",
       "note": "香港国际财经台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/hkguojicaijing.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/hkguojicaijing.png",
+      "channel_id": "254005",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/hkguojicaijing.png"
     },
     {
       "tvid": "338",
@@ -2702,7 +3157,9 @@
       "name": "香港开电视",
       "status": "1",
       "note": "香港开电视",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/hongkongkai.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/hongkongkai.png",
+      "channel_id": "254006",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/hongkongkai.png"
     },
     {
       "tvid": "339",
@@ -2710,7 +3167,9 @@
       "name": "有线财经资讯台,有线财经,有线财经资讯",
       "status": "1",
       "note": "有线财经资讯台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/youxiancaijingzixun.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/youxiancaijingzixun.png",
+      "channel_id": "254007",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/youxiancaijingzixun.png"
     },
     {
       "tvid": "340",
@@ -2718,7 +3177,8 @@
       "name": "有线新闻台,有线新闻",
       "status": "1",
       "note": "有线新闻台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/youxianxinwen.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/youxianxinwen.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/youxianxinwen.png"
     },
     {
       "tvid": "341",
@@ -2726,7 +3186,9 @@
       "name": "香港有线603",
       "status": "1",
       "note": "香港有线603",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/hongkong603.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/hongkong603.png",
+      "channel_id": "254011",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/hongkong603.png"
     },
     {
       "tvid": "342",
@@ -2734,7 +3196,8 @@
       "name": "TVB星河频道,TVB星河",
       "status": "1",
       "note": "TVB星河频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/TVB星河.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/TVB星河.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/TVB星河.png"
     },
     {
       "tvid": "343",
@@ -2742,7 +3205,8 @@
       "name": "星卫HD电影台",
       "status": "1",
       "note": "星卫HD电影台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/starmov.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/starmov.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/starmov.png"
     },
     {
       "tvid": "344",
@@ -2750,7 +3214,8 @@
       "name": "卫视卡式台",
       "status": "1",
       "note": "卫视卡式台",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "345",
@@ -2758,7 +3223,8 @@
       "name": "CHANNEL [V]国际频道",
       "status": "1",
       "note": "CHANNEL [V]国际频道",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "346",
@@ -2766,7 +3232,9 @@
       "name": "东森亚洲新闻台,东森亚洲新闻",
       "status": "1",
       "note": "东森亚洲新闻台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/EbcAsiaNews.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/EbcAsiaNews.png",
+      "channel_id": "14037",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/EbcAsiaNews.png"
     },
     {
       "tvid": "347",
@@ -2774,7 +3242,9 @@
       "name": "东森亚洲卫视",
       "status": "1",
       "note": "东森亚洲卫视",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/EbcAsiaWeishi.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/EbcAsiaWeishi.png",
+      "channel_id": "14038",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/EbcAsiaWeishi.png"
     },
     {
       "tvid": "348",
@@ -2782,7 +3252,9 @@
       "name": "公视台语台(公视2)",
       "status": "1",
       "note": "公视台语台(公视2)",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/PublicTV2.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/PublicTV2.png",
+      "channel_id": "14040",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/PublicTV2.png"
     },
     {
       "tvid": "349",
@@ -2790,7 +3262,9 @@
       "name": "好消息二台",
       "status": "1",
       "note": "好消息二台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/GoodTV2.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/GoodTV2.png",
+      "channel_id": "14042",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/GoodTV2.png"
     },
     {
       "tvid": "350",
@@ -2798,7 +3272,9 @@
       "name": "创世电视",
       "status": "1",
       "note": "创世电视",
-      "logo": ""
+      "logo": "no_logo",
+      "channel_id": "14046",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "351",
@@ -2806,7 +3282,9 @@
       "name": "壹电视综合台,壹电视综合",
       "status": "1",
       "note": "壹电视综合台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/NEXTTVZonghe.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/NEXTTVZonghe.png",
+      "channel_id": "14048",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/NEXTTVZonghe.png"
     },
     {
       "tvid": "352",
@@ -2814,7 +3292,9 @@
       "name": "壹电视电影台,壹电视电影",
       "status": "1",
       "note": "壹电视电影台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/NEXTTVMovie.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/NEXTTVMovie.png",
+      "channel_id": "14049",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/NEXTTVMovie.png"
     },
     {
       "tvid": "353",
@@ -2822,7 +3302,8 @@
       "name": "Baby TV(台湾)",
       "status": "1",
       "note": "Baby TV(台湾)",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/BabyTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/BabyTV.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/BabyTV.png"
     },
     {
       "tvid": "354",
@@ -2830,7 +3311,9 @@
       "name": "公视三台",
       "status": "1",
       "note": "公视三台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/PublicTV3HD.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/PublicTV3HD.png",
+      "channel_id": "14232",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/PublicTV3HD.png"
     },
     {
       "tvid": "355",
@@ -2838,7 +3321,9 @@
       "name": "民视无线台,民视无线",
       "status": "1",
       "note": "民视无线台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/FTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/FTV.png",
+      "channel_id": "254025",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/FTV.png"
     },
     {
       "tvid": "356",
@@ -2846,7 +3331,9 @@
       "name": "台视",
       "status": "1",
       "note": "台视",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/台视.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/台视.png",
+      "channel_id": "14235",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/台视.png"
     },
     {
       "tvid": "357",
@@ -2854,7 +3341,9 @@
       "name": "大爱电视台",
       "status": "1",
       "note": "大爱电视台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/daai.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/daai.png",
+      "channel_id": "14236",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/daai.png"
     },
     {
       "tvid": "358",
@@ -2862,7 +3351,9 @@
       "name": "中视",
       "status": "1",
       "note": "中视",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/中视.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/中视.png",
+      "channel_id": "14237",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/中视.png"
     },
     {
       "tvid": "359",
@@ -2870,7 +3361,9 @@
       "name": "人间卫视",
       "status": "1",
       "note": "人间卫视",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/BeautifulLife.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/BeautifulLife.png",
+      "channel_id": "14238",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/BeautifulLife.png"
     },
     {
       "tvid": "360",
@@ -2878,7 +3371,9 @@
       "name": "华视",
       "status": "1",
       "note": "华视",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/CTS.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/CTS.png",
+      "channel_id": "14239",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/CTS.png"
     },
     {
       "tvid": "361",
@@ -2886,7 +3381,9 @@
       "name": "公视",
       "status": "1",
       "note": "公视",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/PublicTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/PublicTV.png",
+      "channel_id": "14240",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/PublicTV.png"
     },
     {
       "tvid": "362",
@@ -2894,7 +3391,9 @@
       "name": "好消息频道",
       "status": "1",
       "note": "好消息频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/GoodTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/GoodTV.png",
+      "channel_id": "14241",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/GoodTV.png"
     },
     {
       "tvid": "363",
@@ -2902,7 +3401,9 @@
       "name": "原住民频道",
       "status": "1",
       "note": "原住民频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/yuanzhumin.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/yuanzhumin.png",
+      "channel_id": "14242",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/yuanzhumin.png"
     },
     {
       "tvid": "364",
@@ -2910,7 +3411,9 @@
       "name": "客家电视台",
       "status": "1",
       "note": "客家电视台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/HakkaTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/HakkaTV.png",
+      "channel_id": "14243",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/HakkaTV.png"
     },
     {
       "tvid": "365",
@@ -2918,7 +3421,9 @@
       "name": "MOMO亲子台",
       "status": "1",
       "note": "MOMO亲子台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/MOMOkids.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/MOMOkids.png",
+      "channel_id": "14249",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/MOMOkids.png"
     },
     {
       "tvid": "366",
@@ -2926,7 +3431,9 @@
       "name": "东森幼幼台,东森幼幼",
       "status": "1",
       "note": "东森幼幼台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/EBCYoYoTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/EBCYoYoTV.png",
+      "channel_id": "254029",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/EBCYoYoTV.png"
     },
     {
       "tvid": "367",
@@ -2934,7 +3441,9 @@
       "name": "纬来综合台,纬来综合",
       "status": "1",
       "note": "纬来综合台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/VideolandOnTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/VideolandOnTV.png",
+      "channel_id": "254030",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/VideolandOnTV.png"
     },
     {
       "tvid": "368",
@@ -2942,7 +3451,9 @@
       "name": "八大第一台,八大第一",
       "status": "1",
       "note": "八大第一台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/GTVOneHD.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/GTVOneHD.png",
+      "channel_id": "254031",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/GTVOneHD.png"
     },
     {
       "tvid": "369",
@@ -2950,7 +3461,9 @@
       "name": "八大综合台,八大综合",
       "status": "1",
       "note": "八大综合台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/GTVVarietyHD.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/GTVVarietyHD.png",
+      "channel_id": "254032",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/GTVVarietyHD.png"
     },
     {
       "tvid": "370",
@@ -2958,7 +3471,9 @@
       "name": "三立台湾台,三立台湾",
       "status": "1",
       "note": "三立台湾台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/SETTaiwan.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/SETTaiwan.png",
+      "channel_id": "254033",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/SETTaiwan.png"
     },
     {
       "tvid": "371",
@@ -2966,7 +3481,9 @@
       "name": "三立都会台,三立都会",
       "status": "1",
       "note": "三立都会台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/SETCity.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/SETCity.png",
+      "channel_id": "254034",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/SETCity.png"
     },
     {
       "tvid": "372",
@@ -2974,7 +3491,8 @@
       "name": "卫视中文台,卫视中文",
       "status": "1",
       "note": "卫视中文台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/卫视中文.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/卫视中文.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/卫视中文.png"
     },
     {
       "tvid": "373",
@@ -2982,7 +3500,9 @@
       "name": "东森综合台,东森综合",
       "status": "1",
       "note": "东森综合台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/EBCVariety.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/EBCVariety.png",
+      "channel_id": "254035",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/EBCVariety.png"
     },
     {
       "tvid": "374",
@@ -2990,7 +3510,9 @@
       "name": "东森超视",
       "status": "1",
       "note": "东森超视",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/EBCSuper.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/EBCSuper.png",
+      "channel_id": "254015",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/EBCSuper.png"
     },
     {
       "tvid": "375",
@@ -2998,7 +3520,9 @@
       "name": "中天综合台,中天综合",
       "status": "1",
       "note": "中天综合台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/CtiVariety.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/CtiVariety.png",
+      "channel_id": "254037",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/CtiVariety.png"
     },
     {
       "tvid": "376",
@@ -3006,7 +3530,9 @@
       "name": "东风卫视",
       "status": "1",
       "note": "东风卫视",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/东风卫视.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/东风卫视.png",
+      "channel_id": "14261",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/东风卫视.png"
     },
     {
       "tvid": "377",
@@ -3014,7 +3540,9 @@
       "name": "年代MUCH TV",
       "status": "1",
       "note": "年代MUCH TV",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/年代MUCH.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/年代MUCH.png",
+      "channel_id": "254038",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/年代MUCH.png"
     },
     {
       "tvid": "378",
@@ -3022,7 +3550,9 @@
       "name": "中天娱乐台",
       "status": "1",
       "note": "中天娱乐台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/CtiEntertainment.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/CtiEntertainment.png",
+      "channel_id": "254039",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/CtiEntertainment.png"
     },
     {
       "tvid": "379",
@@ -3030,7 +3560,9 @@
       "name": "东森戏剧台,东森戏剧",
       "status": "1",
       "note": "东森戏剧台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/EBCDrama.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/EBCDrama.png",
+      "channel_id": "254040",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/EBCDrama.png"
     },
     {
       "tvid": "380",
@@ -3038,7 +3570,9 @@
       "name": "八大戏剧台,八大戏剧",
       "status": "1",
       "note": "八大戏剧台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/GTVDramaHD.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/GTVDramaHD.png",
+      "channel_id": "254041",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/GTVDramaHD.png"
     },
     {
       "tvid": "381",
@@ -3046,7 +3580,9 @@
       "name": "TVBS欢乐台,TVBS欢乐",
       "status": "1",
       "note": "TVBS欢乐台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/TVBS欢乐.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/TVBS欢乐.png",
+      "channel_id": "14266",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/TVBS欢乐.png"
     },
     {
       "tvid": "382",
@@ -3054,7 +3590,9 @@
       "name": "纬来戏剧台,纬来戏剧",
       "status": "1",
       "note": "纬来戏剧台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/VideolandDrama.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/VideolandDrama.png",
+      "channel_id": "254042",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/VideolandDrama.png"
     },
     {
       "tvid": "383",
@@ -3062,7 +3600,9 @@
       "name": "高点电视台",
       "status": "1",
       "note": "高点电视台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/TOPTVHD.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/TOPTVHD.png",
+      "channel_id": "254043",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/TOPTVHD.png"
     },
     {
       "tvid": "384",
@@ -3070,7 +3610,9 @@
       "name": "JET综合台",
       "status": "1",
       "note": "JET综合台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/JETVariety.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/JETVariety.png",
+      "channel_id": "254044",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/JETVariety.png"
     },
     {
       "tvid": "385",
@@ -3078,7 +3620,9 @@
       "name": "壹电视新闻台",
       "status": "1",
       "note": "壹电视新闻台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/NextTVNews.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/NextTVNews.png",
+      "channel_id": "14270",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/NextTVNews.png"
     },
     {
       "tvid": "386",
@@ -3086,7 +3630,9 @@
       "name": "年代新闻台,年代新闻",
       "status": "1",
       "note": "年代新闻台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/年代ERANewsHD.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/年代ERANewsHD.png",
+      "channel_id": "254045",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/年代ERANewsHD.png"
     },
     {
       "tvid": "387",
@@ -3094,7 +3640,9 @@
       "name": "东森新闻台,东森新闻",
       "status": "1",
       "note": "东森新闻台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/EBCNews.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/EBCNews.png",
+      "channel_id": "14272",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/EBCNews.png"
     },
     {
       "tvid": "388",
@@ -3102,7 +3650,8 @@
       "name": "中天新闻台,中天新闻",
       "status": "1",
       "note": "中天新闻台",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "389",
@@ -3110,7 +3659,9 @@
       "name": "民视新闻台,民视新闻",
       "status": "1",
       "note": "民视新闻台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/FTVNews.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/FTVNews.png",
+      "channel_id": "14273",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/FTVNews.png"
     },
     {
       "tvid": "390",
@@ -3118,7 +3669,9 @@
       "name": "三立新闻台,三立新闻",
       "status": "1",
       "note": "三立新闻台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/SETNews.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/SETNews.png",
+      "channel_id": "254046",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/SETNews.png"
     },
     {
       "tvid": "391",
@@ -3126,7 +3679,9 @@
       "name": "TVBS 新闻台,TVBS新闻台,TVBS新闻",
       "status": "1",
       "note": "TVBS 新闻台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/TVBS新闻.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/TVBS新闻.png",
+      "channel_id": "14275",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/TVBS新闻.png"
     },
     {
       "tvid": "392",
@@ -3134,7 +3689,9 @@
       "name": "TVBS",
       "status": "1",
       "note": "TVBS",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/TVBS.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/TVBS.png",
+      "channel_id": "247669",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/TVBS.png"
     },
     {
       "tvid": "393",
@@ -3142,7 +3699,9 @@
       "name": "东森财经新闻台,东森财经新闻",
       "status": "1",
       "note": "东森财经新闻台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/EBCFinancialNews.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/EBCFinancialNews.png",
+      "channel_id": "14277",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/EBCFinancialNews.png"
     },
     {
       "tvid": "394",
@@ -3150,7 +3709,9 @@
       "name": "非凡新闻台",
       "status": "1",
       "note": "非凡新闻台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/UniqueNews.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/UniqueNews.png",
+      "channel_id": "254047",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/UniqueNews.png"
     },
     {
       "tvid": "395",
@@ -3158,7 +3719,8 @@
       "name": "卫视电影台",
       "status": "1",
       "note": "卫视电影台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/StarChineseMovies.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/StarChineseMovies.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/StarChineseMovies.png"
     },
     {
       "tvid": "396",
@@ -3166,7 +3728,9 @@
       "name": "东森电影台,东森电影",
       "status": "1",
       "note": "东森电影台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/EBCMovies.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/EBCMovies.png",
+      "channel_id": "254048",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/EBCMovies.png"
     },
     {
       "tvid": "397",
@@ -3174,15 +3738,19 @@
       "name": "纬来电影台,纬来电影",
       "status": "1",
       "note": "纬来电影台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/VideolandMovies.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/VideolandMovies.png",
+      "channel_id": "254049",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/VideolandMovies.png"
     },
     {
       "tvid": "398",
       "epgid": "LSTime电影台",
-      "name": "LS Time龙祥時代电影台",
+      "name": "LS Time龙祥時代电影台,LS Time龙祥时代电影台,龙祥时代电影台,龙祥电影台",
       "status": "1",
       "note": "LS Time龙祥時代电影台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/LSTIME.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/LSTIME.png",
+      "channel_id": "254050",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/LSTIME.png"
     },
     {
       "tvid": "399",
@@ -3190,7 +3758,9 @@
       "name": "东森洋片台,东森洋片",
       "status": "1",
       "note": "东森洋片台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/EBCWesternMovies.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/EBCWesternMovies.png",
+      "channel_id": "254051",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/EBCWesternMovies.png"
     },
     {
       "tvid": "400",
@@ -3198,7 +3768,9 @@
       "name": "好莱坞电影台,好莱坞电影",
       "status": "1",
       "note": "好莱坞电影台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/HMC.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/HMC.png",
+      "channel_id": "254052",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/HMC.png"
     },
     {
       "tvid": "401",
@@ -3206,7 +3778,8 @@
       "name": "纬来育乐台,纬来育乐",
       "status": "1",
       "note": "纬来育乐台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/VideolandMaxTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/VideolandMaxTV.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/VideolandMaxTV.png"
     },
     {
       "tvid": "402",
@@ -3214,7 +3787,9 @@
       "name": "纬来体育台,纬来体育",
       "status": "1",
       "note": "纬来体育台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/VideolandSportsHD.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/VideolandSportsHD.png",
+      "channel_id": "254054",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/VideolandSportsHD.png"
     },
     {
       "tvid": "403",
@@ -3222,7 +3797,9 @@
       "name": "纬来日本台,纬来日本",
       "status": "1",
       "note": "纬来日本台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/VideolandJapanese.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/VideolandJapanese.png",
+      "channel_id": "254057",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/VideolandJapanese.png"
     },
     {
       "tvid": "404",
@@ -3230,7 +3807,9 @@
       "name": "国兴卫视",
       "status": "1",
       "note": "国兴卫视",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/GoldSunTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/GoldSunTV.png",
+      "channel_id": "14295",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/GoldSunTV.png"
     },
     {
       "tvid": "405",
@@ -3238,7 +3817,9 @@
       "name": "靖天综合台,靖天综合",
       "status": "1",
       "note": "靖天综合台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天综合.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天综合.png",
+      "channel_id": "14297",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/靖天综合.png"
     },
     {
       "tvid": "406",
@@ -3246,7 +3827,9 @@
       "name": "靖天资讯台,靖天资讯",
       "status": "1",
       "note": "靖天资讯台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天资讯.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天资讯.png",
+      "channel_id": "14298",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/靖天资讯.png"
     },
     {
       "tvid": "407",
@@ -3254,7 +3837,9 @@
       "name": "信吉电视台",
       "status": "1",
       "note": "信吉电视台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/SinJiTVHD.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/SinJiTVHD.png",
+      "channel_id": "254059",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/SinJiTVHD.png"
     },
     {
       "tvid": "408",
@@ -3262,7 +3847,9 @@
       "name": "靖洋戏剧台",
       "status": "1",
       "note": "靖洋戏剧台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖洋戏剧.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖洋戏剧.png",
+      "channel_id": "14300",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/靖洋戏剧.png"
     },
     {
       "tvid": "409",
@@ -3270,7 +3857,8 @@
       "name": "华艺台湾台",
       "status": "1",
       "note": "华艺台湾台",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "410",
@@ -3278,7 +3866,8 @@
       "name": "凯亚综合台",
       "status": "1",
       "note": "凯亚综合台",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "411",
@@ -3286,7 +3875,8 @@
       "name": "冠军电视台",
       "status": "1",
       "note": "冠军电视台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/ChampionTV1.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/ChampionTV1.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/ChampionTV1.png"
     },
     {
       "tvid": "412",
@@ -3294,7 +3884,9 @@
       "name": "台湾艺术台,台湾艺术",
       "status": "1",
       "note": "台湾艺术台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/TACT.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/TACT.png",
+      "channel_id": "254060",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/TACT.png"
     },
     {
       "tvid": "413",
@@ -3302,7 +3894,9 @@
       "name": "全大电视台",
       "status": "1",
       "note": "全大电视台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/CostarTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/CostarTV.png",
+      "channel_id": "254061",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/CostarTV.png"
     },
     {
       "tvid": "414",
@@ -3310,7 +3904,9 @@
       "name": "非凡商业台,非凡商业",
       "status": "1",
       "note": "非凡商业台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/UniqueUSTVHDUSTVHD.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/UniqueUSTVHDUSTVHD.png",
+      "channel_id": "254062",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/UniqueUSTVHDUSTVHD.png"
     },
     {
       "tvid": "415",
@@ -3318,7 +3914,9 @@
       "name": "三立财经新闻台inews,三立财经新闻",
       "status": "1",
       "note": "三立财经新闻台inews",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/SETInews.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/SETInews.png",
+      "channel_id": "14304",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/SETInews.png"
     },
     {
       "tvid": "416",
@@ -3326,7 +3924,8 @@
       "name": "中华财经",
       "status": "1",
       "note": "中华财经",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "417",
@@ -3334,7 +3933,9 @@
       "name": "运通财经",
       "status": "1",
       "note": "运通财经",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/EFTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/EFTV.png",
+      "channel_id": "254063",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/EFTV.png"
     },
     {
       "tvid": "418",
@@ -3342,7 +3943,9 @@
       "name": "SBN全球财经台",
       "status": "1",
       "note": "SBN全球财经台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/SBN.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/SBN.png",
+      "channel_id": "14306",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/SBN.png"
     },
     {
       "tvid": "419",
@@ -3350,7 +3953,9 @@
       "name": "诚心电视台",
       "status": "1",
       "note": "诚心电视台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/ChengSinTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/ChengSinTV.png",
+      "channel_id": "254064",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/ChengSinTV.png"
     },
     {
       "tvid": "420",
@@ -3358,7 +3963,9 @@
       "name": "MTV Live HD 音乐频道",
       "status": "1",
       "note": "MTV Live HD 音乐频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/mtvlivehd.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/mtvlivehd.png",
+      "channel_id": "14309",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/mtvlivehd.png"
     },
     {
       "tvid": "421",
@@ -3366,7 +3973,9 @@
       "name": "靖天映画",
       "status": "1",
       "note": "靖天映画",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天映画.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天映画.png",
+      "channel_id": "14310",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/靖天映画.png"
     },
     {
       "tvid": "422",
@@ -3374,7 +3983,9 @@
       "name": "海豚综合台",
       "status": "1",
       "note": "海豚综合台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/海豚综合.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/海豚综合.png",
+      "channel_id": "254066",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/海豚综合.png"
     },
     {
       "tvid": "423",
@@ -3382,7 +3993,9 @@
       "name": "霹雳台湾台",
       "status": "1",
       "note": "霹雳台湾台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/PiliPuppet.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/PiliPuppet.png",
+      "channel_id": "254067",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/PiliPuppet.png"
     },
     {
       "tvid": "424",
@@ -3390,7 +4003,9 @@
       "name": "十方法界",
       "status": "1",
       "note": "十方法界",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/CosmosBuddhistMissionaryTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/CosmosBuddhistMissionaryTV.png",
+      "channel_id": "254068",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/CosmosBuddhistMissionaryTV.png"
     },
     {
       "tvid": "425",
@@ -3398,7 +4013,9 @@
       "name": "信大频道",
       "status": "1",
       "note": "信大频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/SinDaTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/SinDaTV.png",
+      "channel_id": "254069",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/SinDaTV.png"
     },
     {
       "tvid": "426",
@@ -3406,7 +4023,9 @@
       "name": "华藏卫视",
       "status": "1",
       "note": "华藏卫视",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/HwaZanTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/HwaZanTV.png",
+      "channel_id": "14174",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/HwaZanTV.png"
     },
     {
       "tvid": "427",
@@ -3414,7 +4033,9 @@
       "name": "Z频道",
       "status": "1",
       "note": "Z频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/ZChannel.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/ZChannel.png",
+      "channel_id": "254070",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/ZChannel.png"
     },
     {
       "tvid": "428",
@@ -3422,7 +4043,9 @@
       "name": "佛卫慈悲台,佛卫慈悲",
       "status": "1",
       "note": "佛卫慈悲台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/BudddhaCompassionTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/BudddhaCompassionTV.png",
+      "channel_id": "14317",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/BudddhaCompassionTV.png"
     },
     {
       "tvid": "429",
@@ -3430,7 +4053,9 @@
       "name": "生命频道",
       "status": "1",
       "note": "生命频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/shengming.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/shengming.png",
+      "channel_id": "29044",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/shengming.png"
     },
     {
       "tvid": "430",
@@ -3438,7 +4063,9 @@
       "name": "天良综合台",
       "status": "1",
       "note": "天良综合台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/TienLiangTVHD.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/TienLiangTVHD.png",
+      "channel_id": "254071",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/TienLiangTVHD.png"
     },
     {
       "tvid": "431",
@@ -3446,7 +4073,9 @@
       "name": "正德电视台",
       "status": "1",
       "note": "正德电视台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/ChengTeTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/ChengTeTV.png",
+      "channel_id": "14320",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/ChengTeTV.png"
     },
     {
       "tvid": "432",
@@ -3454,7 +4083,9 @@
       "name": "高点育乐台",
       "status": "1",
       "note": "高点育乐台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/TOPTV2.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/TOPTV2.png",
+      "channel_id": "254072",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/TOPTV2.png"
     },
     {
       "tvid": "433",
@@ -3462,7 +4093,9 @@
       "name": "冠军梦想台",
       "status": "1",
       "note": "冠军梦想台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/ChampionTV2.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/ChampionTV2.png",
+      "channel_id": "254073",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/ChampionTV2.png"
     },
     {
       "tvid": "434",
@@ -3470,7 +4103,9 @@
       "name": "八大娱乐台,八大娱乐",
       "status": "1",
       "note": "八大娱乐台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/GTVEntertainment.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/GTVEntertainment.png",
+      "channel_id": "254074",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/GTVEntertainment.png"
     },
     {
       "tvid": "435",
@@ -3478,7 +4113,9 @@
       "name": "大立电视台,大立电视",
       "status": "1",
       "note": "大立电视台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/DaliTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/DaliTV.png",
+      "channel_id": "254075",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/DaliTV.png"
     },
     {
       "tvid": "436",
@@ -3486,7 +4123,9 @@
       "name": "幸福空间居家台",
       "status": "1",
       "note": "幸福空间居家台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/gstv.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/gstv.png",
+      "channel_id": "14325",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/gstv.png"
     },
     {
       "tvid": "437",
@@ -3494,7 +4133,9 @@
       "name": "大爱二台",
       "status": "1",
       "note": "大爱二台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/daai2.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/daai2.png",
+      "channel_id": "14329",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/daai2.png"
     },
     {
       "tvid": "438",
@@ -3502,7 +4143,9 @@
       "name": "台视新闻台,台视新闻",
       "status": "1",
       "note": "台视新闻台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/台视新闻.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/台视新闻.png",
+      "channel_id": "13944",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/台视新闻.png"
     },
     {
       "tvid": "439",
@@ -3510,7 +4153,9 @@
       "name": "台视财经台,台视财经",
       "status": "1",
       "note": "台视财经台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/台视财经.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/台视财经.png",
+      "channel_id": "13841",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/台视财经.png"
     },
     {
       "tvid": "440",
@@ -3518,7 +4163,9 @@
       "name": "台视综合台,台视综合",
       "status": "1",
       "note": "台视综合台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/台视综合.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/台视综合.png",
+      "channel_id": "13954",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/台视综合.png"
     },
     {
       "tvid": "441",
@@ -3526,7 +4173,9 @@
       "name": "靖天欢乐台,靖天欢乐",
       "status": "1",
       "note": "靖天欢乐台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天欢乐.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天欢乐.png",
+      "channel_id": "13971",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/靖天欢乐.png"
     },
     {
       "tvid": "442",
@@ -3534,7 +4183,9 @@
       "name": "靖天育乐台,靖天育乐",
       "status": "1",
       "note": "靖天育乐台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天育乐.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天育乐.png",
+      "channel_id": "14330",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/靖天育乐.png"
     },
     {
       "tvid": "443",
@@ -3542,7 +4193,9 @@
       "name": "靖天日本台,靖天日本",
       "status": "1",
       "note": "靖天日本台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天日本.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天日本.png",
+      "channel_id": "13916",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/靖天日本.png"
     },
     {
       "tvid": "444",
@@ -3550,7 +4203,9 @@
       "name": "Food Network美食台",
       "status": "1",
       "note": "Food Network美食台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/FoodNetwork.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/FoodNetwork.png",
+      "channel_id": "14051",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/FoodNetwork.png"
     },
     {
       "tvid": "445",
@@ -3558,7 +4213,9 @@
       "name": "HGTV居家乐活",
       "status": "1",
       "note": "HGTV居家乐活",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/HGTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/HGTV.png",
+      "channel_id": "13936",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/HGTV.png"
     },
     {
       "tvid": "446",
@@ -3566,7 +4223,9 @@
       "name": "Travel Channel",
       "status": "1",
       "note": "Travel Channel",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/travelchannel.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/travelchannel.png",
+      "channel_id": "13865",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/travelchannel.png"
     },
     {
       "tvid": "447",
@@ -3574,7 +4233,9 @@
       "name": "亚洲美食频道",
       "status": "1",
       "note": "亚洲美食频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/afc.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/afc.png",
+      "channel_id": "13942",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/afc.png"
     },
     {
       "tvid": "448",
@@ -3582,7 +4243,9 @@
       "name": "寰宇新闻",
       "status": "1",
       "note": "寰宇新闻",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/GlobalNews.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/GlobalNews.png",
+      "channel_id": "13943",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/GlobalNews.png"
     },
     {
       "tvid": "449",
@@ -3590,7 +4253,9 @@
       "name": "亚洲旅游台",
       "status": "1",
       "note": "亚洲旅游台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/asiatravel.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/asiatravel.png",
+      "channel_id": "13945",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/asiatravel.png"
     },
     {
       "tvid": "450",
@@ -3598,7 +4263,9 @@
       "name": "博斯运动二台",
       "status": "1",
       "note": "博斯运动二台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/sports_net_2.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/sports_net_2.png",
+      "channel_id": "13947",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/sports_net_2.png"
     },
     {
       "tvid": "451",
@@ -3606,7 +4273,9 @@
       "name": "博斯网球台",
       "status": "1",
       "note": "博斯网球台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/sport_tennis.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/sport_tennis.png",
+      "channel_id": "13948",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/sport_tennis.png"
     },
     {
       "tvid": "452",
@@ -3614,7 +4283,9 @@
       "name": "博斯无限台",
       "status": "1",
       "note": "博斯无限台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/sport_unlimited.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/sport_unlimited.png",
+      "channel_id": "13949",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/sport_unlimited.png"
     },
     {
       "tvid": "453",
@@ -3622,7 +4293,9 @@
       "name": "博斯高球1台",
       "status": "1",
       "note": "博斯高球1台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/sports-golfch.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/sports-golfch.png",
+      "channel_id": "13950",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/sports-golfch.png"
     },
     {
       "tvid": "454",
@@ -3630,7 +4303,9 @@
       "name": "博斯高球2台",
       "status": "1",
       "note": "博斯高球2台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/sport-golfplus.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/sport-golfplus.png",
+      "channel_id": "13951",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/sport-golfplus.png"
     },
     {
       "tvid": "455",
@@ -3638,7 +4313,9 @@
       "name": "博斯魅力网",
       "status": "1",
       "note": "博斯魅力网",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/sport-trendsport.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/sport-trendsport.png",
+      "channel_id": "13876",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/sport-trendsport.png"
     },
     {
       "tvid": "456",
@@ -3646,7 +4323,9 @@
       "name": "博斯运动一台",
       "status": "1",
       "note": "博斯运动一台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/sport-sports_net.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/sport-sports_net.png",
+      "channel_id": "13952",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/sport-sports_net.png"
     },
     {
       "tvid": "457",
@@ -3654,7 +4333,9 @@
       "name": "博斯无限二台",
       "status": "1",
       "note": "博斯无限二台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/sport_unlimited2.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/sport_unlimited2.png",
+      "channel_id": "13953",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/sport_unlimited2.png"
     },
     {
       "tvid": "458",
@@ -3662,7 +4343,9 @@
       "name": "达文西频道",
       "status": "1",
       "note": "达文西频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/davinci.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/davinci.png",
+      "channel_id": "13960",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/davinci.png"
     },
     {
       "tvid": "459",
@@ -3670,7 +4353,8 @@
       "name": "MOMO追剧台",
       "status": "1",
       "note": "MOMO追剧台",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "460",
@@ -3678,7 +4362,9 @@
       "name": "靖洋卡通台,靖洋卡通",
       "status": "1",
       "note": "靖洋卡通台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖洋卡通.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖洋卡通.png",
+      "channel_id": "13965",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/靖洋卡通.png"
     },
     {
       "tvid": "461",
@@ -3686,7 +4372,9 @@
       "name": "靖天卡通台,靖天卡通",
       "status": "1",
       "note": "靖天卡通台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天卡通.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天卡通.png",
+      "channel_id": "13967",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/靖天卡通.png"
     },
     {
       "tvid": "462",
@@ -3694,7 +4382,9 @@
       "name": "三立综合台,三立综合",
       "status": "1",
       "note": "三立综合台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/SETZonghe.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/SETZonghe.png",
+      "channel_id": "14041",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/SETZonghe.png"
     },
     {
       "tvid": "463",
@@ -3702,7 +4392,9 @@
       "name": "龙华偶像",
       "status": "1",
       "note": "龙华偶像",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/龙华偶像.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/龙华偶像.png",
+      "channel_id": "14080",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/龙华偶像.png"
     },
     {
       "tvid": "464",
@@ -3710,7 +4402,9 @@
       "name": "龙华戏剧",
       "status": "1",
       "note": "龙华戏剧",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/龙华戏剧.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/龙华戏剧.png",
+      "channel_id": "14081",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/龙华戏剧.png"
     },
     {
       "tvid": "465",
@@ -3718,7 +4412,9 @@
       "name": "龙华电影",
       "status": "1",
       "note": "龙华电影",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/龙华电影.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/龙华电影.png",
+      "channel_id": "14082",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/龙华电影.png"
     },
     {
       "tvid": "466",
@@ -3726,7 +4422,8 @@
       "name": "龙华卡通台",
       "status": "1",
       "note": "龙华卡通台",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "467",
@@ -3734,7 +4431,9 @@
       "name": "龙华经典",
       "status": "1",
       "note": "龙华经典",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/龙华经典.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/龙华经典.png",
+      "channel_id": "14083",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/龙华经典.png"
     },
     {
       "tvid": "468",
@@ -3742,7 +4441,9 @@
       "name": "龙华影剧",
       "status": "1",
       "note": "龙华影剧",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/龙华影剧.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/龙华影剧.png",
+      "channel_id": "14084",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/龙华影剧.png"
     },
     {
       "tvid": "469",
@@ -3750,7 +4451,9 @@
       "name": "龙华洋片",
       "status": "1",
       "note": "龙华洋片",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/龙华洋片.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/龙华洋片.png",
+      "channel_id": "14206",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/龙华洋片.png"
     },
     {
       "tvid": "470",
@@ -3758,7 +4461,9 @@
       "name": "民视第一台",
       "status": "1",
       "note": "民视第一台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/ftv-1.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/ftv-1.png",
+      "channel_id": "14207",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/ftv-1.png"
     },
     {
       "tvid": "471",
@@ -3766,7 +4471,9 @@
       "name": "民视台湾台,民视台湾",
       "status": "1",
       "note": "民视台湾台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/ftv-taiwan.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/ftv-taiwan.png",
+      "channel_id": "14087",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/ftv-taiwan.png"
     },
     {
       "tvid": "472",
@@ -3774,7 +4481,9 @@
       "name": "民视",
       "status": "1",
       "note": "民视",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/民视.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/民视.png",
+      "channel_id": "14088",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/民视.png"
     },
     {
       "tvid": "473",
@@ -3782,7 +4491,9 @@
       "name": "中视菁采台",
       "status": "1",
       "note": "中视菁采台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/中视菁采.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/中视菁采.png",
+      "channel_id": "14089",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/中视菁采.png"
     },
     {
       "tvid": "474",
@@ -3790,7 +4501,9 @@
       "name": "TVBS精采台",
       "status": "1",
       "note": "TVBS精采台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/TVBS精采.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/TVBS精采.png",
+      "channel_id": "14090",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/TVBS精采.png"
     },
     {
       "tvid": "475",
@@ -3798,7 +4511,8 @@
       "name": "Baby First宝宝世界",
       "status": "1",
       "note": "Baby First宝宝世界",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/BabyFirst.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/BabyFirst.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/BabyFirst.png"
     },
     {
       "tvid": "476",
@@ -3806,7 +4520,9 @@
       "name": "民视综艺台,民视综艺",
       "status": "1",
       "note": "民视综艺台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/ftv-zongyi.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/ftv-zongyi.png",
+      "channel_id": "14093",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/ftv-zongyi.png"
     },
     {
       "tvid": "477",
@@ -3814,7 +4530,9 @@
       "name": "华艺MBC综合台",
       "status": "1",
       "note": "华艺MBC综合台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/huayimbc.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/huayimbc.png",
+      "channel_id": "29011",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/huayimbc.png"
     },
     {
       "tvid": "478",
@@ -3822,7 +4540,9 @@
       "name": "TRACE Urban",
       "status": "1",
       "note": "TRACE Urban",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/traceurban.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/traceurban.png",
+      "channel_id": "14095",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/traceurban.png"
     },
     {
       "tvid": "479",
@@ -3830,7 +4550,9 @@
       "name": "Fashion One",
       "status": "1",
       "note": "Fashion One",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/fashionone.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/fashionone.png",
+      "channel_id": "254018",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/fashionone.png"
     },
     {
       "tvid": "480",
@@ -3838,7 +4560,9 @@
       "name": "龙华日韩台,龙华日韩",
       "status": "1",
       "note": "龙华日韩台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/龙华日韩.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/龙华日韩.png",
+      "channel_id": "14100",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/龙华日韩.png"
     },
     {
       "tvid": "481",
@@ -3846,7 +4570,9 @@
       "name": "靖天戏剧台,靖天戏剧",
       "status": "1",
       "note": "靖天戏剧台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天戏剧.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天戏剧.png",
+      "channel_id": "14101",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/靖天戏剧.png"
     },
     {
       "tvid": "482",
@@ -3854,7 +4580,9 @@
       "name": "靖天电影台,靖天电影",
       "status": "1",
       "note": "靖天电影台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天电影.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天电影.png",
+      "channel_id": "14102",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/靖天电影.png"
     },
     {
       "tvid": "483",
@@ -3862,7 +4590,8 @@
       "name": "WAKUWAKU JAPANE",
       "status": "1",
       "note": "WAKUWAKU JAPANE",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "484",
@@ -3870,7 +4599,9 @@
       "name": "中视经典台,中视经典",
       "status": "1",
       "note": "中视经典台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/中视经典.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/中视经典.png",
+      "channel_id": "14104",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/中视经典.png"
     },
     {
       "tvid": "485",
@@ -3878,7 +4609,9 @@
       "name": "i-Fun动漫台",
       "status": "1",
       "note": "i-Fun动漫台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/ifun1.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/ifun1.png",
+      "channel_id": "14105",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/ifun1.png"
     },
     {
       "tvid": "486",
@@ -3886,7 +4619,8 @@
       "name": "i-Fun动漫2台",
       "status": "1",
       "note": "i-Fun动漫2台",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "487",
@@ -3894,7 +4628,9 @@
       "name": "i-Fun动漫2台",
       "status": "1",
       "note": "i-Fun动漫2台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/ifun3.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/ifun3.png",
+      "channel_id": "14106",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/ifun3.png"
     },
     {
       "tvid": "488",
@@ -3902,7 +4638,9 @@
       "name": "中视新闻台,中视新闻",
       "status": "1",
       "note": "中视新闻台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/中视新闻.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/中视新闻.png",
+      "channel_id": "14107",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/中视新闻.png"
     },
     {
       "tvid": "489",
@@ -3910,7 +4648,8 @@
       "name": "寰宇新闻二台,寰宇新闻2",
       "status": "1",
       "note": "寰宇新闻二台",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "490",
@@ -3918,7 +4657,9 @@
       "name": "CI 罪案侦查频道",
       "status": "1",
       "note": "CI 罪案侦查频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/CrimeInvestigation.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/CrimeInvestigation.png",
+      "channel_id": "14108",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/CrimeInvestigation.png"
     },
     {
       "tvid": "491",
@@ -3926,7 +4667,9 @@
       "name": "视纳华仁纪实频道",
       "status": "1",
       "note": "视纳华仁纪实频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/cnex.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/cnex.png",
+      "channel_id": "14109",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/cnex.png"
     },
     {
       "tvid": "492",
@@ -3934,7 +4677,9 @@
       "name": "采昌影剧台",
       "status": "1",
       "note": "采昌影剧台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/采昌影剧.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/采昌影剧.png",
+      "channel_id": "14110",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/采昌影剧.png"
     },
     {
       "tvid": "493",
@@ -3942,7 +4687,9 @@
       "name": "智林体育台",
       "status": "1",
       "note": "智林体育台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/智林体育台.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/智林体育台.png",
+      "channel_id": "14111",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/智林体育台.png"
     },
     {
       "tvid": "494",
@@ -3950,7 +4697,9 @@
       "name": "影迷数位纪实台",
       "status": "1",
       "note": "影迷数位纪实台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/影迷纪实.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/影迷纪实.png",
+      "channel_id": "14113",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/影迷纪实.png"
     },
     {
       "tvid": "495",
@@ -3958,7 +4707,9 @@
       "name": "影迷数位电影台",
       "status": "1",
       "note": "影迷数位电影台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/影迷电影.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/影迷电影.png",
+      "channel_id": "14114",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/影迷电影.png"
     },
     {
       "tvid": "496",
@@ -3966,7 +4717,9 @@
       "name": "ELTV生活英语台",
       "status": "1",
       "note": "ELTV生活英语台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/eltv.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/eltv.png",
+      "channel_id": "14115",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/eltv.png"
     },
     {
       "tvid": "497",
@@ -3974,7 +4727,9 @@
       "name": "KLT靖天国际,靖天国际",
       "status": "1",
       "note": "KLT靖天国际",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天国际.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/靖天国际.png",
+      "channel_id": "29013",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/靖天国际.png"
     },
     {
       "tvid": "498",
@@ -3982,7 +4737,9 @@
       "name": "龙华动画",
       "status": "1",
       "note": "龙华动画",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/longhuadonghua.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/longhuadonghua.png",
+      "channel_id": "29014",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/longhuadonghua.png"
     },
     {
       "tvid": "499",
@@ -3990,7 +4747,9 @@
       "name": "MTV综合电视台",
       "status": "1",
       "note": "MTV综合电视台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/MTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/MTV.png",
+      "channel_id": "14070",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/MTV.png"
     },
     {
       "tvid": "500",
@@ -3998,7 +4757,8 @@
       "name": "CMusic",
       "status": "1",
       "note": "CMusic",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "501",
@@ -4006,7 +4766,9 @@
       "name": "爱尔达体育2台",
       "status": "1",
       "note": "爱尔达体育2台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/elta_sports2.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/elta_sports2.png",
+      "channel_id": "29015",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/elta_sports2.png"
     },
     {
       "tvid": "502",
@@ -4014,7 +4776,9 @@
       "name": "LUXE TV Channel",
       "status": "1",
       "note": "LUXE TV Channel",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/luxetv.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/luxetv.png",
+      "channel_id": "14120",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/luxetv.png"
     },
     {
       "tvid": "503",
@@ -4022,7 +4786,9 @@
       "name": "滚动力 rollor",
       "status": "1",
       "note": "滚动力 rollor",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/roller.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/roller.png",
+      "channel_id": "29016",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/roller.png"
     },
     {
       "tvid": "504",
@@ -4030,7 +4796,9 @@
       "name": "亚洲综合台,亚洲综合",
       "status": "1",
       "note": "亚洲综合台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/asiazonghe.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/asiazonghe.png",
+      "channel_id": "29017",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/asiazonghe.png"
     },
     {
       "tvid": "505",
@@ -4038,7 +4806,9 @@
       "name": "寰宇HD综合台,寰宇,寰宇HD综合",
       "status": "1",
       "note": "寰宇HD综合台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/huanyuzonghe.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/huanyuzonghe.png",
+      "channel_id": "29018",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/huanyuzonghe.png"
     },
     {
       "tvid": "506",
@@ -4046,7 +4816,9 @@
       "name": "纬来精采台,纬来精采",
       "status": "1",
       "note": "纬来精采台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/weilaojingcai.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/weilaojingcai.png",
+      "channel_id": "29019",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/weilaojingcai.png"
     },
     {
       "tvid": "507",
@@ -4054,7 +4826,9 @@
       "name": "ETtoday综合台",
       "status": "1",
       "note": "ETtoday综合台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/etoday.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/etoday.png",
+      "channel_id": "29020",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/etoday.png"
     },
     {
       "tvid": "508",
@@ -4062,7 +4836,9 @@
       "name": "八大优频道,八大优",
       "status": "1",
       "note": "八大优频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/badayou.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/badayou.png",
+      "channel_id": "29021",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/badayou.png"
     },
     {
       "tvid": "509",
@@ -4070,7 +4846,9 @@
       "name": "台湾戏剧台",
       "status": "1",
       "note": "台湾戏剧台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/taiwanxiju.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/taiwanxiju.png",
+      "channel_id": "29022",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/taiwanxiju.png"
     },
     {
       "tvid": "510",
@@ -4078,7 +4856,9 @@
       "name": "爱尔达影剧台",
       "status": "1",
       "note": "爱尔达影剧台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/elta_yingju.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/elta_yingju.png",
+      "channel_id": "29023",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/elta_yingju.png"
     },
     {
       "tvid": "511",
@@ -4086,7 +4866,9 @@
       "name": "MY101综合台",
       "status": "1",
       "note": "MY101综合台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/my101.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/my101.png",
+      "channel_id": "254009",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/my101.png"
     },
     {
       "tvid": "512",
@@ -4094,7 +4876,8 @@
       "name": "星卫娱乐台,星卫娱乐",
       "status": "1",
       "note": "星卫娱乐台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/starmovieyule.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/starmovieyule.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/starmovieyule.png"
     },
     {
       "tvid": "513",
@@ -4102,7 +4885,9 @@
       "name": "寰宇财经台,寰宇财经",
       "status": "1",
       "note": "寰宇财经台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/huanyucaijing.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/huanyucaijing.png",
+      "channel_id": "29025",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/huanyucaijing.png"
     },
     {
       "tvid": "514",
@@ -4110,7 +4895,9 @@
       "name": "CatchPlay电影台",
       "status": "1",
       "note": "CatchPlay电影台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/catchplay.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/catchplay.png",
+      "channel_id": "14132",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/catchplay.png"
     },
     {
       "tvid": "515",
@@ -4118,7 +4905,9 @@
       "name": "我的欧洲电影",
       "status": "1",
       "note": "我的欧洲电影",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/MyCinemaEurope.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/MyCinemaEurope.png",
+      "channel_id": "14133",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/MyCinemaEurope.png"
     },
     {
       "tvid": "516",
@@ -4126,7 +4915,9 @@
       "name": "TFC(ABS-CBN)",
       "status": "1",
       "note": "TFC(ABS-CBN)",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/tfc.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/tfc.png",
+      "channel_id": "14134",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/tfc.png"
     },
     {
       "tvid": "517",
@@ -4134,7 +4925,8 @@
       "name": "MY-KIDS TV",
       "status": "1",
       "note": "MY-KIDS TV",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/mykids.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/mykids.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/mykids.png"
     },
     {
       "tvid": "518",
@@ -4142,7 +4934,9 @@
       "name": "爱尔达体育1台",
       "status": "1",
       "note": "爱尔达体育1台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/eata_sports1.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/eata_sports1.png",
+      "channel_id": "29027",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/eata_sports1.png"
     },
     {
       "tvid": "519",
@@ -4150,7 +4944,9 @@
       "name": "爱尔达体育3台",
       "status": "1",
       "note": "爱尔达体育3台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/eata_sports3.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/eata_sports3.png",
+      "channel_id": "29028",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/eata_sports3.png"
     },
     {
       "tvid": "520",
@@ -4158,7 +4954,8 @@
       "name": "狼谷竞技台",
       "status": "1",
       "note": "狼谷竞技台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/wolvesvalley.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/wolvesvalley.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/wolvesvalley.png"
     },
     {
       "tvid": "521",
@@ -4166,7 +4963,9 @@
       "name": "美食星球频道",
       "status": "1",
       "note": "美食星球频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/fooldplanet.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/fooldplanet.png",
+      "channel_id": "29030",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/fooldplanet.png"
     },
     {
       "tvid": "522",
@@ -4174,7 +4973,9 @@
       "name": "EYE TV旅游台",
       "status": "1",
       "note": "EYE TV旅游台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/eyelvyou.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/eyelvyou.png",
+      "channel_id": "29031",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/eyelvyou.png"
     },
     {
       "tvid": "523",
@@ -4182,7 +4983,9 @@
       "name": "爱尔达综合台",
       "status": "1",
       "note": "爱尔达综合台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/elta_zonghehd.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/elta_zonghehd.png",
+      "channel_id": "29032",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/elta_zonghehd.png"
     },
     {
       "tvid": "524",
@@ -4190,7 +4993,9 @@
       "name": "天天电视台,天天电视",
       "status": "1",
       "note": "天天电视台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/tiantian.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/tiantian.png",
+      "channel_id": "29033",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/tiantian.png"
     },
     {
       "tvid": "525",
@@ -4198,7 +5003,9 @@
       "name": "三立戏剧台,三立戏剧",
       "status": "1",
       "note": "三立戏剧台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/setxiju.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/setxiju.png",
+      "channel_id": "29034",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/setxiju.png"
     },
     {
       "tvid": "526",
@@ -4206,7 +5013,9 @@
       "name": "EYE TV戏剧台",
       "status": "1",
       "note": "EYE TV戏剧台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/eyexiju.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/eyexiju.png",
+      "channel_id": "29035",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/eyexiju.png"
     },
     {
       "tvid": "527",
@@ -4214,7 +5023,9 @@
       "name": "曼迪日本台,曼迪日本",
       "status": "1",
       "note": "曼迪日本台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/mandi_japan.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/mandi_japan.png",
+      "channel_id": "29036",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/mandi_japan.png"
     },
     {
       "tvid": "528",
@@ -4222,7 +5033,9 @@
       "name": "Star Movies HD(MOD)",
       "status": "1",
       "note": "Star Movies HD(MOD)",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/StarMoviesHD.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/StarMoviesHD.png",
+      "channel_id": "14146",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/StarMoviesHD.png"
     },
     {
       "tvid": "529",
@@ -4230,7 +5043,9 @@
       "name": "华艺影剧台,华艺影剧",
       "status": "1",
       "note": "华艺影剧台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/huayi_yingju.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/huayi_yingju.png",
+      "channel_id": "29037",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/huayi_yingju.png"
     },
     {
       "tvid": "530",
@@ -4238,15 +5053,18 @@
       "name": "唯心电视台,唯心电视",
       "status": "1",
       "note": "唯心电视台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/weixin.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/weixin.png",
+      "channel_id": "14148",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/weixin.png"
     },
     {
       "tvid": "531",
       "epgid": "卫视电影台",
-      "name": "卫视电影台（港）,卫视电影",
+      "name": "卫视电影台（港）,卫视电影,卫视电影台",
       "status": "1",
       "note": "卫视电影台（港）",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/StarChineseMovies.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/StarChineseMovies.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/StarChineseMovies.png"
     },
     {
       "tvid": "532",
@@ -4254,7 +5072,8 @@
       "name": "澳亚卫视",
       "status": "1",
       "note": "澳亚卫视",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "533",
@@ -4262,7 +5081,9 @@
       "name": "NHK World TV",
       "status": "1",
       "note": "NHK World TV",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/NHKWorld.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/NHKWorld.png",
+      "channel_id": "161740",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/NHKWorld.png"
     },
     {
       "tvid": "534",
@@ -4270,7 +5091,8 @@
       "name": "FOXCRIME",
       "status": "1",
       "note": "FOXCRIME",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "535",
@@ -4278,7 +5100,8 @@
       "name": "国家地理野生频道",
       "status": "1",
       "note": "国家地理野生频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/natgeowild.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/natgeowild.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/natgeowild.png"
     },
     {
       "tvid": "536",
@@ -4286,7 +5109,9 @@
       "name": "MEZZO LIVE HD",
       "status": "1",
       "note": "MEZZO LIVE HD",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/mezzo.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/mezzo.png",
+      "channel_id": "14064",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/mezzo.png"
     },
     {
       "tvid": "537",
@@ -4294,7 +5119,8 @@
       "name": "Fox Sports 3",
       "status": "1",
       "note": "Fox Sports 3",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "538",
@@ -4302,7 +5128,9 @@
       "name": "Lifetime 娱乐频道",
       "status": "1",
       "note": "Lifetime 娱乐频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/Lifetime.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/Lifetime.png",
+      "channel_id": "14033",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/Lifetime.png"
     },
     {
       "tvid": "539",
@@ -4310,7 +5138,9 @@
       "name": "BBC World News",
       "status": "1",
       "note": "BBC World News",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/BBCWORLDNEWSASIA.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/BBCWORLDNEWSASIA.png",
+      "channel_id": "14053",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/BBCWORLDNEWSASIA.png"
     },
     {
       "tvid": "540",
@@ -4318,7 +5148,9 @@
       "name": "CN卡通频道,CN卡通",
       "status": "1",
       "note": "CN卡通频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/CNCartoon.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/CNCartoon.png",
+      "channel_id": "254002",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/CNCartoon.png"
     },
     {
       "tvid": "541",
@@ -4326,7 +5158,8 @@
       "name": "Disney Junior",
       "status": "1",
       "note": "Disney Junior",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "542",
@@ -4334,7 +5167,9 @@
       "name": "CNBC亚太财经",
       "status": "1",
       "note": "CNBC亚太财经",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/CNBC.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/CNBC.png",
+      "channel_id": "14055",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/CNBC.png"
     },
     {
       "tvid": "543",
@@ -4342,7 +5177,8 @@
       "name": "国家地理频道,国家地理",
       "status": "1",
       "note": "国家地理频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/natgeo.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/natgeo.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/natgeo.png"
     },
     {
       "tvid": "544",
@@ -4350,7 +5186,9 @@
       "name": "法国时尚台",
       "status": "1",
       "note": "法国时尚台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/faguoshishang.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/faguoshishang.png",
+      "channel_id": "14057",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/faguoshishang.png"
     },
     {
       "tvid": "545",
@@ -4358,7 +5196,8 @@
       "name": "Fox Family Movies",
       "status": "1",
       "note": "Fox Family Movies",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "546",
@@ -4366,7 +5205,9 @@
       "name": "FX HD",
       "status": "1",
       "note": "FX HD",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/FXHD.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/FXHD.png",
+      "channel_id": "254003",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/FXHD.png"
     },
     {
       "tvid": "547",
@@ -4374,7 +5215,8 @@
       "name": "Fox News Channel",
       "status": "1",
       "note": "Fox News Channel",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "548",
@@ -4382,7 +5224,9 @@
       "name": "DW德国之声",
       "status": "1",
       "note": "DW德国之声",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/DW.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/DW.png",
+      "channel_id": "14060",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/DW.png"
     },
     {
       "tvid": "549",
@@ -4390,7 +5234,9 @@
       "name": "法国TV5Monde",
       "status": "1",
       "note": "法国TV5Monde",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/tv5monde.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/tv5monde.png",
+      "channel_id": "14061",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/tv5monde.png"
     },
     {
       "tvid": "550",
@@ -4398,7 +5244,9 @@
       "name": "法国24台",
       "status": "1",
       "note": "法国24台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/france24.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/france24.png",
+      "channel_id": "14062",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/france24.png"
     },
     {
       "tvid": "551",
@@ -4406,15 +5254,19 @@
       "name": "Sky News",
       "status": "1",
       "note": "Sky News",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/SkyNews.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/SkyNews.png",
+      "channel_id": "14063",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/SkyNews.png"
     },
     {
       "tvid": "552",
       "epgid": "天映经典",
-      "name": "天映经典频道,天映经典",
+      "name": "CCM天映经典电影,天映经典电影,天映经典频道,天映经典,CCM",
       "status": "1",
       "note": "天映经典频道",
-      "logo": ""
+      "logo": "no_logo",
+      "channel_id": "14069",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "553",
@@ -4422,7 +5274,8 @@
       "name": "FOX Action Movies",
       "status": "1",
       "note": "FOX Action Movies",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "554",
@@ -4430,7 +5283,9 @@
       "name": "cinemaworld",
       "status": "1",
       "note": "cinemaworld",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/cinemaworld.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/cinemaworld.png",
+      "channel_id": "14068",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/cinemaworld.png"
     },
     {
       "tvid": "555",
@@ -4438,7 +5293,8 @@
       "name": "Comedy Central Asia爆笑台",
       "status": "1",
       "note": "Comedy Central Asia爆笑台",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "556",
@@ -4446,7 +5302,9 @@
       "name": "CGTN 纪录(英),CGTN纪录(英),CGTN 纪录,CGTN纪录",
       "status": "1",
       "note": "CGTN 纪录(英)",
-      "logo": "http://epg.51zmt.top:8000/tb1/CCTV/CGTNDoc.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/CCTV/CGTNDoc.png",
+      "channel_id": "254004",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/CCTV/CGTNDoc.png"
     },
     {
       "tvid": "557",
@@ -4454,7 +5312,9 @@
       "name": "Trace Sports",
       "status": "1",
       "note": "Trace Sports",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/TRACESportStars.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/TRACESportStars.png",
+      "channel_id": "14085",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/TRACESportStars.png"
     },
     {
       "tvid": "558",
@@ -4462,7 +5322,9 @@
       "name": "Outdoor Channel",
       "status": "1",
       "note": "Outdoor Channel",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/outdoor.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/outdoor.png",
+      "channel_id": "14086",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/outdoor.png"
     },
     {
       "tvid": "559",
@@ -4470,7 +5332,9 @@
       "name": "HITS",
       "status": "1",
       "note": "HITS",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/HITS.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/HITS.png",
+      "channel_id": "14097",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/HITS.png"
     },
     {
       "tvid": "560",
@@ -4478,7 +5342,9 @@
       "name": "CNN国际新闻频道",
       "status": "1",
       "note": "CNN国际新闻频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/CNNNews.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/CNNNews.png",
+      "channel_id": "254024",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/CNNNews.png"
     },
     {
       "tvid": "561",
@@ -4486,7 +5352,8 @@
       "name": "国家地理频道(台湾)",
       "status": "1",
       "note": "国家地理频道(台湾)",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/NationalGeographic_taiwan.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/NationalGeographic_taiwan.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/NationalGeographic_taiwan.png"
     },
     {
       "tvid": "562",
@@ -4494,7 +5361,9 @@
       "name": "探索发现频道,探索发现",
       "status": "1",
       "note": "探索发现频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/DiscoveryHD.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/DiscoveryHD.png",
+      "channel_id": "254026",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/DiscoveryHD.png"
     },
     {
       "tvid": "563",
@@ -4502,7 +5371,9 @@
       "name": "TLC旅游生活频道",
       "status": "1",
       "note": "TLC旅游生活频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/tlc.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/tlc.png",
+      "channel_id": "14246",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/tlc.png"
     },
     {
       "tvid": "564",
@@ -4510,7 +5381,9 @@
       "name": "动物星球",
       "status": "1",
       "note": "动物星球",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/AnimalPlanet.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/AnimalPlanet.png",
+      "channel_id": "254027",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/AnimalPlanet.png"
     },
     {
       "tvid": "565",
@@ -4518,7 +5391,9 @@
       "name": "迪士尼频道",
       "status": "1",
       "note": "迪士尼频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/Disney.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/Disney.png",
+      "channel_id": "254028",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/Disney.png"
     },
     {
       "tvid": "566",
@@ -4526,7 +5401,9 @@
       "name": "HBO",
       "status": "1",
       "note": "HBO",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/HBO.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/HBO.png",
+      "channel_id": "14284",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/HBO.png"
     },
     {
       "tvid": "567",
@@ -4534,7 +5411,9 @@
       "name": "AXN",
       "status": "1",
       "note": "AXN",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/AXN.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/AXN.png",
+      "channel_id": "14286",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/AXN.png"
     },
     {
       "tvid": "568",
@@ -4542,7 +5421,9 @@
       "name": "FOX MOVIES",
       "status": "1",
       "note": "FOX MOVIES",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/FOXMOVIES.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/FOXMOVIES.png",
+      "channel_id": "254053",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/FOXMOVIES.png"
     },
     {
       "tvid": "569",
@@ -4550,7 +5431,9 @@
       "name": "CINEMAX",
       "status": "1",
       "note": "CINEMAX",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/CinemaxHD.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/CinemaxHD.png",
+      "channel_id": "14290",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/CinemaxHD.png"
     },
     {
       "tvid": "570",
@@ -4558,7 +5441,9 @@
       "name": "FOX Sports",
       "status": "1",
       "note": "FOX Sports",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/FOXSports.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/FOXSports.png",
+      "channel_id": "254055",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/FOXSports.png"
     },
     {
       "tvid": "571",
@@ -4566,7 +5451,8 @@
       "name": "FOX Sports 2",
       "status": "1",
       "note": "FOX Sports 2",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "572",
@@ -4574,7 +5460,9 @@
       "name": "ELEVEN体育一台",
       "status": "1",
       "note": "ELEVEN体育一台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/ELEVENsports1.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/ELEVENsports1.png",
+      "channel_id": "254056",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/ELEVENsports1.png"
     },
     {
       "tvid": "573",
@@ -4582,7 +5470,9 @@
       "name": "FOX",
       "status": "1",
       "note": "FOX",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/FOXHD.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/FOXHD.png",
+      "channel_id": "254058",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/FOXHD.png"
     },
     {
       "tvid": "574",
@@ -4590,7 +5480,9 @@
       "name": "NHK",
       "status": "1",
       "note": "NHK",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/NHK.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/NHK.png",
+      "channel_id": "254065",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/NHK.png"
     },
     {
       "tvid": "575",
@@ -4598,7 +5490,8 @@
       "name": "Animax HD",
       "status": "1",
       "note": "Animax HD",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "576",
@@ -4606,7 +5499,9 @@
       "name": "亚洲新闻台,亚洲新闻",
       "status": "1",
       "note": "亚洲新闻台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/channelnewsasia.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/channelnewsasia.png",
+      "channel_id": "14326",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/channelnewsasia.png"
     },
     {
       "tvid": "577",
@@ -4614,7 +5509,9 @@
       "name": "彭博财经台,彭博财经",
       "status": "1",
       "note": "彭博财经台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/BloombergTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/BloombergTV.png",
+      "channel_id": "14327",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/BloombergTV.png"
     },
     {
       "tvid": "578",
@@ -4622,7 +5519,9 @@
       "name": "韩国阿里郎",
       "status": "1",
       "note": "韩国阿里郎",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/ArirangTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/ArirangTV.png",
+      "channel_id": "14328",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/ArirangTV.png"
     },
     {
       "tvid": "579",
@@ -4630,7 +5529,9 @@
       "name": "BBC Lifestyle",
       "status": "1",
       "note": "BBC Lifestyle",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/BBCLifestyle.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/BBCLifestyle.png",
+      "channel_id": "13966",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/BBCLifestyle.png"
     },
     {
       "tvid": "580",
@@ -4638,7 +5539,9 @@
       "name": "梦工厂",
       "status": "1",
       "note": "梦工厂",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/dreamworks.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/dreamworks.png",
+      "channel_id": "13866",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/dreamworks.png"
     },
     {
       "tvid": "581",
@@ -4646,7 +5549,9 @@
       "name": "Warner TV",
       "status": "1",
       "note": "Warner TV",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/WarnerTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/WarnerTV.png",
+      "channel_id": "13970",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/WarnerTV.png"
     },
     {
       "tvid": "582",
@@ -4654,7 +5559,9 @@
       "name": "HBO HD",
       "status": "1",
       "note": "HBO HD",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/HBOHD.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/HBOHD.png",
+      "channel_id": "13998",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/HBOHD.png"
     },
     {
       "tvid": "583",
@@ -4662,7 +5569,9 @@
       "name": "HBO 强档钜献",
       "status": "1",
       "note": "HBO 强档钜献",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/HBOHits.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/HBOHits.png",
+      "channel_id": "14021",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/HBOHits.png"
     },
     {
       "tvid": "584",
@@ -4670,7 +5579,9 @@
       "name": "HBO 原创钜献",
       "status": "1",
       "note": "HBO 原创钜献",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/HBOSignature.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/HBOSignature.png",
+      "channel_id": "14031",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/HBOSignature.png"
     },
     {
       "tvid": "585",
@@ -4678,7 +5589,9 @@
       "name": "HBO 温馨家庭",
       "status": "1",
       "note": "HBO 温馨家庭",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/HBOFamily.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/HBOFamily.png",
+      "channel_id": "14036",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/HBOFamily.png"
     },
     {
       "tvid": "586",
@@ -4686,7 +5599,9 @@
       "name": "BlueAnt综艺娱乐",
       "status": "1",
       "note": "BlueAnt综艺娱乐",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/BlueAntEntertainment.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/BlueAntEntertainment.png",
+      "channel_id": "14039",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/BlueAntEntertainment.png"
     },
     {
       "tvid": "587",
@@ -4694,7 +5609,9 @@
       "name": "tvN",
       "status": "1",
       "note": "tvN",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/tvN.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/tvN.png",
+      "channel_id": "13918",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/tvN.png"
     },
     {
       "tvid": "588",
@@ -4702,7 +5619,8 @@
       "name": "E!好莱坞娱乐频道",
       "status": "1",
       "note": "E!好莱坞娱乐频道",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "589",
@@ -4710,7 +5628,9 @@
       "name": "韩国娱乐台KMTV",
       "status": "1",
       "note": "韩国娱乐台KMTV",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/KMTV.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/KMTV.png",
+      "channel_id": "14171",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/KMTV.png"
     },
     {
       "tvid": "590",
@@ -4718,7 +5638,8 @@
       "name": "DIVA",
       "status": "1",
       "note": "DIVA",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "591",
@@ -4726,7 +5647,9 @@
       "name": "EVE",
       "status": "1",
       "note": "EVE",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/EVE.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/EVE.png",
+      "channel_id": "14065",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/EVE.png"
     },
     {
       "tvid": "592",
@@ -4734,7 +5657,9 @@
       "name": "Discovery 科学频道",
       "status": "1",
       "note": "Discovery 科学频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/Discovery科学.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/Discovery科学.png",
+      "channel_id": "14066",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/Discovery科学.png"
     },
     {
       "tvid": "593",
@@ -4742,7 +5667,9 @@
       "name": "Discovery Asia",
       "status": "1",
       "note": "Discovery Asia",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/Discovery-Asia.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/Discovery-Asia.png",
+      "channel_id": "14067",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/Discovery-Asia.png"
     },
     {
       "tvid": "594",
@@ -4750,7 +5677,9 @@
       "name": "DMAX",
       "status": "1",
       "note": "DMAX",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/DMAX.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/DMAX.png",
+      "channel_id": "13867",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/DMAX.png"
     },
     {
       "tvid": "595",
@@ -4758,7 +5687,9 @@
       "name": "梅迪奇艺术",
       "status": "1",
       "note": "梅迪奇艺术",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/medici-arts.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/medici-arts.png",
+      "channel_id": "13946",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/medici-arts.png"
     },
     {
       "tvid": "596",
@@ -4766,7 +5697,9 @@
       "name": "BlueAnt超极娱乐",
       "status": "1",
       "note": "BlueAnt超极娱乐",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/BLUEAntExtreme.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/BLUEAntExtreme.png",
+      "channel_id": "13955",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/BLUEAntExtreme.png"
     },
     {
       "tvid": "597",
@@ -4774,7 +5707,9 @@
       "name": "欧洲新闻",
       "status": "1",
       "note": "欧洲新闻",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/euronews.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/euronews.png",
+      "channel_id": "13956",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/euronews.png"
     },
     {
       "tvid": "598",
@@ -4782,7 +5717,9 @@
       "name": "尼克儿童频道",
       "status": "1",
       "note": "尼克儿童频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/Nickelodeon.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/Nickelodeon.png",
+      "channel_id": "13957",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/Nickelodeon.png"
     },
     {
       "tvid": "599",
@@ -4790,7 +5727,9 @@
       "name": "小尼克频道",
       "status": "1",
       "note": "小尼克频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/NickJr.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/NickJr.png",
+      "channel_id": "13958",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/NickJr.png"
     },
     {
       "tvid": "600",
@@ -4798,7 +5737,9 @@
       "name": "CBeebies",
       "status": "1",
       "note": "CBeebies",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/CBeebies.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/CBeebies.png",
+      "channel_id": "13961",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/CBeebies.png"
     },
     {
       "tvid": "601",
@@ -4806,7 +5747,9 @@
       "name": "Boomerang",
       "status": "1",
       "note": "Boomerang",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/BOOMERANG.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/BOOMERANG.png",
+      "channel_id": "13962",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/BOOMERANG.png"
     },
     {
       "tvid": "602",
@@ -4814,7 +5757,9 @@
       "name": "BBC Earth",
       "status": "1",
       "note": "BBC Earth",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/BBCEarth.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/BBCEarth.png",
+      "channel_id": "13963",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/BBCEarth.png"
     },
     {
       "tvid": "603",
@@ -4822,7 +5767,9 @@
       "name": "ABCAustralia",
       "status": "1",
       "note": "ABCAustralia",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/abcaus.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/abcaus.png",
+      "channel_id": "14072",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/abcaus.png"
     },
     {
       "tvid": "604",
@@ -4830,7 +5777,8 @@
       "name": "CNN头条新闻台",
       "status": "1",
       "note": "CNN头条新闻台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/CNN.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/CNN.png",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/CNN.png"
     },
     {
       "tvid": "605",
@@ -4838,7 +5786,9 @@
       "name": "NHKWorldPremium",
       "status": "1",
       "note": "NHKWorldPremium",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/nhkworldp.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/nhkworldp.png",
+      "channel_id": "14074",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/nhkworldp.png"
     },
     {
       "tvid": "606",
@@ -4846,7 +5796,9 @@
       "name": "爱尔达娱乐台",
       "status": "1",
       "note": "爱尔达娱乐台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/ELTA_Ent.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/ELTA_Ent.png",
+      "channel_id": "14091",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/ELTA_Ent.png"
     },
     {
       "tvid": "607",
@@ -4854,7 +5806,9 @@
       "name": "ELEVEN体育二台",
       "status": "1",
       "note": "ELEVEN体育二台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/elevensports2.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/elevensports2.png",
+      "channel_id": "14096",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/elevensports2.png"
     },
     {
       "tvid": "608",
@@ -4862,7 +5816,9 @@
       "name": "History 历史频道",
       "status": "1",
       "note": "History 历史频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/HistoryChannel.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/HistoryChannel.png",
+      "channel_id": "14098",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/HistoryChannel.png"
     },
     {
       "tvid": "609",
@@ -4870,7 +5826,8 @@
       "name": "HISTORY 2 频道",
       "status": "1",
       "note": "HISTORY 2 频道",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "610",
@@ -4878,7 +5835,9 @@
       "name": "SMART 知识频道",
       "status": "1",
       "note": "SMART 知识频道",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/Smart知识台.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/Smart知识台.png",
+      "channel_id": "29012",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/Smart知识台.png"
     },
     {
       "tvid": "611",
@@ -4886,7 +5845,9 @@
       "name": "AMC",
       "status": "1",
       "note": "AMC",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/AMC.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/AMC.png",
+      "channel_id": "14103",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/AMC.png"
     },
     {
       "tvid": "612",
@@ -4894,7 +5855,8 @@
       "name": "Eleven Sport Plus",
       "status": "1",
       "note": "Eleven Sport Plus",
-      "logo": ""
+      "logo": "no_logo",
+      "logo_2": "no_new_logo"
     },
     {
       "tvid": "613",
@@ -4902,7 +5864,9 @@
       "name": "半岛国际新闻台",
       "status": "1",
       "note": "半岛国际新闻台",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/aljazeera.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/aljazeera.png",
+      "channel_id": "14112",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/aljazeera.png"
     },
     {
       "tvid": "614",
@@ -4910,15 +5874,18 @@
       "name": "EUROSPORT",
       "status": "1",
       "note": "EUROSPORT",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/eurosport.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/eurosport.png",
+      "channel_id": "29029",
+      "logo_2": "http://epg.51zmt.top:8000/tb1/gt/eurosport.png"
     },
     {
-      "tvid": "615",
+      "tvid": "534",
       "epgid": "Animax",
       "name": "Animax",
       "status": "1",
       "note": "Animax",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/ANIMAX.png"
+      "logo": "http://epg.51zmt.top:8000/tb1/gt/ANIMAX.png",
+      "channel_id": "14149"
     }
   ]
 }

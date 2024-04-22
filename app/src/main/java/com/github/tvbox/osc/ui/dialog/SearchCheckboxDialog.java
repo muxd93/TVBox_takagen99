@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 
 import com.github.tvbox.osc.R;
+import com.github.tvbox.osc.base.BaseActivity;
 import com.github.tvbox.osc.bean.SourceBean;
 import com.github.tvbox.osc.ui.adapter.CheckboxSearchAdapter;
 import com.github.tvbox.osc.util.FastClickCheckUtil;
@@ -68,7 +69,8 @@ public class SearchCheckboxDialog extends BaseDialog{
         int spanCount = (int) Math.floor(size / 10);
         if (spanCount <= 1) spanCount = 2;
         if (spanCount >= 3) spanCount = 3;
-        mGridView.setLayoutManager(new V7GridLayoutManager(getContext(), spanCount));
+        boolean isPortrait = ((BaseActivity) context).isPortrait();
+        mGridView.setLayoutManager(new V7GridLayoutManager(getContext(), isPortrait? 2: spanCount));
         View root = findViewById(R.id.root);
         ViewGroup.LayoutParams clp = root.getLayoutParams();
         clp.width = AutoSizeUtils.mm2px(getContext(), 400 + 300 * (spanCount - 1));

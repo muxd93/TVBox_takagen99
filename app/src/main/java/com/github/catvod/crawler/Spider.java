@@ -1,11 +1,13 @@
 package com.github.catvod.crawler;
 
 import android.content.Context;
+
 import com.github.tvbox.osc.util.OkGoHelper;
-import com.github.tvbox.osc.util.js.Connect;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import okhttp3.Dns;
 
 public abstract class Spider {

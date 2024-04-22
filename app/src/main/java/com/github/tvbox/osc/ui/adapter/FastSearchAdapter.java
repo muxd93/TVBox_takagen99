@@ -8,12 +8,9 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.github.tvbox.osc.R;
 import com.github.tvbox.osc.api.ApiConfig;
 import com.github.tvbox.osc.bean.Movie;
-import com.github.tvbox.osc.util.DefaultConfig;
 import com.github.tvbox.osc.util.ImgUtil;
 
 import java.util.ArrayList;
-
-import me.jessyan.autosize.utils.AutoSizeUtils;
 
 public class FastSearchAdapter extends BaseQuickAdapter<Movie.Video, BaseViewHolder> {
     public FastSearchAdapter() {

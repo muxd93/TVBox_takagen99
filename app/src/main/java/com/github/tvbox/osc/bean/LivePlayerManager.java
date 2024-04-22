@@ -1,18 +1,13 @@
 package com.github.tvbox.osc.bean;
 
 import androidx.annotation.NonNull;
-import androidx.exifinterface.media.ExifInterface;
 
-import com.github.tvbox.osc.api.ApiConfig;
 import com.github.tvbox.osc.util.HawkConfig;
 import com.github.tvbox.osc.util.PlayerHelper;
 import com.orhanobut.hawk.Hawk;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Objects;
 
 import xyz.doikki.videoplayer.player.VideoView;
 
@@ -27,7 +22,7 @@ public class LivePlayerManager {
             defaultPlayerConfig.put("pl", playerType);
             defaultPlayerConfig.put("ijk", Hawk.get(HawkConfig.IJK_CODEC, "软解码"));
             defaultPlayerConfig.put("pr", Hawk.get(HawkConfig.PLAY_RENDER, 0));
-            defaultPlayerConfig.put("sc", Hawk.get(HawkConfig.PLAY_SCALE, 0));
+            defaultPlayerConfig.put("sc", Hawk.get(HawkConfig.LIVE_SCALE, 1));
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -86,6 +81,9 @@ public class LivePlayerManager {
                 case 2:
                     playerTypeIndex = 3;
                     break;
+                case 3:
+                    playerTypeIndex = 4;
+                    break;
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -99,7 +97,7 @@ public class LivePlayerManager {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return 0;
+        return Hawk.get(HawkConfig.LIVE_SCALE, 1);
     }
 
     public void changeLivePlayerType(VideoView videoView, int playerType, String channelName) {
@@ -121,6 +119,10 @@ public class LivePlayerManager {
                 case 3:
                     playerConfig.put("pl", 2);
                     playerConfig.put("ijk", "软解码");
+                    break;
+                case 4:
+                    playerConfig.put("pl", 3);
+                    playerConfig.put("ijk", "硬解码");
                     break;
             }
         } catch (JSONException e) {

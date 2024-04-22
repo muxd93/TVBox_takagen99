@@ -26,6 +26,10 @@ public class RefreshEvent {
     public static final int TYPE_APP_REFRESH = 15;
     public static final int TYPE_FILTER_CHANGE = 16;
     public static final int TYPE_REFRESH_NOTIFY = 17;
+    public static final int TYPE_SETTING_SEARCH_TV = 18;
+    public static final int TYPE_STORE_CONFIG_CHANGE = 19;
+    public static final int TYPE_PROXY_URL = 20;
+
     public int type;
     public Object obj;
 

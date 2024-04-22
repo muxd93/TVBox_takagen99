@@ -4,9 +4,9 @@ import static okhttp3.ConnectionSpec.CLEARTEXT;
 import static okhttp3.ConnectionSpec.COMPATIBLE_TLS;
 import static okhttp3.ConnectionSpec.MODERN_TLS;
 import static okhttp3.ConnectionSpec.RESTRICTED_TLS;
+
 import com.github.catvod.net.SSLCompat;
 import com.github.tvbox.osc.base.App;
-
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.https.HttpsUtils;
 import com.lzy.okgo.interceptor.HttpLoggingInterceptor;
@@ -14,12 +14,12 @@ import com.lzy.okgo.model.HttpHeaders;
 import com.orhanobut.hawk.Hawk;
 
 import java.io.File;
-import java.util.List;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
@@ -36,7 +36,7 @@ import okhttp3.internal.Version;
 import xyz.doikki.videoplayer.exo.ExoMediaSourceHelper;
 
 public class OkGoHelper {
-    public static final long DEFAULT_MILLISECONDS = 10000;      //默认的超时时间
+    public static final long DEFAULT_MILLISECONDS = 8000;      //默认的超时时间
 
     //https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200
     public static HashMap<Integer, String > httpPhaseMap  = new HashMap<Integer, String>(){{

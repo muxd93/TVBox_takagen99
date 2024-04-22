@@ -2,7 +2,6 @@ package com.github.tvbox.osc.subtitle.widget;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -13,15 +12,14 @@ import android.util.AttributeSet;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+
 import com.github.tvbox.osc.cache.CacheManager;
 import com.github.tvbox.osc.subtitle.DefaultSubtitleEngine;
 import com.github.tvbox.osc.subtitle.SubtitleEngine;
 import com.github.tvbox.osc.subtitle.model.Subtitle;
 import com.github.tvbox.osc.util.MD5;
 import com.github.tvbox.osc.util.StringUtils;
-
-
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 

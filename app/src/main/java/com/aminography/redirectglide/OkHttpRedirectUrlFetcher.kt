@@ -4,7 +4,11 @@ import android.util.Log
 import com.bumptech.glide.load.HttpException
 import com.bumptech.glide.load.data.DataFetcher.DataCallback
 import com.bumptech.glide.load.model.GlideUrl
-import okhttp3.*
+import okhttp3.Call
+import okhttp3.Callback
+import okhttp3.Request
+import okhttp3.Response
+import okhttp3.ResponseBody
 import java.io.IOException
 
 /**

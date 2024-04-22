@@ -3,8 +3,6 @@ package com.github.tvbox.osc.util.rsa;
 import android.util.Log;
 
 import java.io.ByteArrayOutputStream;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 import java.security.KeyFactory;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;

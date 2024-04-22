@@ -14,6 +14,8 @@ public interface DataReceiver {
 
     void onApiReceived(String url);
 
+    void onStoreReceived(String url);
+
     void onLiveReceived(String url);
 
     void onEpgReceived(String url);
@@ -23,4 +25,6 @@ public interface DataReceiver {
     void onPushReceived(String url);
 
     void onMirrorReceived(String id, String sourceKey);
+
+    void onProxyReceived(String url);
 }

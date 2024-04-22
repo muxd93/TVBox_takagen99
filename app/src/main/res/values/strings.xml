@@ -2,11 +2,12 @@
 <resources>
     <string name="app_name">TVBox</string>
     <string name="app_home">Home</string>
-    <string name="app_source"></string>
 
     // Home Page //
-    <string name="hm_ok">Load Complete</string>
-    <string name="hm_notok">Load Fail</string>
+    <string name="hm_ok">Load Jar Complete</string>
+    <string name="hm_notok">Load Jar Fail</string>
+    <string name="hm_notok_try">Please Try with other source</string>
+    <string name="empty_source">There is no available api in current api list , please go to the settings page to configure it</string>
     <string name="hm_retry">Retry</string>
     <string name="hm_cancel">Cancel</string>
     <string name="hm_exit">Press BACK again to EXIT</string>
@@ -32,20 +33,21 @@
     <string name="det_sort">Sort</string>
     <string name="det_push">Push</string>
     <string name="det_fav">Favorite</string>
+    <string name="det_download">Download</string>
     <string name="det_fav_add">Added to Favorite</string>
     <string name="det_fav_del">Removed from Favorite</string>
     <string name="det_fav_star">★ Favorite</string>
     <string name="det_fav_unstar">☆ Favorite</string>
     <string name="det_url">Play URL Copied</string>
-    <string name="det_source"></string>
+    <string name="det_source">Source</string>
     <string name="det_year">Year</string>
     <string name="det_area">Area</string>
     <string name="det_lang">Language</string>
     <string name="det_type">Genre</string>
     <string name="det_actor">Cast</string>
     <string name="det_dir">Director</string>
-    <string name="det_des"></string>
-    <string name="det_desc">intro</string>
+    <string name="det_des">Info</string>
+    <string name="det_desc">Intro</string>
 
     // Settings Menu Page //
     <string name="mn_config">Configuration Address</string>
@@ -65,6 +67,7 @@
     <string name="mn_bgplay">Bgplay</string>
     <string name="mn_preview">Preview Window</string>
     <string name="mn_webview">WebView</string>
+    <string name="mn_searchTVBox">Search other TVBox</string>
     <string name="mn_render">Render</string>
     <string name="mn_backup">Backup/Restore</string>
     <string name="mn_dns">DNS</string>
@@ -96,6 +99,8 @@
     <string name="dia_theme">Select Theme</string>
     <string name="dia_confirm">Confirm to Clear All ?</string>
     <string name="dia_reset">Reset Clear Configuration</string>
+    <string name="dia_reset_done">Reset Successfully</string>
+    <string name="dia_proxy_epg">GITHUB Proxy History List</string>
 
     // Settings Backup Restore Page //
     <string name="set_bkup_ok">Backup Success</string>
@@ -122,6 +127,7 @@
     <string name="act_hist_sel">Select to Remove</string>
     <string name="act_hist_rm">Remove</string>
     <string name="act_live_play_empty_live_url">The live url is not configured, please go to the settings page to configure it</string>
+    <string name="act_live_play_empty_channel_load_local">The live url is not configured, try to load local live</string>
     <string name="act_live_play_empty_channel">The channel list is empty</string>
     <string name="act_live_play_network_error">The network request for the live-streaming address failed</string>
     <string name="act_search">Search</string>
@@ -134,6 +140,7 @@
     <string name="act_home">Home</string>
     <string name="act_player">Player</string>
     <string name="act_system">System</string>
+    <string name="act_no_EPG_information">No Information</string>
 
     // Search Page //
     <string name="search_input">Input cannot be blank</string>
@@ -188,6 +195,11 @@
     <string name="sub_delay">Delay</string>
     <string name="sub_style">Style</string>
     <string name="sub_style_text">ABC.</string>
+
+    // About
+    <string name="version_title">English Ver.</string>
+<!--    <string name="mn_Version">20231101-0006</string>-->
+    <string name="dia_about">This software only provides aggregated display functions, all resources come from the Internet, and the software does not participate in any content production, upload, storage, download,etc.The software is only for learning reference, please delete it within 24 hours after installation. \n\nPlease keep the source after package distribution\nhttps://github.com/CatVodTVOfficial/TVBoxOSC</string>
 
     <string-array name="doh_name">
         <item>System</item>

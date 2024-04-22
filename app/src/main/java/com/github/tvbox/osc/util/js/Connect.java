@@ -3,7 +3,7 @@ package com.github.tvbox.osc.util.js;
 import android.util.Base64;
 
 import com.github.catvod.net.OkHttp;
-import com.github.tvbox.osc.util.LOG;
+import com.github.tvbox.osc.util.LogUtil;
 import com.google.common.net.HttpHeaders;
 import com.lzy.okgo.OkGo;
 import com.whl.quickjs.wrapper.JSArray;
@@ -14,7 +14,6 @@ import com.whl.quickjs.wrapper.QuickJSContext;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
 import okhttp3.FormBody;
@@ -120,7 +119,7 @@ public class Connect {
             }
             OkGo.getInstance().cancelTag(tag);
         } catch (Exception e) {
-            LOG.e(e);
+            LogUtil.e(e);
         }
     }
 }

@@ -1,7 +1,6 @@
 package com.aminography.redirectglide
 
 import android.util.Log
-import com.aminography.redirectglide.OkHttpStreamFetcher
 import com.bumptech.glide.Priority
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.HttpException
@@ -10,7 +9,11 @@ import com.bumptech.glide.load.data.DataFetcher.DataCallback
 import com.bumptech.glide.load.model.GlideUrl
 import com.bumptech.glide.util.ContentLengthInputStream
 import com.bumptech.glide.util.Preconditions
-import okhttp3.*
+import okhttp3.Call
+import okhttp3.Callback
+import okhttp3.Request
+import okhttp3.Response
+import okhttp3.ResponseBody
 import java.io.IOException
 import java.io.InputStream
 

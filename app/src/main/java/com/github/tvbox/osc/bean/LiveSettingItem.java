@@ -33,4 +33,13 @@ public class LiveSettingItem {
     public void setItemSelected(boolean itemSelected) {
         this.itemSelected = itemSelected;
     }
+
+    @Override
+    public String toString() {
+        return "LiveSettingItem{" +
+                "itemIndex=" + itemIndex +
+                ", itemName='" + itemName + '\'' +
+                ", itemSelected=" + itemSelected +
+                '}';
+    }
 }

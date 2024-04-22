@@ -5,7 +5,6 @@ import android.content.Context;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.github.tvbox.osc.R;
 import com.github.tvbox.osc.subtitle.widget.SimpleSubtitleView;

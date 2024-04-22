@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +18,8 @@ import com.github.tvbox.osc.base.BaseActivity;
 import com.github.tvbox.osc.base.BaseLazyFragment;
 import com.github.tvbox.osc.bean.IJKCode;
 import com.github.tvbox.osc.bean.SourceBean;
+import com.github.tvbox.osc.event.RefreshEvent;
+import com.github.tvbox.osc.player.thirdparty.RemoteTVBox;
 import com.github.tvbox.osc.ui.activity.SettingActivity;
 import com.github.tvbox.osc.ui.adapter.ApiHistoryDialogAdapter;
 import com.github.tvbox.osc.ui.adapter.SelectDialogAdapter;
@@ -27,28 +28,41 @@ import com.github.tvbox.osc.ui.dialog.ApiDialog;
 import com.github.tvbox.osc.ui.dialog.ApiHistoryDialog;
 import com.github.tvbox.osc.ui.dialog.BackupDialog;
 import com.github.tvbox.osc.ui.dialog.HomeIconDialog;
+import com.github.tvbox.osc.ui.dialog.SearchRemoteTvDialog;
 import com.github.tvbox.osc.ui.dialog.SelectDialog;
-import com.github.tvbox.osc.ui.dialog.ResetDialog;
 import com.github.tvbox.osc.ui.dialog.XWalkInitDialog;
+import com.github.tvbox.osc.update.component.CustomUpdateChecker;
+import com.github.tvbox.osc.update.component.CustomUpdateParser;
+import com.github.tvbox.osc.update.component.CustomUpdatePrompter;
+import com.github.tvbox.osc.update.pojo.VersionInfoVo;
+import com.github.tvbox.osc.update.service.OkGoUpdateHttpService;
+import com.github.tvbox.osc.util.Checker;
+import com.github.tvbox.osc.util.Constants;
 import com.github.tvbox.osc.util.DefaultConfig;
 import com.github.tvbox.osc.util.FastClickCheckUtil;
 import com.github.tvbox.osc.util.HawkConfig;
 import com.github.tvbox.osc.util.HistoryHelper;
+import com.github.tvbox.osc.util.JsonUtil;
+import com.github.tvbox.osc.util.LogUtil;
 import com.github.tvbox.osc.util.OkGoHelper;
 import com.github.tvbox.osc.util.PlayerHelper;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.FileCallback;
+import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Progress;
 import com.lzy.okgo.model.Response;
 import com.orhanobut.hawk.Hawk;
 import com.owen.tvrecyclerview.widget.TvRecyclerView;
 import com.owen.tvrecyclerview.widget.V7GridLayoutManager;
+import com.xuexiang.xupdate.XUpdate;
+import com.xuexiang.xupdate.utils.UpdateUtils;
 
 import org.greenrobot.eventbus.EventBus;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import me.jessyan.autosize.utils.AutoSizeUtils;
@@ -88,6 +102,8 @@ public class ModelSettingFragment extends BaseLazyFragment {
     private TextView tvDns;
     private TextView tvFastSearchText;
 
+    private View notificationPoint;
+
     public static ModelSettingFragment newInstance() {
         return new ModelSettingFragment().setArguments();
     }
@@ -103,7 +119,8 @@ public class ModelSettingFragment extends BaseLazyFragment {
 
     @Override
     protected void init() {
-    	tvFastSearchText = findViewById(R.id.showFastSearchText);
+        notificationPoint = findViewById(R.id.notification_point);
+        tvFastSearchText = findViewById(R.id.showFastSearchText);
         tvFastSearchText.setText(Hawk.get(HawkConfig.FAST_SEARCH_MODE, false) ? "已开启" : "已关闭");
         tvDebugOpen = findViewById(R.id.tvDebugOpen);
         tvDebugOpen.setText(Hawk.get(HawkConfig.DEBUG_OPEN, false) ? "开启" : "关闭");
@@ -157,6 +174,17 @@ public class ModelSettingFragment extends BaseLazyFragment {
                 Hawk.put(HawkConfig.DEBUG_OPEN, !Hawk.get(HawkConfig.DEBUG_OPEN, false));
                 tvDebugOpen.setText(Hawk.get(HawkConfig.DEBUG_OPEN, false) ? "开启" : "关闭");
             }
+        });
+        checkHasUpdate();
+        findViewById(R.id.llCheckUpdate).setOnClickListener( v -> {
+            Toast.makeText(mActivity, "检查更新中...", Toast.LENGTH_SHORT).show();
+            checkUpdate();
+            notificationPoint.setVisibility(View.GONE);
+        });
+        findViewById(R.id.llCheckUpdate).setOnLongClickListener(v -> {
+            Toast.makeText(mActivity, "检查API更新中...", Toast.LENGTH_SHORT).show();
+//            checkApiUpdate();
+            return true;
         });
         // Input Source URL ------------------------------------------------------------------------
         findViewById(R.id.llApi).setOnClickListener(new View.OnClickListener() {
@@ -229,10 +257,10 @@ public class ModelSettingFragment extends BaseLazyFragment {
                     if (spanCount >= 3) spanCount = 3;
 
                     TvRecyclerView tvRecyclerView = dialog.findViewById(R.id.list);
-                    tvRecyclerView.setLayoutManager(new V7GridLayoutManager(dialog.getContext(), spanCount));
+                    tvRecyclerView.setLayoutManager(new V7GridLayoutManager(dialog.getContext(), isPortrait() ? 2 : spanCount));
                     ConstraintLayout cl_root = dialog.findViewById(R.id.cl_root);
                     ViewGroup.LayoutParams clp = cl_root.getLayoutParams();
-                    if (spanCount != 1) {
+                    if (spanCount != 1 && !isPortrait()) {
                         clp.width = AutoSizeUtils.mm2px(dialog.getContext(), 400 + 260 * (spanCount - 1));
                     }
 
@@ -649,7 +677,47 @@ public class ModelSettingFragment extends BaseLazyFragment {
             @Override
             public void onClick(View v) {
                 FastClickCheckUtil.check(v);
-                ResetDialog dialog = new ResetDialog(mActivity);
+                //ResetDialog dialog = new ResetDialog(mActivity);
+                SelectDialog<String> dialog = new SelectDialog<>(mActivity);
+//                dialog.setTip(getString(R.string.dia_reset));
+                ArrayList<String> resetOptionList = new ArrayList<>();
+                resetOptionList.add(getString(R.string.dia_reset));
+                resetOptionList.add("重置API");
+                resetOptionList.add("重置所有");
+                dialog.setAdapter(null, new SelectDialogAdapter.SelectDialogInterface<String>() {
+                    @Override
+                    public void click(String value, int pos) {
+                        switch (pos) {
+                            case 0:
+                                Toast.makeText(mContext, getString(R.string.dia_reset), Toast.LENGTH_SHORT).show();
+                            case 1:
+                                resetApi();
+                                Toast.makeText(mContext, getString(R.string.dia_reset_done), Toast.LENGTH_SHORT).show();
+                                dialog.dismiss();
+                                break;
+                            case 2:
+                                DefaultConfig.resetApp(mActivity);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+
+                    @Override
+                    public String getDisplay(String val) {
+                        return val;
+                    }
+                }, new DiffUtil.ItemCallback<String>() {
+                    @Override
+                    public boolean areItemsTheSame(@NonNull @NotNull String oldItem, @NonNull @NotNull String newItem) {
+                        return oldItem.equals(newItem);
+                    }
+
+                    @Override
+                    public boolean areContentsTheSame(@NonNull @NotNull String oldItem, @NonNull @NotNull String newItem) {
+                        return oldItem.equals(newItem);
+                    }
+                }, resetOptionList, 0);
                 dialog.show();
             }
         });
@@ -849,6 +917,63 @@ public class ModelSettingFragment extends BaseLazyFragment {
             }
         });
 
+        findViewById(R.id.llSearchTv).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FastClickCheckUtil.check(view);
+                loadingSearchRemoteTvDialog = new SearchRemoteTvDialog(mActivity);
+                EventBus.getDefault().register(loadingSearchRemoteTvDialog);
+                loadingSearchRemoteTvDialog.setTip("搜索附近TVBox");
+                loadingSearchRemoteTvDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                    @Override
+                    public void onDismiss(DialogInterface dialogInterface) {
+                        EventBus.getDefault().unregister(loadingSearchRemoteTvDialog);
+                    }
+                });
+                loadingSearchRemoteTvDialog.show();
+
+                RemoteTVBox tv = new RemoteTVBox();
+                remoteTvHostList = new ArrayList<>();
+                foundRemoteTv = false;
+                view.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                RemoteTVBox.searchAvalible(tv.new Callback() {
+                                    @Override
+                                    public void found(String viewHost, boolean end) {
+                                        remoteTvHostList.add(viewHost);
+                                        if (end) {
+                                            foundRemoteTv = true;
+                                            EventBus.getDefault().post(new RefreshEvent(RefreshEvent.TYPE_SETTING_SEARCH_TV));
+                                        }
+                                    }
+
+                                    @Override
+                                    public void fail(boolean all, boolean end) {
+                                        if (end) {
+                                            if (all) {
+                                                foundRemoteTv = false;
+                                            } else {
+                                                foundRemoteTv = true;
+                                            }
+                                            EventBus.getDefault().post(new RefreshEvent(RefreshEvent.TYPE_SETTING_SEARCH_TV));
+                                        }
+                                    }
+                                });
+                            }
+                        }).start();
+
+                    }
+                }, 500);
+
+
+            }
+        });
+
         SettingActivity.callback = new SettingActivity.DevModeCallback() {
             @Override
             public void onChange() {
@@ -857,6 +982,100 @@ public class ModelSettingFragment extends BaseLazyFragment {
         };
 
     }
+
+    private void checkHasUpdate () {
+        if (Hawk.get(HawkConfig.IS_IGNORE_VERSION, false)) {
+            LogUtil.i("已忽略更新");
+            return;
+        }
+        Checker.getInstance().checkProxy(isAvailable -> {
+            String checkUrl = isAvailable ? Constants.DOMAIN_NAME_PROXY + Constants.GITHUB_VERSION_PATH : Constants.GITHUB_VERSION_PATH;
+            OkGo.<String>get(checkUrl)
+                    .headers("User-Agent", "okhttp/3.15")
+                    .headers("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9")
+                    .execute(new StringCallback() {
+                        @Override
+                        public void onSuccess(Response<String> response) {
+                            try {
+                                String json = response.body();
+                                LogUtil.i("get versionInfoVo from json: " + json);
+                                VersionInfoVo versionInfoVo = JsonUtil.fromJson(json, VersionInfoVo.class);
+                                if (versionInfoVo != null && versionInfoVo.getVersionCode() > UpdateUtils.getVersionCode(getContext())) {
+                                    LogUtil.i("versionInfoVo: " + versionInfoVo);
+                                    // 有新版本
+                                    Hawk.put(HawkConfig.VERSION_INFO_STR, json);
+                                    notificationPoint.setVisibility(View.VISIBLE);
+                                    if (versionInfoVo.getDownloadURL() != null) {
+                                        Constants.APK_PATH = versionInfoVo.getDownloadURL();
+                                    }
+                                } else {
+                                    // 已是最新版本
+                                    Hawk.put(HawkConfig.VERSION_INFO_STR, json);
+                                    notificationPoint.setVisibility(View.GONE);
+                                }
+                            } catch (Throwable th) {
+                                th.printStackTrace();
+                            }
+                        }
+
+                        @Override
+                        public void onError(Response<String> response) {
+                            Toast.makeText(mContext, "请求：" + checkUrl + "失败！", Toast.LENGTH_SHORT);
+                            Hawk.put(HawkConfig.VERSION_INFO_STR, "");
+                        }
+                    });
+        });
+    }
+
+    private void checkUpdate () {
+        Hawk.put(HawkConfig.IS_IGNORE_VERSION, false);
+        Checker.getInstance().checkProxy(isAvailable -> {
+            String checkUrl = isAvailable ? Constants.DOMAIN_NAME_PROXY + Constants.GITHUB_VERSION_PATH : Constants.GITHUB_VERSION_PATH;
+            String apkUrl = isAvailable ? Constants.DOMAIN_NAME_PROXY + Constants.APK_PATH : Constants.APK_PATH;
+            XUpdate.newBuild(mContext)
+                    .updateUrl(checkUrl)
+                    .updateChecker(new CustomUpdateChecker(getActivity()))
+                    .updateParser(new CustomUpdateParser(mContext, apkUrl))
+                    .updatePrompter(new CustomUpdatePrompter())
+                    // .updateDownLoader(new CustomUpdateDownloader())
+                    .updateHttpService(new OkGoUpdateHttpService())
+                    .update();
+        });
+    }
+    private void checkApiUpdate () {
+        Checker.getInstance().checkProxy(isAvailable -> {
+            String checkUrl = isAvailable ? Constants.DOMAIN_NAME_PROXY + Constants.GITHUB_VERSION_PATH : Constants.GITHUB_VERSION_PATH;
+            String apkUrl = isAvailable ? Constants.DOMAIN_NAME_PROXY + Constants.APK_PATH : Constants.APK_PATH;
+            XUpdate.newBuild(mContext)
+                    .updateUrl(checkUrl)
+                    .updateChecker(new CustomUpdateChecker(getActivity()))
+                    .updateParser(new CustomUpdateParser(mContext, apkUrl))
+                    .updatePrompter(new CustomUpdatePrompter())
+                    // .updateDownLoader(new CustomUpdateDownloader())
+                    .updateHttpService(new OkGoUpdateHttpService())
+                    .update();
+        });
+    }
+    private void resetApi () {
+        LogUtil.d("resetApi");
+        // 接口相关
+        Hawk.put(HawkConfig.API_URL, getString(R.string.default_api_url));    // 默认接口
+        Hawk.put(HawkConfig.LIVE_URL, getString(R.string.default_live_url));  // 默认直播
+        Hawk.put(HawkConfig.EPG_URL, getString(R.string.default_epg_url));    // 默认EPG
+        Hawk.put(HawkConfig.PROXY_URL, getString(R.string.default_proxy_url));// 默认代理地址
+        ArrayList<String> api_history = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.default_api_history)));
+        Hawk.put(HawkConfig.API_HISTORY, api_history);                        // 接口历史记录
+        ArrayList<String> live_history = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.default_live_history)));
+        Hawk.put(HawkConfig.LIVE_HISTORY, live_history);                      // 直播接口历史记录
+        ArrayList<String> epg_history = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.default_epg_history)));
+        Hawk.put(HawkConfig.EPG_HISTORY, epg_history);                        // EPG历史记录
+        ArrayList<String> proxy_url_history = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.default_proxy_history)));
+        Hawk.put(HawkConfig.PROXY_URL_HISTORY, proxy_url_history);            // 代理历史记录
+    }
+
+    public static SearchRemoteTvDialog loadingSearchRemoteTvDialog;
+    public static List<String> remoteTvHostList;
+    public static boolean foundRemoteTv;
 
     @Override
     public void onDestroyView() {

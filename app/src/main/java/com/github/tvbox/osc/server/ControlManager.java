@@ -92,6 +92,10 @@ public class ControlManager {
                     EventBus.getDefault().post(new RefreshEvent(RefreshEvent.TYPE_PROXYS_CHANGE, url));
                 }
 
+                public void onStoreReceived(String url) {
+                    EventBus.getDefault().post(new RefreshEvent(RefreshEvent.TYPE_STORE_CONFIG_CHANGE, url));
+                }
+
                 @Override
                 public void onPushReceived(String url) {
                     EventBus.getDefault().post(new RefreshEvent(RefreshEvent.TYPE_PUSH_URL, url));
@@ -110,6 +114,11 @@ public class ControlManager {
                         intent.putExtras(bundle);
                         mContext.sendBroadcast(intent);
                     }
+                }
+
+                @Override
+                public void onProxyReceived(String url) {
+                    EventBus.getDefault().post(new RefreshEvent(RefreshEvent.TYPE_PROXY_URL, url));
                 }
             });
             try {
