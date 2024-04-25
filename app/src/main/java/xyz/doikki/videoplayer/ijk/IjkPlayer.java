@@ -11,7 +11,6 @@ import android.view.SurfaceHolder;
 
 import com.github.tvbox.osc.util.PlayerHelper;
 
-import java.io.IOException;
 import java.util.Map;
 
 import tv.danmaku.ijk.media.player.IMediaPlayer;

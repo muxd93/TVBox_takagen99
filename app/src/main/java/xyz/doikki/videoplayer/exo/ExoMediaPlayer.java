@@ -28,7 +28,6 @@ import androidx.media3.ui.PlayerView;
 
 import com.github.tvbox.osc.base.App;
 import com.github.tvbox.osc.util.HawkConfig;
-import com.github.tvbox.osc.util.LOG;
 import com.github.tvbox.osc.util.PlayerHelper;
 import com.orhanobut.hawk.Hawk;
 
