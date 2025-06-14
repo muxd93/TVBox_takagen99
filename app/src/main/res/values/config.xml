@@ -2,40 +2,17 @@
 <resources>
     <string name="default_epg_url" translatable="false">"https://epg.pw/api/epg.json?&amp;date={date}&amp;channel_id={channel_id}&amp;lang=zh-hans&amp;timezone=QXNpYS9TaGFuZ2hhaQ%3D%3D"</string>
     <string name="default_live_url" translatable="false">""</string>
-    <string name="default_api_url" translatable="false">http://肥猫.live</string>
-    <string name="default_proxy_url" translatable="false">"https://mirror.ghproxy.com/"</string>
+    <string name="default_api_url" translatable="false">https://qist.ugigc.dpdns.org/xiaosa/api.json</string>
+    <string name="default_proxy_url" translatable="false">"https://tvv.tw/"</string>
 
     <string-array name="default_multi_api_url" translatable="false">
         <item>"https://atomgit.com/66dashun/xiazheng/raw/master/d.json"</item>
     </string-array>
 
     <string-array name="default_api_history" translatable="false">
-        <item>http://肥猫.live</item>
-        <item>https://raw.githubusercontent.com/muxd93/ApkAutoBuild/main/tv_api.json</item>
-        <item>https://atomgit.com/lintech/tms/raw/master/source/stable/main.json</item>
-        <item>https://raw.githubusercontent.com/mengzehe/tvbox/main/%E8%87%AA%E7%94%A8%E6%BA%90</item>
-        <item>https://pastebin.com/raw/5NHaxyGR</item>
-        <item>http://home.jundie.top:81/top98.json</item>
-        <item>hhttps://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json</item>
-        <item>https://100km.top/0</item>
-        <item>https://raw.liucn.cc/box/m.json</item>
-        <item>https://jinenge.cn/1.json</item>
-        <item>https://cn.kstore.space/download/2863/01.txt</item>
-        <item>http://svip.weixine.net:88/uploads/itvbox/svip.json</item>
-        <item>https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json</item>
-        <item>http://cdn.qiaoji8.com/tvbox.json</item>
-        <item>https://box.000913.xyz/231225</item>
-        <item>https://agit.ai/xisohi/TVBoxOSC/raw/branch/master/XHYSyuan.json</item>
-        <item>https://jihulab.com/clear1/yingmi/-/raw/main/xh.txt</item>
-        <item>https://jihulab.com/yw88075/tvbox/-/raw/main/dr/js.json</item>
-        <item>https://www.ywsj.cf/upload/2023/10/yyzq4k.json</item>
-        <item>http://52bsj.vip:81/api/v3/file/get/29899/box2.json?sign=3cVyKZQr3lFAwdB3HK-A7h33e0MnmG6lLB9oWlvSNnM%3D%3A0</item>
-        <item>https://agit.ai/lanhaidixingren/Tvbox/raw/branch/master/py.json</item>
-        <item>https://神器每日推送.tk/pz.json</item>
-        <item>https://weixine.net/ysc.json</item>
-        <item>https://agit.ai/lanhaidixingren/Tvbox/raw/branch/master/%E5%BF%83%E5%8A%A8%E9%87%87%E9%9B%86.json"</item>
-        <item>https://agit.ai/lanhaidixingren/Tvbox/raw/branch/master/1004.json</item>
-        <item>https://github.com/mlabalabala/TVResource/raw/main/boxCfg/ori_source.json</item>
+        <item>https://qist.ugigc.dpdns.org/xiaosa/api.json</item>
+        <item>https://www.iyouhun.com/tv/dc</item>
+        <item>http://z.qiqiv.cn/123.txt</item>
     </string-array>
 
     <string-array name="default_live_history" translatable="false">
@@ -70,6 +47,7 @@
 
     <string-array name="default_proxy_history" translatable="false">
         <item>https://github.moeyy.xyz/</item>
+        <item>https://tvv.tw/</item>
         <item>https://gh.ddlc.top/</item>
         <item>https://gh-proxy.com/</item>
         <item>https://ghps.cc/</item>

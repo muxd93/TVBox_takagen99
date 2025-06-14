@@ -13,6 +13,7 @@ import android.os.Message;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.webkit.WebView;
 import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
@@ -34,6 +35,7 @@ import com.github.tvbox.osc.api.ApiConfig;
 import com.github.tvbox.osc.base.BaseActivity;
 import com.github.tvbox.osc.bean.IJKCode;
 import com.github.tvbox.osc.bean.ParseBean;
+import com.github.tvbox.osc.bean.SourceBean;
 import com.github.tvbox.osc.event.RefreshEvent;
 import com.github.tvbox.osc.player.thirdparty.Kodi;
 import com.github.tvbox.osc.player.thirdparty.MXPlayer;
@@ -49,6 +51,7 @@ import com.github.tvbox.osc.util.HawkConfig;
 import com.github.tvbox.osc.util.PlayerHelper;
 import com.github.tvbox.osc.util.ScreenUtils;
 import com.github.tvbox.osc.util.SubtitleHelper;
+import com.github.tvbox.osc.util.VideoParseRuler;
 import com.orhanobut.hawk.Hawk;
 import com.owen.tvrecyclerview.widget.TvRecyclerView;
 import com.owen.tvrecyclerview.widget.V7LinearLayoutManager;
@@ -57,7 +60,7 @@ import org.greenrobot.eventbus.EventBus;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
-
+import org.xwalk.core.XWalkView;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -140,6 +143,7 @@ public class VodController extends BaseController {
                         if (((BaseActivity) mActivity).supportsTouch()) {
                             mBack.setVisibility(VISIBLE);
                         }
+                        updateDanmuBtn();
                         showLockView();
 
                         if (isKeyUp) {
@@ -208,6 +212,7 @@ public class VodController extends BaseController {
                                         mBottomRoot.clearAnimation();
                                     }
                                 });
+                        mDanmuSetting.setVisibility(GONE);
                         mBack.setVisibility(GONE);
                         mLockView.setVisibility(GONE);
                         break;
@@ -251,6 +256,10 @@ public class VodController extends BaseController {
 
     // center BACK button
     LinearLayout mBack;
+
+    LinearLayout mDanmuSetting;
+
+    private boolean hasDanmu = false;
 
     //center LOCK button    
     private boolean isLock = false;
@@ -368,6 +377,7 @@ public class VodController extends BaseController {
 
         // center back button
         mBack = findViewById(R.id.tvBackButton);
+        mDanmuSetting = findViewById(R.id.ll_danmu_setting);
 
         // center lock button
         mLockView = findViewById(R.id.tv_lock);
@@ -421,6 +431,7 @@ public class VodController extends BaseController {
         mTopRoot.setVisibility(INVISIBLE);
         mBottomRoot.setVisibility(INVISIBLE);
         mBack.setVisibility(INVISIBLE);
+        mDanmuSetting.setVisibility(INVISIBLE);
 
         // initialize subtitle
         initSubtitleInfo();
@@ -964,6 +975,7 @@ public class VodController extends BaseController {
                     mBack.setVisibility(GONE);
                     mLockView.setVisibility(GONE);
                     mProgressTop.setVisibility(GONE);
+                    mDanmuSetting.setVisibility(GONE);
                     mHandler.removeCallbacks(mHideBottomRunnable);
                     if (mActivity != null) {
                         if (mActivity.getClass().getSimpleName().equals("DetailActivity")) {
@@ -990,6 +1002,10 @@ public class VodController extends BaseController {
                 hideBottom();
                 //Toast.makeText(getContext(), "点击显示网速 播放进度 时间", Toast.LENGTH_SHORT).show();
             }
+        });
+
+        mDanmuSetting.setOnClickListener(view -> {
+            listener.showDanmuSetting();
         });
 
     }
@@ -1094,6 +1110,8 @@ public class VodController extends BaseController {
 
         void openVideo();
 
+        void showDanmuSetting();
+
     }
 
     public void setListener(VodControlListener listener) {
@@ -1156,6 +1174,7 @@ public class VodController extends BaseController {
     private int simSeekPosition = 0;
     private long simSlideOffset = 0;
     private int tapDirection;
+    private long lastSlideTime = 0;
 
     public void tvSlideStop() {
         if (!simSlideStart)
@@ -1172,13 +1191,25 @@ public class VodController extends BaseController {
         int duration = (int) mControlWrapper.getDuration();
         if (duration <= 0)
             return;
+
+        long currentTime = System.currentTimeMillis();
+        final int baseSkip = 10000; // 基础跳转10秒
+        final float accelerationFactor = 1.5f; // 连续操作时的加速因子
+        final long threshold = 500; // 操作间隔阈值500ms
+
         if (!simSlideStart) {
             simSlideStart = true;
+            simSlideOffset = (long) baseSkip * dir;
+        } else {
+            if (currentTime - lastSlideTime <= threshold) {
+                simSlideOffset += (baseSkip * accelerationFactor * dir);
+            } else {
+                simSlideOffset = (long) baseSkip * dir;
+            }
         }
-        // 每次10秒
-        simSlideOffset += (10000.0f * dir);
+        lastSlideTime = currentTime;
         int currentPosition = (int) mControlWrapper.getCurrentPosition();
-        int position = (int) (simSlideOffset + currentPosition);
+        int position = (int) (currentPosition + simSlideOffset);
         if (position > duration) position = duration;
         if (position < 0) position = 0;
         updateSeekUI(currentPosition, position, duration);
@@ -1603,4 +1634,48 @@ public class VodController extends BaseController {
         }
         return false;
     }
+
+    public void updateDanmuBtn(){
+        if(hasDanmu){
+            mDanmuSetting.setVisibility(VISIBLE);
+        }else{
+            mDanmuSetting.setVisibility(GONE);
+        }
+    }
+
+    public void setHasDanmu(boolean hasDanmu){
+        this.hasDanmu = hasDanmu;
+    }
+
+    public void evaluateScript(SourceBean sourceBean,String url, WebView web_view, XWalkView xWalk_view){
+        String clickSelector = sourceBean.getClickSelector().trim();
+        clickSelector=clickSelector.isEmpty()?VideoParseRuler.getHostScript(url):clickSelector;
+        if (!clickSelector.isEmpty()) {
+            String selector;
+            if (clickSelector.contains(";") && !clickSelector.endsWith(";")) {
+                String[] parts = clickSelector.split(";", 2);
+                if (!url.contains(parts[0])) {
+                    return;
+                }
+                selector = parts[1].trim();
+            } else {
+                selector = clickSelector.trim();
+            }
+            // 构造点击的 JS 代码
+            String js = selector;
+//            if(!selector.contains("click()"))js+=".click();";
+            if(web_view!=null){
+                //4.4以上才支持这种写法
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                    web_view.evaluateJavascript(js, null);
+                } else {
+                    web_view.loadUrl("javascript:" + js);
+                }
+            }
+            if(xWalk_view!=null){
+                //4.0+开始全部支持这种写法
+                xWalk_view.evaluateJavascript(js, null);
+            }
+        }
+    }	    
 }

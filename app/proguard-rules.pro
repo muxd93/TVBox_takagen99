@@ -83,6 +83,9 @@
     public static ** valueOf(java.lang.String);
 }
 
+# Nano
+-keep class fi.iki.elonen.** { *; }
+
 # 保留我们自定义控件（继承自View）不被混淆
 -keep public class * extends android.view.View{
     *** get*();
@@ -334,3 +337,16 @@
     public static **[] values();
     public static ** valueOf(java.lang.String);
 }
+# SimpleXML
+-keep interface org.simpleframework.xml.core.Label { public *; }
+-keep class * implements org.simpleframework.xml.core.Label { public *; }
+-keep interface org.simpleframework.xml.core.Parameter { public *; }
+-keep class * implements org.simpleframework.xml.core.Parameter { public *; }
+-keep interface org.simpleframework.xml.core.Extractor { public *; }
+-keep class * implements org.simpleframework.xml.core.Extractor { public *; }
+-keepclassmembers,allowobfuscation class * { @org.simpleframework.xml.Path <fields>; }
+-keepclassmembers,allowobfuscation class * { @org.simpleframework.xml.Root <fields>; }
+-keepclassmembers,allowobfuscation class * { @org.simpleframework.xml.Text <fields>; }
+-keepclassmembers,allowobfuscation class * { @org.simpleframework.xml.Element <fields>; }
+-keepclassmembers,allowobfuscation class * { @org.simpleframework.xml.Attribute <fields>; }
+-keepclassmembers,allowobfuscation class * { @org.simpleframework.xml.ElementList <fields>; }

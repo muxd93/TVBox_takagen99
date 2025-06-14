@@ -21,7 +21,6 @@ public class AdBlocker {
     public static void addAdHost(String host) {
         AD_HOSTS.add(host);
     }
-
     public static boolean hasHost(String host) {
         return AD_HOSTS.contains(host);
     }
