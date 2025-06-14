@@ -4,8 +4,13 @@ import static com.xuexiang.xupdate.entity.UpdateError.ERROR.CHECK_NO_NEW_VERSION
 
 import android.app.Activity;
 import android.os.Environment;
+
 import android.widget.Toast;
 
+import android.os.Handler;
+import android.os.Looper;
+
+import androidx.core.os.HandlerCompat;
 import androidx.multidex.MultiDexApplication;
 
 import com.github.catvod.crawler.JsLoader;
@@ -38,6 +43,11 @@ import com.xuexiang.xupdate.utils.UpdateUtils;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
+import com.yanzhenjie.andserver.AndServer;
+import com.yanzhenjie.andserver.Server;
+
+import java.io.File;
+import java.util.concurrent.TimeUnit;
 
 import io.github.inflationx.calligraphy3.CalligraphyConfig;
 import io.github.inflationx.calligraphy3.CalligraphyInterceptor;
@@ -58,12 +68,17 @@ public class App extends MultiDexApplication {
     public static String burl;
     private static String dashData;
     public static ViewPump viewPump = null;
+    private static Server server = null;
+    private final Handler handler;
 
+    public App() {
+        instance = this;
+        handler = HandlerCompat.createAsync(Looper.getMainLooper());
+    }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        instance = this;
         SubtitleHelper.initSubtitleColor(this);
         initParams();
         // takagen99 : Initialize Locale
@@ -238,7 +253,7 @@ public class App extends MultiDexApplication {
     @Override
     public void onTerminate() {
         super.onTerminate();
-        JsLoader.load();
+        JsLoader.destroy();
     }
 
     public VodInfo getVodInfo() {
@@ -259,5 +274,39 @@ public class App extends MultiDexApplication {
 
     public String getDashData() {
         return dashData;
+    }
+
+    public static void startWebserver() {
+        if (server != null) return;
+        server = AndServer
+                .webServer(instance)
+                .port(12345)
+                .timeout(60, TimeUnit.SECONDS)
+                .listener(new Server.ServerListener() {
+                    @Override
+                    public void onStarted() {
+
+                    }
+
+                    @Override
+                    public void onStopped() {
+
+                    }
+
+                    @Override
+                    public void onException(Exception e) {
+
+                    }
+                }).build();
+        server.startup();
+    }
+
+    public static void post(Runnable runnable) {
+        getInstance().handler.post(runnable);
+    }
+
+    public static void post(Runnable runnable, long delayMillis) {
+        getInstance().handler.removeCallbacks(runnable);
+        if (delayMillis >= 0) getInstance().handler.postDelayed(runnable, delayMillis);
     }
 }

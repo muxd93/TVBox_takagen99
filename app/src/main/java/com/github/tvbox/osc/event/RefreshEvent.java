@@ -30,6 +30,7 @@ public class RefreshEvent {
     public static final int TYPE_STORE_CONFIG_CHANGE = 19;
     public static final int TYPE_PROXY_URL = 20;
 
+    public static final int TYPE_SET_DANMU_SETTINGS = 18;
     public int type;
     public Object obj;
 

@@ -59,6 +59,7 @@ import com.github.tvbox.osc.player.MyVideoView;
 import com.github.tvbox.osc.player.TrackInfo;
 import com.github.tvbox.osc.player.TrackInfoBean;
 import com.github.tvbox.osc.player.controller.VodController;
+import com.github.tvbox.osc.player.danmu.Parser;
 import com.github.tvbox.osc.player.thirdparty.Kodi;
 import com.github.tvbox.osc.player.thirdparty.MXPlayer;
 import com.github.tvbox.osc.player.thirdparty.ReexPlayer;
@@ -67,6 +68,7 @@ import com.github.tvbox.osc.server.RemoteServer;
 import com.github.tvbox.osc.subtitle.model.Subtitle;
 import com.github.tvbox.osc.ui.activity.DetailActivity;
 import com.github.tvbox.osc.ui.adapter.SelectDialogAdapter;
+import com.github.tvbox.osc.ui.dialog.DanmuSettingDialog;
 import com.github.tvbox.osc.ui.dialog.SearchSubtitleDialog;
 import com.github.tvbox.osc.ui.dialog.SelectDialog;
 import com.github.tvbox.osc.ui.dialog.SubtitleDialog;
@@ -75,8 +77,10 @@ import com.github.tvbox.osc.util.DefaultConfig;
 import com.github.tvbox.osc.util.FileUtils;
 import com.github.tvbox.osc.util.HawkConfig;
 import com.github.tvbox.osc.util.LogUtil;
+import com.github.tvbox.osc.util.HawkUtils;
 import com.github.tvbox.osc.util.M3U8;
 import com.github.tvbox.osc.util.MD5;
+import com.github.tvbox.osc.util.parser.SuperParse;
 import com.github.tvbox.osc.util.PlayerHelper;
 import com.github.tvbox.osc.util.StringUtils;
 import com.github.tvbox.osc.util.SubtitleHelper;
@@ -121,6 +125,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import master.flame.danmaku.danmaku.model.BaseDanmaku;
+import master.flame.danmaku.danmaku.model.IDisplayer;
+import master.flame.danmaku.danmaku.model.android.DanmakuContext;
+import master.flame.danmaku.ui.widget.DanmakuView;
 import me.jessyan.autosize.AutoSize;
 import tv.danmaku.ijk.media.player.IMediaPlayer;
 import tv.danmaku.ijk.media.player.IjkTimedText;
@@ -136,6 +144,11 @@ public class PlayFragment extends BaseLazyFragment {
     private SourceViewModel sourceViewModel;
     private Handler mHandler;
 
+    ExecutorService executorService;
+    private DanmakuView mDanmuView;
+    private DanmakuContext mDanmakuContext;
+    private String danmuText;
+
     private String videoURL;
     private long videoDuration = -1;
     private List<String> videoSegmentationURL = new ArrayList<>();
@@ -150,6 +163,9 @@ public class PlayFragment extends BaseLazyFragment {
         if (event.type == RefreshEvent.TYPE_SUBTITLE_SIZE_CHANGE) {
             mController.mSubtitleView.setTextSize((int) event.obj);
         }
+        if (event.type == RefreshEvent.TYPE_SET_DANMU_SETTINGS) {
+            setDanmuViewSettings((Boolean) event.obj);
+        }
     }
 
     @Override
@@ -157,6 +173,42 @@ public class PlayFragment extends BaseLazyFragment {
         initView();
         initViewModel();
         initData();
+        initDanmuView();
+    }
+    private void initDanmuView() {
+        mDanmuView  = findViewById(R.id.danmaku);
+        mDanmakuContext = DanmakuContext.create();
+        mVideoView.setDanmuView(mDanmuView);
+    }
+
+    private void setDanmuViewSettings(boolean reload) {
+        float speed = HawkUtils.getDanmuSpeed();
+        float alpha = HawkUtils.getDanmuAlpha();
+        float sizeScale = HawkUtils.getDanmuSizeScale();
+        int maxLine = HawkUtils.getDanmuMaxLine();
+        HashMap<Integer, Integer> maxLines = new HashMap<>();
+        maxLines.put(BaseDanmaku.TYPE_FIX_TOP, maxLine);
+        maxLines.put(BaseDanmaku.TYPE_SCROLL_RL, maxLine);
+        maxLines.put(BaseDanmaku.TYPE_SCROLL_LR, maxLine);
+        maxLines.put(BaseDanmaku.TYPE_FIX_BOTTOM, maxLine);
+        mDanmakuContext.setMaximumLines(maxLines).setScrollSpeedFactor(speed).setDanmakuTransparency(alpha).setScaleTextSize(sizeScale);
+        mDanmakuContext.setDanmakuStyle(IDisplayer.DANMAKU_STYLE_STROKEN, 3).setDanmakuMargin(8);
+        if (reload){
+            if (executorService != null){
+                executorService.shutdownNow();
+                executorService = null;
+            }
+            executorService = Executors.newSingleThreadExecutor();
+            executorService.execute(() -> {
+                mDanmuView.release();
+                mDanmuView.prepare(new Parser(danmuText), mDanmakuContext);
+                App.post(()->{
+                    if(mVideoView!=null && mVideoView.isPlaying()){
+                        mDanmuView.seekTo(mVideoView.getCurrentPosition());
+                    }
+                });
+            });
+        }
     }
 
     public String getFinalUrl(){
@@ -220,6 +272,14 @@ public class PlayFragment extends BaseLazyFragment {
         };
         mVideoView.setProgressManager(progressManager);
         mController.setListener(new VodController.VodControlListener() {
+
+            @Override
+            public void showDanmuSetting() {
+                final DetailActivity activity = (DetailActivity) mActivity;
+                DanmuSettingDialog dialog = new DanmuSettingDialog(activity, mDanmuView);
+                dialog.show();
+            }
+
             @Override
             public void playNext(boolean rmProgress) {
                 if (videoSegmentationURL.size() > 0) {
@@ -330,7 +390,7 @@ public class PlayFragment extends BaseLazyFragment {
             subtitleDialog.selectInternal.setVisibility(View.GONE);
         }
         subtitleDialog.setSubtitleViewListener(new SubtitleDialog.SubtitleViewListener() {
-        	@Override
+            @Override
             public void setTextSize(int size) {
                 mController.mSubtitleView.setTextSize(size);
             }@Override
@@ -345,15 +405,15 @@ public class PlayFragment extends BaseLazyFragment {
             }
         });
         subtitleDialog.setSearchSubtitleListener(new SubtitleDialog.SearchSubtitleListener() {
-        	@Override
+            @Override
             public void openSearchSubtitleDialog() {
                 SearchSubtitleDialog searchSubtitleDialog = new SearchSubtitleDialog(getActivity());
                 searchSubtitleDialog.setSubtitleLoader(new SearchSubtitleDialog.SubtitleLoader() {
-                	@Override
+                    @Override
                     public void loadSubtitle(SubtitleBean subtitle) {
-                    	if (!isAdded()) return;
+                        if (!isAdded()) return;
                         requireActivity().runOnUiThread(new Runnable() {
-                        	@Override
+                            @Override
                             public void run() {
                                 String zimuUrl = subtitle.getUrl();
                                 LogUtil.i("Remote SubtitleBean Url: " + zimuUrl);
@@ -381,20 +441,20 @@ public class PlayFragment extends BaseLazyFragment {
             }
         });
         subtitleDialog.setLocalFileChooserListener(new SubtitleDialog.LocalFileChooserListener() {
-        	@Override
+            @Override
             public void openLocalFileChooserDialog() {
                 new ChooserDialog(getActivity())
-                    .withFilter(false, false, "srt", "ass", "scc", "stl", "ttml")
-                    .withStartFile("/storage/emulated/0/Download")
-                    .withChosenListener(new ChooserDialog.Result() {
-	                    @Override
-	                    public void onChoosePath(String path, File pathFile) {
-	                        LogUtil.i("Local SubtitleBean Path: " + path);
-	                        setSubtitle(path); //设置字幕
-	                    }
-	                })
-                    .build()
-                    .show();
+                        .withFilter(false, false, "srt", "ass", "scc", "stl", "ttml")
+                        .withStartFile("/storage/emulated/0/Download")
+                        .withChosenListener(new ChooserDialog.Result() {
+                            @Override
+                            public void onChoosePath(String path, File pathFile) {
+                                LogUtil.i("Local SubtitleBean Path: " + path);
+                                setSubtitle(path); //设置字幕
+                            }
+                        })
+                        .build()
+                        .show();
             }
         });
         subtitleDialog.show();
@@ -564,7 +624,7 @@ public class PlayFragment extends BaseLazyFragment {
     void openMyVideo() {
         Intent i = new Intent();
         i.addCategory(Intent.CATEGORY_DEFAULT);
-        i.setAction(android.content.Intent.ACTION_VIEW);
+        i.setAction(Intent.ACTION_VIEW);
         if (videoURL == null) return;
         i.setDataAndType(Uri.parse(videoURL), "video/*");
         startActivity(Intent.createChooser(i, "Open Video with ..."));
@@ -654,7 +714,7 @@ public class PlayFragment extends BaseLazyFragment {
                 .headers(hheaders)
                 .execute(new AbsCallback<String>() {
                     @Override
-                    public void onSuccess(com.lzy.okgo.model.Response<String> response) {
+                    public void onSuccess(Response<String> response) {
                         String content = response.body();
                         if (!content.startsWith("#EXTM3U")) {
                             startPlayUrl(url, headers);
@@ -707,7 +767,7 @@ public class PlayFragment extends BaseLazyFragment {
                                 .headers(hheaders)
                                 .execute(new AbsCallback<String>() {
                                     @Override
-                                    public void onSuccess(com.lzy.okgo.model.Response<String> response) {
+                                    public void onSuccess(Response<String> response) {
                                         String content = response.body();
                                         int ilast = finalforwardurl.lastIndexOf('/');
                                         RemoteServer.m3u8Content = M3U8.purify(finalforwardurl.substring(0, ilast + 1), content);
@@ -726,7 +786,7 @@ public class PlayFragment extends BaseLazyFragment {
                                     }
 
                                     @Override
-                                    public void onError(com.lzy.okgo.model.Response<String> response) {
+                                    public void onError(Response<String> response) {
                                         super.onError(response);
                                         startPlayUrl(url, headers);
                                     }
@@ -739,7 +799,7 @@ public class PlayFragment extends BaseLazyFragment {
                     }
 
                     @Override
-                    public void onError(com.lzy.okgo.model.Response<String> response) {
+                    public void onError(Response<String> response) {
                         super.onError(response);
                         startPlayUrl(url, headers);
                     }
@@ -819,7 +879,7 @@ public class PlayFragment extends BaseLazyFragment {
     }
 
     private void initSubtitleView() {
-    	AbstractPlayer mediaPlayer = mVideoView.getMediaPlayer();
+        AbstractPlayer mediaPlayer = mVideoView.getMediaPlayer();
         TrackInfo trackInfo = null;
         if (mVideoView.getMediaPlayer() instanceof IjkmPlayer) {
             trackInfo = ((IjkmPlayer) (mVideoView.getMediaPlayer())).getTrackInfo();
@@ -875,7 +935,7 @@ public class PlayFragment extends BaseLazyFragment {
                     mController.mSubtitleView.isInternal = true;
                     if (mediaPlayer instanceof IjkmPlayer) {
                         if (trackInfo != null && trackInfo.getSubtitle()
-                            .size() > 0) {
+                                .size() > 0) {
                             List < TrackInfoBean > subtitleTrackList = trackInfo.getSubtitle();
                             int selectedIndex = trackInfo.getSubtitleSelected(true);
                             boolean hasCh = false;
@@ -885,14 +945,14 @@ public class PlayFragment extends BaseLazyFragment {
                                     hasCh = true;
                                     if (selectedIndex != subtitleTrackInfoBean.trackId) {
                                         ((IjkmPlayer)(mVideoView.getMediaPlayer()))
-                                            .setTrack(subtitleTrackInfoBean.trackId);
+                                                .setTrack(subtitleTrackInfoBean.trackId);
                                         break;
                                     }
                                 }
                             }
                             if (!hasCh)((IjkmPlayer)(mVideoView.getMediaPlayer()))
-                                .setTrack(subtitleTrackList.get(0)
-                                .trackId);
+                                    .setTrack(subtitleTrackList.get(0)
+                                            .trackId);
                         }
                     }
                 }
@@ -950,6 +1010,7 @@ public class PlayFragment extends BaseLazyFragment {
                     }
                     String flag = info.optString("flag");
                     String url = info.getString("url");
+                    String danmaku = info.optString("danmaku");
                     HashMap<String, String> headers = null;
                     webUserAgent = null;
                     webHeaderMap = null;
@@ -982,14 +1043,28 @@ public class PlayFragment extends BaseLazyFragment {
                         mController.showParse(false);
                         playUrl(playUrl + url, headers);
                     }
+                    checkDanmu(danmaku);
                 } catch (Throwable th) {
                     errorWithRetry("获取播放信息错误", true);
                 }
             } else {
                 errorWithRetry("获取播放信息错误", true);
             }
-        }        
+        }
     };
+
+    private void checkDanmu(String danmu) {
+        danmuText = danmu;
+        mDanmuView.release();
+        mDanmuView.setVisibility(TextUtils.isEmpty(danmuText) || !HawkUtils.getDanmuOpen() ? View.GONE : View.VISIBLE);
+        if (TextUtils.isEmpty(danmuText)
+                || !HawkUtils.getDanmuOpen()
+                || (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N && mActivity.isInPictureInPictureMode())) return;
+        if (!danmuText.isEmpty()) {
+            mController.setHasDanmu(true);
+            setDanmuViewSettings(true);
+        }
+    }
 
     public void setData(Bundle bundle) {
         mVodInfo = (VodInfo) bundle.getSerializable("VodInfo");
@@ -1010,7 +1085,19 @@ public class PlayFragment extends BaseLazyFragment {
         }
         try {
             if (!mVodPlayerCfg.has("pl")) {
-                mVodPlayerCfg.put("pl", (sourceBean.getPlayerType() == -1) ? (int) Hawk.get(HawkConfig.PLAY_TYPE, 1) : sourceBean.getPlayerType());
+                int playType = Hawk.get(HawkConfig.PLAY_TYPE, 1);
+                boolean configurationFile = HawkUtils.getVodPlayerPreferredConfigurationFile();
+                int playerType = sourceBean.getPlayerType();
+                if (configurationFile && playerType != -1) {
+                    playType = playerType;
+                }
+                mVodPlayerCfg.put("pl", playType);
+            } else {
+//                boolean configurationFile = HawkUtils.getVodPlayerPreferredConfigurationFile();
+//                if (!configurationFile) {
+//                    int playType = Hawk.get(HawkConfig.PLAY_TYPE, 0);
+//                    mVodPlayerCfg.put("pl", playType);
+//                }
             }
             if (!mVodPlayerCfg.has("pr")) {
                 mVodPlayerCfg.put("pr", Hawk.get(HawkConfig.PLAY_RENDER, 0));
@@ -1049,7 +1136,7 @@ public class PlayFragment extends BaseLazyFragment {
 
     // takagen99 : Picture-in-Picture support
     public boolean extPlay;
-    
+
     @Override
     public void onPause() {
         super.onPause();
@@ -1085,6 +1172,10 @@ public class PlayFragment extends BaseLazyFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        if(executorService!=null){
+            executorService.shutdownNow();
+            executorService = null;
+        }
         //手动注销
         sourceViewModel.playResult.removeObserver(mObserverPlayResult);
         EventBus.getDefault().unregister(this);
@@ -1098,7 +1189,7 @@ public class PlayFragment extends BaseLazyFragment {
         Jianpian.finish();//停止p2p下载
         App.getInstance().setDashData(null);
     }
-    
+
     public MyVideoView getPlayer() {
         return mVideoView;
     }
@@ -1161,6 +1252,7 @@ public class PlayFragment extends BaseLazyFragment {
     private int autoRetryCount = 0;
 
     boolean autoRetry() {
+        switchPlayer();
         if (loadFoundVideoUrls != null && loadFoundVideoUrls.size() > 0) {
             autoRetryFromLoadFoundVideoUrls();
             return true;
@@ -1175,6 +1267,18 @@ public class PlayFragment extends BaseLazyFragment {
         }
     }
 
+    void switchPlayer() {
+        try {
+            int playerType = mVodPlayerCfg.getInt("pl") == 1 ? 2 : 1;
+            mVodPlayerCfg.put("pl", playerType);
+            mController.setPlayerConfig(mVodPlayerCfg);
+            mVodInfo.playerCfg = mVodPlayerCfg.toString();
+            EventBus.getDefault().post(new RefreshEvent(RefreshEvent.TYPE_REFRESH, mVodPlayerCfg));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     void autoRetryFromLoadFoundVideoUrls() {
         String videoUrl = loadFoundVideoUrls.poll();
         HashMap<String, String> header = loadFoundVideoUrlsHeader.get(videoUrl);
@@ -1186,9 +1290,20 @@ public class PlayFragment extends BaseLazyFragment {
         loadFoundVideoUrls = new LinkedList<String>();
         loadFoundVideoUrlsHeader = new HashMap<String, HashMap<String, String>>();
     }
-
+    public void setPlayTitle(boolean show)
+    {
+        if(show){
+            String playTitleInfo= "";
+            if(mVodInfo!=null){
+                playTitleInfo = mVodInfo.name + " " + mVodInfo.seriesMap.get(mVodInfo.playFlag).get(mVodInfo.playIndex).name;
+            }
+            mController.setTitle(playTitleInfo);
+        }else {
+            mController.setTitle("");
+        }
+    }
     public void play(boolean reset) {
-    	if (mVodInfo == null) return;
+        if (mVodInfo == null) return;
         VodInfo.VodSeries vs = mVodInfo.seriesMap.get(mVodInfo.playFlag).get(mVodInfo.getplayIndex());
         EventBus.getDefault().post(new RefreshEvent(RefreshEvent.TYPE_REFRESH, mVodInfo.getplayIndex()));
         EventBus.getDefault().post(new RefreshEvent(RefreshEvent.TYPE_REFRESH_NOTIFY, mVodInfo.name + "&&" + vs.name));
@@ -1340,11 +1455,13 @@ public class PlayFragment extends BaseLazyFragment {
     private void doParse(ParseBean pb) {
         stopParse();
         initParseLoadFound();
-        if (pb.getType() == 0) {
+        if (pb.getType() == 4) {
+            parseMix(pb,true);
+        }else if (pb.getType() == 0) {
             setTip("正在嗅探播放地址", true, false);
             mHandler.removeMessages(100);
             mHandler.sendEmptyMessageDelayed(100, 20 * 1000);
-            if (pb.getExt() != null) {
+            if(pb.getExt()!=null){
                 // 解析ext
                 try {
                     HashMap<String, String> reqHeaders = new HashMap<>();
@@ -1487,24 +1604,68 @@ public class PlayFragment extends BaseLazyFragment {
                 }
             });
         } else if (pb.getType() == 3) { // json 聚合
-            setTip("正在解析播放地址", true, false);
-            parseThreadPool = Executors.newSingleThreadExecutor();
-            LinkedHashMap<String, HashMap<String, String>> jxs = new LinkedHashMap<>();
-            String extendName = "";
-            for (ParseBean p : ApiConfig.get().getParseBeanList()) {
-                HashMap<String, String> data = new HashMap<String, String>();
-                data.put("url", p.getUrl());
-                if (p.getUrl().equals(pb.getUrl())) {
-                    extendName = p.getName();
-                }
-                data.put("type", p.getType() + "");
-                data.put("ext", p.getExt());
-                jxs.put(p.getName(), data);
+            parseMix(pb,false);
+        }
+    }
+    private void parseMix(ParseBean pb,boolean isSuper){
+        setTip("正在解析播放地址", true, false);
+        parseThreadPool = Executors.newSingleThreadExecutor();
+        LinkedHashMap<String, HashMap<String, String>> jxs = new LinkedHashMap<>();
+        LinkedHashMap<String, String> json_jxs = new LinkedHashMap<>();
+        String extendName = "";
+        for (ParseBean p : ApiConfig.get().getParseBeanList()) {
+            HashMap<String, String> data = new HashMap<String, String>();
+            data.put("url", p.getUrl());
+            if (p.getUrl().equals(pb.getUrl())) {
+                extendName = p.getName();
             }
-            String finalExtendName = extendName;
-            parseThreadPool.execute(new Runnable() {
-                @Override
-                public void run() {
+            data.put("type", p.getType() + "");
+            data.put("ext", p.getExt());
+            jxs.put(p.getName(), data);
+
+            if (p.getType() == 1) {
+                json_jxs.put(p.getName(), p.mixUrl());
+            }
+        }
+        String finalExtendName = extendName;
+        parseThreadPool.execute(new Runnable() {
+            @Override
+            public void run() {
+                if(isSuper){
+                    //并发执行 嗅探和json
+                    JSONObject rs = SuperParse.parse(jxs, parseFlag+"123", webUrl);
+                    if (!rs.has("url") || rs.optString("url").isEmpty()) {
+                        setTip("解析错误", false, true);
+                    } else {
+                        if (rs.has("parse") && rs.optInt("parse", 0) == 1) {
+                            if (rs.has("ua")) {
+                                webUserAgent = rs.optString("ua").trim();
+                            }
+                            setTip("超级解析中", true, false);
+
+                            if(!isAdded())return;
+                            requireActivity().runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    String mixParseUrl = DefaultConfig.checkReplaceProxy(rs.optString("url", ""));
+                                    stopParse();
+                                    mHandler.removeMessages(100);
+                                    mHandler.sendEmptyMessageDelayed(100, 20 * 1000);
+                                    loadWebView(mixParseUrl);
+                                }
+                            });
+                            parseThreadPool.execute(new Runnable() {
+                                @Override
+                                public void run() {
+                                    JSONObject res = SuperParse.doJsonJx(webUrl);
+                                    rsJsonJX(res, true);
+                                }
+                            });
+                        } else {
+                            rsJsonJX(rs,false);
+                        }
+                    }
+                }else {
                     JSONObject rs = ApiConfig.get().jsonExtMix(parseFlag + "111", pb.getUrl(), finalExtendName, jxs, webUrl);
                     if (rs == null || !rs.has("url") || rs.optString("url").isEmpty()) {
 //                        errorWithRetry("解析错误", false);
@@ -1514,7 +1675,7 @@ public class PlayFragment extends BaseLazyFragment {
                             if (rs.has("ua")) {
                                 webUserAgent = rs.optString("ua").trim();
                             }
-                            if (!isAdded()) return;
+                            if(!isAdded())return;
                             requireActivity().runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
@@ -1527,38 +1688,47 @@ public class PlayFragment extends BaseLazyFragment {
                                 }
                             });
                         } else {
-                            HashMap<String, String> headers = null;
-                            if (rs.has("header")) {
-                                try {
-                                    JSONObject hds = rs.getJSONObject("header");
-                                    Iterator<String> keys = hds.keys();
-                                    while (keys.hasNext()) {
-                                        String key = keys.next();
-                                        if (headers == null) {
-                                            headers = new HashMap<>();
-                                        }
-                                        headers.put(key, hds.getString(key));
-                                    }
-                                } catch (Throwable th) {
-                                    th.printStackTrace();
-                                }
-                            }
-                            if (rs.has("jxFrom")) {
-                                if (!isAdded()) return;
-                                requireActivity().runOnUiThread(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        Toast.makeText(mContext, "解析来自:" + rs.optString("jxFrom"), Toast.LENGTH_SHORT).show();
-                                    }
-                                });
-                            }
-                            playUrl(rs.optString("url", ""), headers);
+                            rsJsonJX(rs,false);
                         }
                     }
                 }
+            }
+        });
+    }
+
+    private void rsJsonJX(JSONObject rs,boolean isSuper){
+        if(isSuper){
+            if(rs==null || !rs.has("url"))return;
+            stopLoadWebView(false);
+        }
+        HashMap<String, String> headers = null;
+        if (rs.has("header")) {
+            try {
+                JSONObject hds = rs.getJSONObject("header");
+                Iterator<String> keys = hds.keys();
+                while (keys.hasNext()) {
+                    String key = keys.next();
+                    if (headers == null) {
+                        headers = new HashMap<>();
+                    }
+                    headers.put(key, hds.getString(key));
+                }
+            } catch (Throwable th) {
+                th.printStackTrace();
+            }
+        }
+        if (rs.has("jxFrom")) {
+            if(!isAdded())return;
+            requireActivity().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Toast.makeText(mContext, "解析来自:" + rs.optString("jxFrom"), Toast.LENGTH_SHORT).show();
+                }
             });
         }
+        playUrl(rs.optString("url", ""), headers);
     }
+
 
     private String encodeUrl(String url) {
         try {
@@ -1585,7 +1755,7 @@ public class PlayFragment extends BaseLazyFragment {
                 XWalkUtils.tryUseXWalk(mContext, new XWalkUtils.XWalkState() {
                     @Override
                     public void success() {
-                        initWebView(!sourceBean.getClickSelector().isEmpty());
+                        initWebView(false);
                         loadUrl(url);
                     }
 
@@ -1841,20 +2011,9 @@ public class PlayFragment extends BaseLazyFragment {
         @Override
         public void onPageFinished(WebView view, String url) {
             super.onPageFinished(view, url);
-            String click = sourceBean.getClickSelector();
-            LogUtil.i("onPageFinished url:" + url);
-
-            if(!click.isEmpty()){
-                String selector;
-                if(click.contains(";")){
-                    if(!url.contains(click.split(";")[0]))return;
-                    selector=click.split(";")[1];
-                }else {
-                    selector=click.trim();
-                }
-                String js="$(\""+ selector+"\").click();";
-                LogUtil.i("javascript:" + js);
-                mSysWebView.loadUrl("javascript:"+js);
+            LOG.i("echo-onPageFinished url:" + url);
+            if(!url.equals("about:blank")){
+                mController.evaluateScript(sourceBean,url,view,null);
             }
 
             mHandler.sendEmptyMessage(200);
@@ -1896,6 +2055,7 @@ public class PlayFragment extends BaseLazyFragment {
                             headers.put("Cookie", " " + cookie);//携带cookie
                         playUrl(url, headers);
                         stopLoadWebView(false);
+                        SuperParse.stopJsonJx();
                     }
                 }
             }
@@ -2021,6 +2181,10 @@ public class PlayFragment extends BaseLazyFragment {
         @Override
         public void onLoadFinished(XWalkView view, String url) {
             super.onLoadFinished(view, url);
+            LOG.i("echo-onLoadFinished url:" + url);
+            if(!url.equals("about:blank")){
+                mController.evaluateScript(sourceBean,url,null,view);
+            }
         }
 
         @Override
@@ -2078,6 +2242,7 @@ public class PlayFragment extends BaseLazyFragment {
                             webHeaders.put("Cookie", " " + cookie);//携带cookie
                         playUrl(url, webHeaders);
                         stopLoadWebView(false);
+                        SuperParse.stopJsonJx();
                     }
                 }
             }
